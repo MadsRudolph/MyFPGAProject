@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    13:44:17 03/10/2025 
+-- Create Date:    14:44:44 03/10/2025 
 -- Design Name: 
--- Module Name:    Test - Behavioral 
+-- Module Name:    Calc_top - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,10 +29,19 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Test is
-end Test;
+entity Calc_top is
+    Port ( BTN3 : in  STD_LOGIC;
+           MClk : in  STD_LOGIC;
+           BTN0 : in  STD_LOGIC;
+           BTN2 : in  STD_LOGIC;
+           BTN1 : in  STD_LOGIC;
+           SW : in  STD_LOGIC_VECTOR (7 downto 0);
+           An : out  STD_LOGIC_VECTOR (3 downto 0);
+           Cat : out  STD_LOGIC_VECTOR (6 downto 0);
+           LD : out  STD_LOGIC_VECTOR (7 downto 0));
+end Calc_top;
 
-architecture Behavioral of Test is
+architecture Behavioral of Calc_top is
 
 begin
 
