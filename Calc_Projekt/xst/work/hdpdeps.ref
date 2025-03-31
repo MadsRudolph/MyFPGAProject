@@ -1,0 +1,15 @@
+V3 7
+FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd 2025/03/31.15:50:52 P.15xf
+EN work/Calc_Menu 0 \
+      FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/Calc_Menu/Behavioral 0 \
+      FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd \
+      EN work/Calc_Menu 0
+FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd 2025/03/31.14:39:46 P.15xf
+EN work/std_8bit_reg 1743424867 \
+      FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/std_8bit_reg/Behavioral 1743424868 \
+      FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd \
+      EN work/std_8bit_reg 1743424867
