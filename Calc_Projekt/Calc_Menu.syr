@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.89 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.92 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.89 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.92 secs
  
 --> Reading design: Calc_Menu.prj
 
@@ -108,23 +108,32 @@ WARNING:HDLParsers:3516 - Found error in file "C:/Users/s246132/Xilinx_Projects/
 WARNING:HDLParsers:3458 - Because of erroneous VHDL file(s), automatic determination of correct order of compilation of files in project file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu_vhdl.prj" may be inaccurate. Please put the files in the project file in correct order with keyword 'nosort' at end of the project file, or compile your vhdl file(s) individually to find and fix the error(s) in your vhdl file(s). 
 Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" in Library work.
 Entity <calc_menu> compiled.
-ERROR:HDLParsers:164 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 78. parse error, unexpected ENTITY
-WARNING:HDLParsers:901 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 78. Label Val1Reg is ignored.
-ERROR:HDLParsers:164 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 79. parse error, unexpected ENTITY
-WARNING:HDLParsers:901 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 79. Label Val2Reg is ignored.
-ERROR:HDLParsers:164 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 80. parse error, unexpected ENTITY
-WARNING:HDLParsers:901 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 80. Label Val3Reg is ignored.
-ERROR:HDLParsers:164 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 81. parse error, unexpected ENTITY
-WARNING:HDLParsers:901 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 81. Label Op1Reg is ignored.
-ERROR:HDLParsers:164 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 82. parse error, unexpected ENTITY
-WARNING:HDLParsers:901 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 82. Label Op2Reg is ignored.
-ERROR:HDLParsers:164 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 83. parse error, unexpected ENTITY
-WARNING:HDLParsers:901 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 83. Label CalcValReg is ignored.
+ERROR:HDLParsers:3384 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 84. Size mismatch.  String literal "001" is of size 3 but is expected to be of size 16.
+ERROR:HDLParsers:3384 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 100. Size mismatch.  String literal "010" is of size 3 but is expected to be of size 16.
+ERROR:HDLParsers:3384 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 115. Size mismatch.  String literal "011" is of size 3 but is expected to be of size 16.
+ERROR:HDLParsers:3384 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 130. Size mismatch.  String literal "100" is of size 3 but is expected to be of size 16.
+ERROR:HDLParsers:3384 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 145. Size mismatch.  String literal "101" is of size 3 but is expected to be of size 16.
+ERROR:HDLParsers:3312 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 164. Undefined symbol 'nextsate'.
+ERROR:HDLParsers:164 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 167. parse error, unexpected WHEN, expecting SEMICOLON
+ERROR:HDLParsers:3384 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 181. Size mismatch.  String literal "110" is of size 3 but is expected to be of size 16.
+ERROR:HDLParsers:813 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 159. Enumerated value g is missing in case.
+ERROR:HDLParsers:164 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 189. parse error, unexpected ENTITY
+WARNING:HDLParsers:901 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 189. Label Val1Reg is ignored.
+ERROR:HDLParsers:164 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 190. parse error, unexpected ENTITY
+WARNING:HDLParsers:901 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 190. Label Val2Reg is ignored.
+ERROR:HDLParsers:164 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 191. parse error, unexpected ENTITY
+WARNING:HDLParsers:901 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 191. Label Val3Reg is ignored.
+ERROR:HDLParsers:164 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 192. parse error, unexpected ENTITY
+WARNING:HDLParsers:901 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 192. Label Op1Reg is ignored.
+ERROR:HDLParsers:164 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 193. parse error, unexpected ENTITY
+WARNING:HDLParsers:901 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 193. Label Op2Reg is ignored.
+ERROR:HDLParsers:164 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 194. parse error, unexpected ENTITY
+WARNING:HDLParsers:901 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" Line 194. Label CalcValReg is ignored.
 --> 
 
-Total memory usage is 4492832 kilobytes
+Total memory usage is 4492724 kilobytes
 
-Number of errors   :    6 (   0 filtered)
+Number of errors   :   15 (   0 filtered)
 Number of warnings :    8 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

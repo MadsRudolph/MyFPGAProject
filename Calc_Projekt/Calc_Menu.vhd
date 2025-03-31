@@ -56,8 +56,8 @@ signal state, nextstate : Statetype;
     -- Internal signals
     signal Op1S, Op2S : STD_LOGIC_VECTOR (2 downto 0);
 	 signal Val2S: STD_LOGIC_VECTOR (7 downto 0);
-    signal Val1S, Val3S, DisplayData : STD_LOGIC_VECTOR (15 downto 0);
-    signal Val1En, Val2En, Val3En, Op1En, Op2En : STD_LOGIC;
+    signal Val1S, Val3S, DispSel : STD_LOGIC_VECTOR (15 downto 0);
+    signal Val1En, Val2En, Val3En, Op1En, Op2En, RegSel : STD_LOGIC;
 
 begin
 
@@ -72,9 +72,120 @@ begin
 	 
 StateDec: process (state, func, enter, operation, done)
 	begin
+		val1EN <= '0';
+		val2EN <= '0';
+		val3EN <= '0';
+		Op1EN <= '0';
+		Op2EN <= '0';
+		Start <= '0';
 		
-
-
+	case state is
+		when A =>
+		DispSel <= "001";
+		if func = '1' then
+			nextstate <= B;
+			elsif enter = '1' then 
+			nextstate <= Val1;
+			elsif operation = '1' then
+			nextstate <= F;
+			else nextstate <= A;
+			end if;
+			
+		when Val1 => 
+				Val1EN <= '1';
+				nextstate <= A;
+				
+			
+		when B =>
+		DispSel <= "010";
+		if func = '1' then
+			nextstate <= C;
+			elsif enter = '1' then 
+			nextstate <= Op1;
+			elsif operation = '1' then
+			nextstate <= F;
+			else nextstate <= B;
+			end if;
+			
+		when Op1 => 
+				Op1EN <= '1';
+				nextstate <= B;
+				
+		when C =>
+		DispSel <= "011";
+		if func = '1' then
+			nextstate <= D;
+			elsif enter = '1' then 
+			nextstate <= Val2;
+			elsif operation = '1' then
+			nextstate <= F;
+			else nextstate <= C;
+			end if;
+			
+		when Val2 => 
+				Val2EN <= '1';
+				nextstate <= C;
+				
+	when D =>
+		DispSel <= "100";
+		if func = '1' then
+			nextstate <= E;
+			elsif enter = '1' then 
+			nextstate <= Op2;
+			elsif operation = '1' then
+			nextstate <= F;
+			else nextstate <= D;
+			end if;
+			
+		when Op2 => 
+				Op2EN <= '1';
+				nextstate <= D;
+				
+	when E =>
+		DispSel <= "101";
+		if func = '1' then
+			nextstate <= A;
+			elsif enter = '1' then 
+			nextstate <= Val3;
+			elsif operation = '1' then
+			nextstate <= F;
+			else nextstate <= E;
+			end if;
+			
+		when Val3 => 
+				Val3EN <= '1';
+				nextstate <= E;
+				
+		when F =>
+				start <= '1';
+				RegSel <= '0';
+				if done = '1' then
+				nextstate <= G;
+				else nextsate <= F;
+				end if
+				
+		when G =>
+				start <= '0';
+				nextstate <= H;
+				
+		when H =>
+				start <= '1';
+				RegSel <= '1';
+				if done = '1' then
+				nextstate <= I;
+				else
+				Nextstate <= H;
+				end if;
+				
+		when I =>
+				DispSel <= "110";
+				if enter = '1' then
+				nextstate <= A;
+				else 
+				nextstate <= I;
+				end if;
+			end case;
+				
 Val1Reg: entity work.std_8bit_reg port map(reset, clk, SW);
 Val2Reg: entity work.std_8bit_reg port map(reset, clk, SW);
 Val3Reg: entity work.std_8bit_reg port map(reset, clk, SW);
@@ -82,6 +193,6 @@ Op1Reg: entity work.std_8bit_reg port map(reset, clk, SW);
 Op2Reg: entity work.std_8bit_reg port map(reset, clk, SW);
 CalcValReg: entity work.std_8bit_reg port map(reset, clk);
 
-
+end process;
 end Behavioral;
 
