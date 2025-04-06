@@ -5,73 +5,49 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLParsers" num="3516" delta="old" >Found error in file &quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot;. 
+<msg type="warning" file="HDLParsers" num="3516" delta="old" >Found error in file &quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot;. 
 </msg>
 
-<msg type="warning" file="HDLParsers" num="3458" delta="old" >Because of erroneous VHDL file(s), automatic determination of correct order of compilation of files in project file &quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu_vhdl.prj</arg>&quot; may be inaccurate. Please put the files in the project file in correct order with keyword &apos;nosort&apos; at end of the project file, or compile your vhdl file(s) individually to find and fix the error(s) in your vhdl file(s). 
+<msg type="warning" file="HDLParsers" num="3458" delta="old" >Because of erroneous VHDL file(s), automatic determination of correct order of compilation of files in project file &quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu_vhdl.prj</arg>&quot; may be inaccurate. Please put the files in the project file in correct order with keyword &apos;nosort&apos; at end of the project file, or compile your vhdl file(s) individually to find and fix the error(s) in your vhdl file(s). 
 </msg>
 
-<msg type="error" file="HDLParsers" num="3384" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">84</arg>. Size mismatch.  String literal &quot;<arg fmt="%s" index="3">001</arg>&quot; is of size <arg fmt="%u" index="4">3</arg> but is expected to be of size <arg fmt="%u" index="5">16</arg>.
+<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">169</arg>. <arg fmt="%s" index="3">parse error, unexpected WITH</arg>
 </msg>
 
-<msg type="error" file="HDLParsers" num="3384" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">100</arg>. Size mismatch.  String literal &quot;<arg fmt="%s" index="3">010</arg>&quot; is of size <arg fmt="%u" index="4">3</arg> but is expected to be of size <arg fmt="%u" index="5">16</arg>.
+<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">181</arg>. <arg fmt="%s" index="3">parse error, unexpected ENTITY</arg>
 </msg>
 
-<msg type="error" file="HDLParsers" num="3384" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">115</arg>. Size mismatch.  String literal &quot;<arg fmt="%s" index="3">011</arg>&quot; is of size <arg fmt="%u" index="4">3</arg> but is expected to be of size <arg fmt="%u" index="5">16</arg>.
+<msg type="warning" file="HDLParsers" num="901" delta="old" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">181</arg>. Label <arg fmt="%s" index="3">Val1Reg</arg> is ignored.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3384" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">130</arg>. Size mismatch.  String literal &quot;<arg fmt="%s" index="3">100</arg>&quot; is of size <arg fmt="%u" index="4">3</arg> but is expected to be of size <arg fmt="%u" index="5">16</arg>.
+<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">190</arg>. <arg fmt="%s" index="3">parse error, unexpected ENTITY</arg>
 </msg>
 
-<msg type="error" file="HDLParsers" num="3384" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">145</arg>. Size mismatch.  String literal &quot;<arg fmt="%s" index="3">101</arg>&quot; is of size <arg fmt="%u" index="4">3</arg> but is expected to be of size <arg fmt="%u" index="5">16</arg>.
+<msg type="warning" file="HDLParsers" num="901" delta="old" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">190</arg>. Label <arg fmt="%s" index="3">Val2Reg</arg> is ignored.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">164</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">nextsate</arg>&apos;.
+<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">199</arg>. <arg fmt="%s" index="3">parse error, unexpected ENTITY</arg>
 </msg>
 
-<msg type="error" file="HDLParsers" num="164" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">167</arg>. <arg fmt="%s" index="3">parse error, unexpected WHEN, expecting SEMICOLON</arg>
+<msg type="warning" file="HDLParsers" num="901" delta="old" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">199</arg>. Label <arg fmt="%s" index="3">Val3Reg</arg> is ignored.
 </msg>
 
-<msg type="error" file="HDLParsers" num="3384" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">181</arg>. Size mismatch.  String literal &quot;<arg fmt="%s" index="3">110</arg>&quot; is of size <arg fmt="%u" index="4">3</arg> but is expected to be of size <arg fmt="%u" index="5">16</arg>.
+<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">208</arg>. <arg fmt="%s" index="3">parse error, unexpected ENTITY</arg>
 </msg>
 
-<msg type="error" file="HDLParsers" num="813" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">159</arg>. Enumerated value <arg fmt="%s" index="3">g</arg> is missing in <arg fmt="%s" index="4">case</arg>.
+<msg type="warning" file="HDLParsers" num="901" delta="old" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">208</arg>. Label <arg fmt="%s" index="3">Op1Reg</arg> is ignored.
 </msg>
 
-<msg type="error" file="HDLParsers" num="164" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">189</arg>. <arg fmt="%s" index="3">parse error, unexpected ENTITY</arg>
+<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">217</arg>. <arg fmt="%s" index="3">parse error, unexpected ENTITY</arg>
 </msg>
 
-<msg type="warning" file="HDLParsers" num="901" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">189</arg>. Label <arg fmt="%s" index="3">Val1Reg</arg> is ignored.
+<msg type="warning" file="HDLParsers" num="901" delta="old" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">217</arg>. Label <arg fmt="%s" index="3">Op2Reg</arg> is ignored.
 </msg>
 
-<msg type="error" file="HDLParsers" num="164" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">190</arg>. <arg fmt="%s" index="3">parse error, unexpected ENTITY</arg>
+<msg type="error" file="HDLParsers" num="164" delta="old" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">226</arg>. <arg fmt="%s" index="3">parse error, unexpected ENTITY</arg>
 </msg>
 
-<msg type="warning" file="HDLParsers" num="901" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">190</arg>. Label <arg fmt="%s" index="3">Val2Reg</arg> is ignored.
-</msg>
-
-<msg type="error" file="HDLParsers" num="164" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">191</arg>. <arg fmt="%s" index="3">parse error, unexpected ENTITY</arg>
-</msg>
-
-<msg type="warning" file="HDLParsers" num="901" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">191</arg>. Label <arg fmt="%s" index="3">Val3Reg</arg> is ignored.
-</msg>
-
-<msg type="error" file="HDLParsers" num="164" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">192</arg>. <arg fmt="%s" index="3">parse error, unexpected ENTITY</arg>
-</msg>
-
-<msg type="warning" file="HDLParsers" num="901" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">192</arg>. Label <arg fmt="%s" index="3">Op1Reg</arg> is ignored.
-</msg>
-
-<msg type="error" file="HDLParsers" num="164" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">193</arg>. <arg fmt="%s" index="3">parse error, unexpected ENTITY</arg>
-</msg>
-
-<msg type="warning" file="HDLParsers" num="901" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">193</arg>. Label <arg fmt="%s" index="3">Op2Reg</arg> is ignored.
-</msg>
-
-<msg type="error" file="HDLParsers" num="164" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">194</arg>. <arg fmt="%s" index="3">parse error, unexpected ENTITY</arg>
-</msg>
-
-<msg type="warning" file="HDLParsers" num="901" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">194</arg>. Label <arg fmt="%s" index="3">CalcValReg</arg> is ignored.
+<msg type="warning" file="HDLParsers" num="901" delta="old" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd</arg>&quot; Line <arg fmt="%d" index="2">226</arg>. Label <arg fmt="%s" index="3">CalcValReg</arg> is ignored.
 </msg>
 
 </messages>

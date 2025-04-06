@@ -15,7 +15,7 @@
 
   <!--                                                          -->
 
-  <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved. -->
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
 
   <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
 
@@ -27,6 +27,8 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Calc_Menu.prj"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Calc_Menu.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Calc_Menu.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Calc_Menu_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Calc_Menu_summary.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Calc_Menu_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Calc_Menu_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
@@ -63,7 +65,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1743433001" xil_pn:in_ck="1460956164064242874" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-7680355311718861742" xil_pn:start_ts="1743432996">
+    <transform xil_pn:end_ts="1743973557" xil_pn:in_ck="1460956164064242874" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-7680355311718861742" xil_pn:start_ts="1743973555">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
