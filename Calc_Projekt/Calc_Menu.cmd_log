@@ -43,3 +43,4 @@ xst -intstyle ise -ifn "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Proj
 xst -intstyle ise -ifn "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.xst" -ofn "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.syr" 
 xst -intstyle ise -ifn "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.xst" -ofn "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.syr" 
 xst -intstyle ise -ifn "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.xst" -ofn "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.syr" 
+xst -intstyle ise -ifn "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.xst" -ofn "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.syr" 
