@@ -1,6 +1,6 @@
-AR std_16bit_reg behavioral C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd sub00/vhpl04 1744030721
-AR calc_menu behavioral C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd sub00/vhpl05 1744030723
-AR std_8bit_reg behavioral C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd sub00/vhpl01 1744030719
-EN std_8bit_reg NULL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd sub00/vhpl00 1744030718
-EN std_16bit_reg NULL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd sub00/vhpl03 1744030720
-EN calc_menu NULL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd sub00/vhpl02 1744030722
+AR std_16bit_reg behavioral C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd sub00/vhpl04 1744032597
+AR calc_menu behavioral C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd sub00/vhpl05 1744032599
+AR std_8bit_reg behavioral C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd sub00/vhpl01 1744032595
+EN std_8bit_reg NULL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd sub00/vhpl00 1744032594
+EN std_16bit_reg NULL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd sub00/vhpl03 1744032596
+EN calc_menu NULL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd sub00/vhpl02 1744032598

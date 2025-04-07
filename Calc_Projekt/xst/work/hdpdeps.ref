@@ -1,24 +1,24 @@
 V3 13
 FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd 2025/03/31.17:05:29 P.15xf
 FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd 2025/03/31.16:06:16 P.15xf
-FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd 2025/04/07.14:58:24 P.15xf
-EN work/Calc_Menu 1744030722 \
+FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd 2025/04/07.15:29:47 P.15xf
+EN work/Calc_Menu 1744032598 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd \
       PB ieee/std_logic_1164 1335251622
-AR work/Calc_Menu/Behavioral 1744030723 \
+AR work/Calc_Menu/Behavioral 1744032599 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd \
-      EN work/Calc_Menu 1744030722 CP work/std_8bit_reg CP work/std_16bit_reg
+      EN work/Calc_Menu 1744032598 CP work/std_8bit_reg CP work/std_16bit_reg
 FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd 2025/04/07.13:11:25 P.15xf
-EN work/std_16bit_reg 1744030720 \
+EN work/std_16bit_reg 1744032596 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd \
       PB ieee/std_logic_1164 1335251622
-AR work/std_16bit_reg/Behavioral 1744030721 \
+AR work/std_16bit_reg/Behavioral 1744032597 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd \
-      EN work/std_16bit_reg 1744030720
+      EN work/std_16bit_reg 1744032596
 FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd 2025/04/07.13:20:01 P.15xf
-EN work/std_8bit_reg 1744030718 \
+EN work/std_8bit_reg 1744032594 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd \
       PB ieee/std_logic_1164 1335251622
-AR work/std_8bit_reg/Behavioral 1744030719 \
+AR work/std_8bit_reg/Behavioral 1744032595 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd \
-      EN work/std_8bit_reg 1744030718
+      EN work/std_8bit_reg 1744032594

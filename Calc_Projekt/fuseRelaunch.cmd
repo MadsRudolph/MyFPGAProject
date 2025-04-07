@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu_tb_isim_beh.exe" -prj "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu_tb_beh.prj" "work.Calc_Menu_tb" 

@@ -1,0 +1,3 @@
+work	"Calc_Menu.vhd"
+work	"std_16bit_reg.vhd"
+work	"std_8bit_reg.vhd"

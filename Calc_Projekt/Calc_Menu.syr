@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.82 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.82 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: Calc_Menu.prj
 
@@ -240,7 +240,7 @@ Optimizing unit <std_16bit_reg> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Calc_Menu, actual ratio is 4.
+Found area constraint ratio of 100 (+ 5) on block Calc_Menu, actual ratio is 5.
 FlipFlop state_FSM_FFd6 has been replicated 1 time(s)
 
 Final Macro Processing ...
@@ -279,11 +279,13 @@ Design Statistics
 # IOs                              : 66
 
 Cell Usage :
-# BELS                             : 84
-#      LUT2                        : 12
-#      LUT3                        : 34
+# BELS                             : 89
+#      LUT2                        : 8
+#      LUT3                        : 35
 #      LUT3_L                      : 6
-#      LUT4                        : 32
+#      LUT4                        : 37
+#      MUXF5                       : 2
+#      VCC                         : 1
 # FlipFlops/Latches                : 71
 #      FDC                         : 14
 #      FDCE                        : 56
@@ -300,9 +302,9 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                       47  out of    960     4%  
+ Number of Slices:                       49  out of    960     5%  
  Number of Slice Flip Flops:             71  out of   1920     3%  
- Number of 4 input LUTs:                 84  out of   1920     4%  
+ Number of 4 input LUTs:                 86  out of   1920     4%  
  Number of IOs:                          66
  Number of bonded IOBs:                  66  out of     83    79%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -343,9 +345,9 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 3.867ns (Maximum Frequency: 258.598MHz)
+   Minimum period: 3.940ns (Maximum Frequency: 253.807MHz)
    Minimum input arrival time before clock: 4.547ns
-   Maximum output required time after clock: 7.422ns
+   Maximum output required time after clock: 7.461ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -354,10 +356,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 3.867ns (frequency: 258.598MHz)
+  Clock period: 3.940ns (frequency: 253.807MHz)
   Total number of paths / destination ports: 92 / 71
 -------------------------------------------------------------------------
-Delay:               3.867ns (Levels of Logic = 2)
+Delay:               3.940ns (Levels of Logic = 2)
   Source:            state_FSM_FFd13 (FF)
   Destination:       state_FSM_FFd11 (FF)
   Source Clock:      Clk rising
@@ -367,13 +369,13 @@ Delay:               3.867ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             12   0.591   1.136  state_FSM_FFd13 (state_FSM_FFd13)
+     FDC:C->Q             16   0.591   1.209  state_FSM_FFd13 (state_FSM_FFd13)
      LUT2:I0->O            1   0.704   0.424  state_FSM_FFd11-In3 (state_FSM_FFd11-In3)
      LUT4:I3->O            1   0.704   0.000  state_FSM_FFd11-In30 (state_FSM_FFd11-In)
      FDC:D                     0.308          state_FSM_FFd11
     ----------------------------------------
-    Total                      3.867ns (2.307ns logic, 1.560ns route)
-                                       (59.7% logic, 40.3% route)
+    Total                      3.940ns (2.307ns logic, 1.633ns route)
+                                       (58.6% logic, 41.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
@@ -398,9 +400,9 @@ Offset:              4.547ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
-  Total number of paths / destination ports: 171 / 36
+  Total number of paths / destination ports: 187 / 36
 -------------------------------------------------------------------------
-Offset:              7.422ns (Levels of Logic = 3)
+Offset:              7.461ns (Levels of Logic = 3)
   Source:            state_FSM_FFd10 (FF)
   Destination:       DispData<7> (PAD)
   Source Clock:      Clk rising
@@ -409,23 +411,23 @@ Offset:              7.422ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             12   0.591   1.136  state_FSM_FFd10 (state_FSM_FFd10)
+     FDC:C->Q             14   0.591   1.175  state_FSM_FFd10 (state_FSM_FFd10)
      LUT4:I0->O            1   0.704   0.595  DispData<7>4 (DispData<7>4)
      LUT3:I0->O            1   0.704   0.420  DispData<7>23 (DispData_7_OBUF)
      OBUF:I->O                 3.272          DispData_7_OBUF (DispData<7>)
     ----------------------------------------
-    Total                      7.422ns (5.271ns logic, 2.151ns route)
-                                       (71.0% logic, 29.0% route)
+    Total                      7.461ns (5.271ns logic, 2.190ns route)
+                                       (70.6% logic, 29.4% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.45 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.50 secs
  
 --> 
 
-Total memory usage is 4510816 kilobytes
+Total memory usage is 4510828 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

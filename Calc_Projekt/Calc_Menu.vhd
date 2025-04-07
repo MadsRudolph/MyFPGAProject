@@ -24,7 +24,7 @@ architecture Behavioral of Calc_Menu is
     signal state, nextstate : Statetype;
 
     -- Internal signals
-	 signal Calcvals : std_logic_vector (15 downto 0);
+    signal Calcvals : std_logic_vector (15 downto 0);
     signal Op1S, Op2S, Val1S, Val3S, DispSel, Val2S : STD_LOGIC_VECTOR (7 downto 0);
     signal Val1En, Val2En, Val3En, Op1En, Op2En, RegSel : STD_LOGIC;
 
@@ -49,12 +49,12 @@ begin
         Op1En <= '0';
         Op2En <= '0';
         Start <= '0';
-		  RegSel <= '0';
-		  DispSel <= "00000000";
+        RegSel <= '0';
+        DispSel <= "00000000";
 
         case state is
             when A =>
-                DispSel <= "00000001";  -- Padded to 16 bits
+                DispSel <= "00000001";  
                 if func = '1' then
                     nextstate <= B;
                 elsif enter = '1' then 
@@ -70,7 +70,7 @@ begin
                 nextstate <= A;
 
             when B =>
-                DispSel <= "00000010";  -- Padded to 16 bits
+                DispSel <= "00000010";  
                 if func = '1' then
                     nextstate <= C;
                 elsif enter = '1' then 
@@ -86,7 +86,7 @@ begin
                 nextstate <= B;
 
             when C =>
-                DispSel <= "00000011";  -- Padded to 16 bits
+                DispSel <= "00000011";  
                 if func = '1' then
                     nextstate <= D;
                 elsif enter = '1' then 
@@ -102,7 +102,7 @@ begin
                 nextstate <= C;
 
             when D =>
-                DispSel <= "00000100";  -- Padded to 16 bits
+                DispSel <= "00000100";  
                 if func = '1' then
                     nextstate <= E;
                 elsif enter = '1' then 
@@ -118,7 +118,7 @@ begin
                 nextstate <= D;
 
             when E =>
-                DispSel <= "00000101";  -- Padded to 16 bits
+                DispSel <= "00000101";  
                 if func = '1' then
                     nextstate <= A;
                 elsif enter = '1' then 
@@ -156,105 +156,98 @@ begin
                 end if;
 
             when I =>
-                DispSel <= "00000110";  -- Padded to 16 bits
+                DispSel <= "00000110";  
                 if enter = '1' then
                     nextstate <= A;
                 else 
                     nextstate <= I;
                 end if;
         end case;
-		 
+    end process;
 
-        
-			end process;
-			
-			-- Display data assignment based on DispSel value
-        with DispSel select
-            DispData <= 
-                (others => '0')          when "00000000", 
-                X"00" & Val1S            when "00000001",
-                X"00" & Val2S            when "00000010",
-                X"00" & Val3S            when "00000011",
-                X"00" & Op1S             when "00000100",
-                X"00" & Op2S             when "00000110",
-                CalcVals                 when "00000101",
-                (others => '0')          when others;
-					 
-					 
-					 
-					 
-					 with RegSel select
-            In1 <=  
-                Val1S            			when '0',
-					 CalcVals(7 downto 0)		when '1',
-					 (others => '0')          when others;
-					 
-					 with RegSel select
-            In2 <=  
-                Val2S            			when '0',
-					 Val3s							when '1',
-					 (others => '0')          when others;
-					 
-					 with RegSel select
-            OpCode <=  
-                op1s(2 downto 0)           when '0',
-					 op2s(2 downto 0)				 when '1',
-					 (others => '0')          when others;
-					 
-			
--- Register mappings (these must be placed outside the process!)
-Val1Reg: entity work.std_8bit_reg 
-    port map (
-        Reset => reset,
-        Clk   => clk,
-        Enable => Val1En,
-        Data_in => SW,
-        Data_out => Val1S
-    );
+    -- Display data assignment based on DispSel value
+    with DispSel select
+        DispData <= 
+            (others => '0')          when "00000000", 
+            X"A0" & Val1S            when "00000001",
+            X"B0" & Val2S            when "00000010",
+            X"C0" & Val3S            when "00000011",
+            X"d0" & Op1S             when "00000100",
+            X"E0" & Op2S             when "00000110",
+            CalcVals                 when "00000101",
+            (others => '0')          when others;
 
-Val2Reg: entity work.std_8bit_reg 
-    port map (
-        Reset => reset,
-        Clk   => clk,
-        Enable => Val2En,
-        Data_in => SW,
-        Data_out => Val2S
-    );
+    with RegSel select
+        In1 <=  
+            Val1S            			when '0',
+            CalcVals(7 downto 0)		when '1',
+            (others => '0')          when others;
 
-Val3Reg: entity work.std_8bit_reg 
-    port map (
-        Reset => reset,
-        Clk   => clk,
-        Enable => Val3En,
-        Data_in => SW,
-        Data_out => Val3S
-    );
+    with RegSel select
+        In2 <=  
+            Val2S            			when '0',
+            Val3s							when '1',
+            (others => '0')          when others;
 
-Op1Reg: entity work.std_8bit_reg 
-    port map (
-        Reset => reset,
-        Clk   => clk,
-        Enable => Op1En,
-        Data_in => SW,
-        Data_out => Op1S
-    );
+    with RegSel select
+        OpCode <=  
+            op1s(2 downto 0)           when '0',
+            op2s(2 downto 0)				 when '1',
+            (others => '0')          when others;
 
-Op2Reg: entity work.std_8bit_reg 
-    port map (
-        Reset => reset,
-        Clk   => clk,
-        Enable => Op2En,
-        Data_in => SW,
-        Data_out => Op2S
-    );
+    -- Register mappings
+    Val1Reg: entity work.std_8bit_reg 
+        port map (
+            Reset => reset,
+            Clk   => clk,
+            Enable => Val1En,
+            Data_in => SW,
+            Data_out => Val1S
+        );
 
-CalcValReg: entity work.std_16bit_reg 
-    port map (
-        Reset => reset,
-        Clk   => clk,
-        Enable => RegSel,
-        Data_in => CalcVal,
-        Data_out => CalcVals
-    );
+    Val2Reg: entity work.std_8bit_reg 
+        port map (
+            Reset => reset,
+            Clk   => clk,
+            Enable => Val2En,
+            Data_in => SW,
+            Data_out => Val2S
+        );
+
+    Val3Reg: entity work.std_8bit_reg 
+        port map (
+            Reset => reset,
+            Clk   => clk,
+            Enable => Val3En,
+            Data_in => SW,
+            Data_out => Val3S
+        );
+
+    Op1Reg: entity work.std_8bit_reg 
+        port map (
+            Reset => reset,
+            Clk   => clk,
+            Enable => Op1En,
+            Data_in => SW,
+            Data_out => Op1S
+        );
+
+    Op2Reg: entity work.std_8bit_reg 
+        port map (
+            Reset => reset,
+            Clk   => clk,
+            Enable => Op2En,
+            Data_in => SW,
+            Data_out => Op2S
+        );
+
+    CalcValReg: entity work.std_16bit_reg 
+        port map (
+            Reset => reset,
+            Clk   => clk,
+            Enable => RegSel,
+            Data_in => CalcVal,
+            Data_out => CalcVals
+        );
 
 end Behavioral;
