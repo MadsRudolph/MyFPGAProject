@@ -7,10 +7,8 @@ entity Calc_Menu is
            Enter : in  STD_LOGIC;
            Operation : in  STD_LOGIC;
            Func : in  STD_LOGIC;
-           DataIn : in  STD_LOGIC_VECTOR (7 downto 0);
            CalcVal : in  STD_LOGIC_VECTOR (15 downto 0);
            DispData : out  STD_LOGIC_VECTOR (15 downto 0);
-           Tilstand : out  STD_LOGIC_VECTOR (7 downto 0);
            Start : out  STD_LOGIC;
            Done : in  STD_LOGIC;
            OpCode : out  STD_LOGIC_VECTOR (2 downto 0);
@@ -26,9 +24,8 @@ architecture Behavioral of Calc_Menu is
     signal state, nextstate : Statetype;
 
     -- Internal signals
-    signal Op1S, Op2S : STD_LOGIC_VECTOR (2 downto 0);
-    signal Val2S : STD_LOGIC_VECTOR (7 downto 0);
-    signal Val1S, Val3S, DispSel : STD_LOGIC_VECTOR (15 downto 0);
+	 signal Calcvals : std_logic_vector (15 downto 0);
+    signal Op1S, Op2S, Val1S, Val3S, DispSel, Val2S : STD_LOGIC_VECTOR (7 downto 0);
     signal Val1En, Val2En, Val3En, Op1En, Op2En, RegSel : STD_LOGIC;
 
 begin
@@ -52,10 +49,12 @@ begin
         Op1En <= '0';
         Op2En <= '0';
         Start <= '0';
+		  RegSel <= '0';
+		  DispSel <= "00000000";
 
         case state is
             when A =>
-                DispSel <= "0000000000000001";  -- Padded to 16 bits
+                DispSel <= "00000001";  -- Padded to 16 bits
                 if func = '1' then
                     nextstate <= B;
                 elsif enter = '1' then 
@@ -71,7 +70,7 @@ begin
                 nextstate <= A;
 
             when B =>
-                DispSel <= "0000000000000010";  -- Padded to 16 bits
+                DispSel <= "00000010";  -- Padded to 16 bits
                 if func = '1' then
                     nextstate <= C;
                 elsif enter = '1' then 
@@ -87,7 +86,7 @@ begin
                 nextstate <= B;
 
             when C =>
-                DispSel <= "0000000000000011";  -- Padded to 16 bits
+                DispSel <= "00000011";  -- Padded to 16 bits
                 if func = '1' then
                     nextstate <= D;
                 elsif enter = '1' then 
@@ -103,7 +102,7 @@ begin
                 nextstate <= C;
 
             when D =>
-                DispSel <= "0000000000000100";  -- Padded to 16 bits
+                DispSel <= "00000100";  -- Padded to 16 bits
                 if func = '1' then
                     nextstate <= E;
                 elsif enter = '1' then 
@@ -119,7 +118,7 @@ begin
                 nextstate <= D;
 
             when E =>
-                DispSel <= "0000000000000101";  -- Padded to 16 bits
+                DispSel <= "00000101";  -- Padded to 16 bits
                 if func = '1' then
                     nextstate <= A;
                 elsif enter = '1' then 
@@ -157,26 +156,52 @@ begin
                 end if;
 
             when I =>
-                DispSel <= "0000000000000110";  -- Padded to 16 bits
+                DispSel <= "00000110";  -- Padded to 16 bits
                 if enter = '1' then
                     nextstate <= A;
                 else 
                     nextstate <= I;
                 end if;
         end case;
+		 
 
-        -- Display data assignment based on DispSel value
+        
+			end process;
+			
+			-- Display data assignment based on DispSel value
         with DispSel select
             DispData <= 
-                (others => '0')          when "0000000000000000",  -- Padded to 16 bits
-                X"00" & Val1S            when "0000000000000001",
-                X"00" & Val2S            when "0000000000000010",
-                X"00" & Val3S            when "0000000000000011",
-                Op1S                      when "0000000000000100",
-                Op2S                      when "0000000000000110",
-                CalcVal                  when "0000000000000101",
+                (others => '0')          when "00000000", 
+                X"00" & Val1S            when "00000001",
+                X"00" & Val2S            when "00000010",
+                X"00" & Val3S            when "00000011",
+                X"00" & Op1S             when "00000100",
+                X"00" & Op2S             when "00000110",
+                CalcVals                 when "00000101",
                 (others => '0')          when others;
-
+					 
+					 
+					 
+					 
+					 with RegSel select
+            In1 <=  
+                Val1S            			when '0',
+					 CalcVals(7 downto 0)		when '1',
+					 (others => '0')          when others;
+					 
+					 with RegSel select
+            In2 <=  
+                Val2S            			when '0',
+					 Val3s							when '1',
+					 (others => '0')          when others;
+					 
+					 with RegSel select
+            OpCode <=  
+                op1s(2 downto 0)           when '0',
+					 op2s(2 downto 0)				 when '1',
+					 (others => '0')          when others;
+					 
+			
 -- Register mappings (these must be placed outside the process!)
 Val1Reg: entity work.std_8bit_reg 
     port map (
@@ -223,13 +248,13 @@ Op2Reg: entity work.std_8bit_reg
         Data_out => Op2S
     );
 
-CalcValReg: entity work.std_8bit_reg 
+CalcValReg: entity work.std_16bit_reg 
     port map (
         Reset => reset,
         Clk   => clk,
         Enable => RegSel,
         Data_in => CalcVal,
-        Data_out => CalcVal
+        Data_out => CalcVals
     );
 
 end Behavioral;
