@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2025-04-07T15:51:42</DateModified>
+  <DateModified>2025-04-25T15:30:21</DateModified>
   <ModuleName>Calc_Menu</ModuleName>
-  <SummaryTimeStamp>2025-04-07T15:29:58</SummaryTimeStamp>
+  <SummaryTimeStamp>2025-04-25T14:50:20</SummaryTimeStamp>
   <SavedFilePath>C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/iseconfig/Calc_Menu.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt\</ImplementationReportsDirectory>
   <DateInitialized>2025-03-31T17:05:43</DateInitialized>
