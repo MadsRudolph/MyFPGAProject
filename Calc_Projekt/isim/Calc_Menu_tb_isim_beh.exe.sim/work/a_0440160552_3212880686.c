@@ -10,7 +10,7 @@
 /*  \___\/\___\                                                    */
 /***********************************************************************/
 
-/* This file is designed for use with ISim build 0xc3576ebc */
+/* This file is designed for use with ISim build 0xfbc00daa */
 
 #define XSI_HIDE_SYMBOL_SPEC true
 #include "xsi.h"
@@ -21,10 +21,10 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd";
+static const char *ng0 = "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd";
 extern char *IEEE_P_2592010699;
 
-unsigned char ieee_p_2592010699_sub_1744673427_503743352(char *, char *, unsigned int , unsigned int );
+unsigned char ieee_p_2592010699_sub_2763492388968962707_503743352(char *, char *, unsigned int , unsigned int );
 
 
 static void work_a_0440160552_3212880686_p_0(char *t0)
@@ -50,12 +50,12 @@ LAB0:    xsi_set_current_line(35, ng0);
         goto LAB2;
 
 LAB4:    t1 = (t0 + 1152U);
-    t3 = ieee_p_2592010699_sub_1744673427_503743352(IEEE_P_2592010699, t1, 0U, 0U);
+    t3 = ieee_p_2592010699_sub_2763492388968962707_503743352(IEEE_P_2592010699, t1, 0U, 0U);
     if (t3 != 0)
         goto LAB5;
 
 LAB6:
-LAB3:    t1 = (t0 + 3152);
+LAB3:    t1 = (t0 + 3144);
     *((int *)t1) = 1;
 
 LAB1:    return;
@@ -64,7 +64,7 @@ LAB2:    xsi_set_current_line(36, ng0);
     memset(t1, 0, 8U);
     t5 = t1;
     memset(t5, (unsigned char)2, 8U);
-    t6 = (t0 + 3232);
+    t6 = (t0 + 3224);
     t7 = (t6 + 56U);
     t8 = *((char **)t7);
     t9 = (t8 + 56U);
@@ -87,7 +87,7 @@ LAB8:    goto LAB3;
 LAB7:    xsi_set_current_line(39, ng0);
     t2 = (t0 + 1512U);
     t6 = *((char **)t2);
-    t2 = (t0 + 3232);
+    t2 = (t0 + 3224);
     t7 = (t2 + 56U);
     t8 = *((char **)t7);
     t9 = (t8 + 56U);
