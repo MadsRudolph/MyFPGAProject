@@ -5,7 +5,7 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity SevenSeg4 is
-    Port ( Rst,Clk: in  std_logic;    
+    Port ( Reset,Clk: in  std_logic;    
 	        Data :   in  std_logic_vector (15 downto 0); -- Binary data
            cat :    out std_logic_vector(6 downto 0);  -- Common cathodes
            an :     out std_logic_vector(3 downto 0)); -- Common Anodes
@@ -18,9 +18,9 @@ signal DataN: std_logic_vector (3 downto 0);
 begin
 	
 
-	DispCountReg: process(Rst, Clk)
+	DispCountReg: process(reset, Clk)
 	begin
-	 if Rst = '1' then
+	 if Reset = '1' then
 	 DispCount <= 0;
 	 elsif Clk'event and Clk = '1' then
 	   if DispCount = 3 

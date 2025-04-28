@@ -1,0 +1,7 @@
+vhdl work "std_8bit_reg.vhd"
+vhdl work "std_16bit_reg.vhd"
+vhdl work "SevenSeg4.vhd"
+vhdl work "DivClk.vhd"
+vhdl work "Debounce_corrected.vhd"
+vhdl work "Calc_Menu.vhd"
+vhdl work "Calc_top.vhd"

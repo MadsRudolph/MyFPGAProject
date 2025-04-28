@@ -41,10 +41,82 @@ entity Calc_Top is
            LD : out  STD_LOGIC_VECTOR (7 downto 0));
 end Calc_Top;
 
+
 architecture Behavioral of Calc_Top is
+
+
+
+signal DispClk, BTN2d, BTN1d, start, Done: STD_LOGIC;
+signal DispData,In1, calcval: STD_LOGIC_VECTOR (15 downto 0);
+signal In2: STD_LOGIC_VECTOR (7 downto 0);
+signal OPcode: STD_LOGIC_VECTOR (2 downto 0);
 
 begin
 
-
+    U1: entity work.DivClk 
+        port map (
+            Reset => BTN3,
+            Clk   => MClk,
+				TimeP => 50e6,
+				Clk1 => dispclk 
+        );
+		  
+	
+    U2: entity work.SevenSeg4 
+        port map (
+            Reset => BTN3,
+            Clk   => DispClk,
+				Data => DispData,
+				Cat => Cat,
+				An => An
+        );
+		  
+		  
+    U3: entity work.Debounce
+        port map (
+            Reset => BTN3,
+            Clk   => MClk,
+				BTN => BTN2,
+				BTNd => BTN2d
+	        );
+	
+    U4: entity work.Debounce
+        port map (
+            Reset => BTN3,
+            Clk   => MClk,
+				BTN => BTN1,
+				BTNd => BTN1d
+	        );
+			  
+    U5: entity work.Calc_Menu
+        port map (
+            Reset => BTN3,
+            Clk   => MClk,
+				Enter => BTN0,
+				Operation => BTN2d,
+				Func => BTN1d,
+				SW => SW,
+				CalcVal => CalcVal,
+				DispData => DispData,
+				-- Tilstand => LD,
+				Start => Start,
+				Done => Done,
+				OpCode => OpCode,
+				In1 => In1,
+				In2 => In2
+	        );
+			  
+    U6: entity work.Calc_Data
+        port map (
+            Reset => BTN3,
+            Clk   => MClk,
+				CalcVal => CalcVal,
+				Start => Start,
+				Done => Done,
+				OpCode => OpCode,
+				In1 => In1,
+				In2 => In2
+	        );
+			 
 end Behavioral;
 
