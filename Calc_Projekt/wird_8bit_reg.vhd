@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:46:19 04/28/2025 
+-- Create Date:    17:25:34 04/28/2025 
 -- Design Name: 
--- Module Name:    Calc_Top - Behavioral 
+-- Module Name:    wird_8bit_reg - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,22 +29,24 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Calc_Top is
-    Port ( BTN3 : in  STD_LOGIC;
-           MClk : in  STD_LOGIC;
-           BTN0 : in  STD_LOGIC;
-           BTN1 : in  STD_LOGIC;
-           BTN2 : in  STD_LOGIC;
-           SW : in  STD_LOGIC_VECTOR (7 downto 0);
-           An : out  STD_LOGIC_VECTOR (3 downto 0);
-           Cat : out  STD_LOGIC_VECTOR (6 downto 0);
-           LD : out  STD_LOGIC_VECTOR (7 downto 0));
-end Calc_Top;
+entity wird_8bit_reg is
+    Port ( reset : in  STD_LOGIC;
+           clk : in  STD_LOGIC;
+           enable : in  STD_LOGIC;
+           data_in : in  STD_LOGIC_VECTOR (7 downto 0);
+           data_out : out  STD_LOGIC_VECTOR (15 downto 0));
+end wird_8bit_reg;
 
-architecture Behavioral of Calc_Top is
-
+architecture Behavioral of wird_8bit_reg is
 begin
-
-
+    process (reset, clk)
+    begin
+        if reset = '1' then
+            data_out <= (others => '0');  -- Reset the register to 0
+        elsif rising_edge(clk) then
+            if enable = '1' then
+                data_out <= X"00" & data_in;  -- Load data_in into data_out on clock edge
+            end if;
+        end if;
+    end process;
 end Behavioral;
-

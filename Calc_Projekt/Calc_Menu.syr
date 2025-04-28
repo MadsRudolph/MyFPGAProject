@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.87 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.87 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: Calc_Menu.prj
 
@@ -109,8 +109,7 @@ Architecture behavioral of Entity std_8bit_reg is up to date.
 Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd" in Library work.
 Architecture behavioral of Entity std_16bit_reg is up to date.
 Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" in Library work.
-Entity <calc_menu> compiled.
-Entity <calc_menu> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity calc_menu is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -278,12 +277,12 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 66
+# IOs                              : 74
 
 Cell Usage :
-# BELS                             : 88
+# BELS                             : 96
 #      LUT2                        : 7
-#      LUT3                        : 16
+#      LUT3                        : 24
 #      LUT3_L                      : 6
 #      LUT4                        : 56
 #      MUXF5                       : 2
@@ -294,9 +293,9 @@ Cell Usage :
 #      FDP                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 65
+# IO Buffers                       : 73
 #      IBUF                        : 29
-#      OBUF                        : 36
+#      OBUF                        : 44
 =========================================================================
 
 Device utilization summary:
@@ -304,11 +303,11 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                       49  out of    960     5%  
+ Number of Slices:                       53  out of    960     5%  
  Number of Slice Flip Flops:             73  out of   1920     3%  
- Number of 4 input LUTs:                 85  out of   1920     4%  
- Number of IOs:                          66
- Number of bonded IOBs:                  66  out of     83    79%  
+ Number of 4 input LUTs:                 93  out of   1920     4%  
+ Number of IOs:                          74
+ Number of bonded IOBs:                  74  out of     83    89%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -402,7 +401,7 @@ Offset:              4.451ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
-  Total number of paths / destination ports: 203 / 36
+  Total number of paths / destination ports: 227 / 44
 -------------------------------------------------------------------------
 Offset:              7.461ns (Levels of Logic = 3)
   Source:            state_FSM_FFd11 (FF)
@@ -424,12 +423,12 @@ Offset:              7.461ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.81 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.38 secs
  
 --> 
 
-Total memory usage is 4510828 kilobytes
+Total memory usage is 4510852 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

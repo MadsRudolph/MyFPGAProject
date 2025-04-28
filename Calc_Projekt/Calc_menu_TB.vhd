@@ -21,7 +21,7 @@ architecture behavior of Calc_Menu_tb is
                Start : out  STD_LOGIC;
                Done : in  STD_LOGIC;
                OpCode : out  STD_LOGIC_VECTOR (2 downto 0);
-               In1 : out  STD_LOGIC_VECTOR (7 downto 0);
+               In1 : out  STD_LOGIC_VECTOR (15 downto 0);
                In2 : out  STD_LOGIC_VECTOR (7 downto 0);
                SW : in STD_LOGIC_VECTOR (7 downto 0));
     end component;
@@ -40,7 +40,7 @@ architecture behavior of Calc_Menu_tb is
     signal DispData : STD_LOGIC_VECTOR(15 downto 0);
     signal Start : STD_LOGIC;
     signal OpCode : STD_LOGIC_VECTOR(2 downto 0);
-    signal In1 : STD_LOGIC_VECTOR(7 downto 0);
+    signal In1 : STD_LOGIC_VECTOR(15 downto 0);
     signal In2 : STD_LOGIC_VECTOR(7 downto 0);
 
 begin

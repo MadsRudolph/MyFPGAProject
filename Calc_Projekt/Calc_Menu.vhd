@@ -12,7 +12,7 @@ entity Calc_Menu is
            Start : out  STD_LOGIC;
            Done : in  STD_LOGIC;
            OpCode : out  STD_LOGIC_VECTOR (2 downto 0);
-           In1 : out  STD_LOGIC_VECTOR (7 downto 0); --skal ændres til 16bit?
+           In1 : out  STD_LOGIC_VECTOR (15 downto 0); --skal ændres til 16bit?
            In2 : out  STD_LOGIC_VECTOR (7 downto 0);
            SW : in STD_LOGIC_VECTOR (7 downto 0));
 end Calc_Menu;
@@ -26,7 +26,7 @@ architecture Behavioral of Calc_Menu is
 
     -- Internal signals
     signal Calcvals : std_logic_vector (15 downto 0);
-    signal Op1S, Op2S, Val1S, Val3S, DispSel, Val2S : STD_LOGIC_VECTOR (7 downto 0);
+    signal Op1S, Op2S,Val1S, Val3S, DispSel, Val2S : STD_LOGIC_VECTOR (7 downto 0);
     signal Val1En, Val2En, Val3En, Op1En, Op2En, RegSel : STD_LOGIC;
 
 begin
@@ -187,8 +187,8 @@ begin
 
     with RegSel select
         In1 <=  
-            Val1S            			when '0',
-            CalcVals(7 downto 0)		when '1',
+             X"00" & Val1S       	 when '0',
+            CalcVals						 when '1',
             (others => '0')          when others;
 
     with RegSel select
@@ -204,7 +204,7 @@ begin
             (others => '0')          when others;
 
     -- Register mappings
-    Val1Reg: entity work.std_8bit_reg 
+    Val1Reg: entity work.std_8bit_reg
         port map (
             Reset => reset,
             Clk   => clk,

@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:46:19 04/28/2025 
+-- Create Date:    17:22:00 04/28/2025 
 -- Design Name: 
--- Module Name:    Calc_Top - Behavioral 
+-- Module Name:    weird_8bit_reg - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,19 +29,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Calc_Top is
-    Port ( BTN3 : in  STD_LOGIC;
-           MClk : in  STD_LOGIC;
-           BTN0 : in  STD_LOGIC;
-           BTN1 : in  STD_LOGIC;
-           BTN2 : in  STD_LOGIC;
-           SW : in  STD_LOGIC_VECTOR (7 downto 0);
-           An : out  STD_LOGIC_VECTOR (3 downto 0);
-           Cat : out  STD_LOGIC_VECTOR (6 downto 0);
-           LD : out  STD_LOGIC_VECTOR (7 downto 0));
-end Calc_Top;
+entity weird_8bit_reg is
+end weird_8bit_reg;
 
-architecture Behavioral of Calc_Top is
+architecture Behavioral of weird_8bit_reg is
 
 begin
 
