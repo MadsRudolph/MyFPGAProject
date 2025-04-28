@@ -130,9 +130,9 @@ begin
         -- Test Case 4: State D (setting op2)
         -- State D is active
         -- Step 7: Load Val3 value (from SW input)
-        SW <= "00000100";  -- Input value for Val3
+        SW <= "00000100";  -- Input value for op2
 		  wait for 20 ns;
-        Enter <= '1';      -- Simulate pressing Enter to load Val3
+        Enter <= '1';      -- Simulate pressing Enter to load op2
         wait for 20 ns;
         Enter <= '0';      -- Release Enter
         wait for 20 ns;

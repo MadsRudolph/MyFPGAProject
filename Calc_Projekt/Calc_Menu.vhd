@@ -154,6 +154,7 @@ begin
 					 nextstate <= I;
 					 
             when I =>
+					 regsel <='1';
                 Start <= '0';
 					 if done = '1'
 					 then

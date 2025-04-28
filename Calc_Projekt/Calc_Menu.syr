@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.87 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.87 secs
  
 --> Reading design: Calc_Menu.prj
 
@@ -242,6 +242,8 @@ Optimizing unit <std_16bit_reg> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block Calc_Menu, actual ratio is 5.
+FlipFlop state_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop state_FSM_FFd3 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -249,8 +251,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 71
- Flip-Flops                                            : 71
+# Registers                                            : 73
+ Flip-Flops                                            : 73
 
 =========================================================================
 
@@ -279,15 +281,15 @@ Design Statistics
 # IOs                              : 66
 
 Cell Usage :
-# BELS                             : 87
-#      LUT2                        : 6
-#      LUT3                        : 35
+# BELS                             : 88
+#      LUT2                        : 7
+#      LUT3                        : 16
 #      LUT3_L                      : 6
-#      LUT4                        : 37
+#      LUT4                        : 56
 #      MUXF5                       : 2
 #      VCC                         : 1
-# FlipFlops/Latches                : 71
-#      FDC                         : 14
+# FlipFlops/Latches                : 73
+#      FDC                         : 16
 #      FDCE                        : 56
 #      FDP                         : 1
 # Clock Buffers                    : 1
@@ -302,9 +304,9 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                       48  out of    960     5%  
- Number of Slice Flip Flops:             71  out of   1920     3%  
- Number of 4 input LUTs:                 84  out of   1920     4%  
+ Number of Slices:                       49  out of    960     5%  
+ Number of Slice Flip Flops:             73  out of   1920     3%  
+ Number of 4 input LUTs:                 85  out of   1920     4%  
  Number of IOs:                          66
  Number of bonded IOBs:                  66  out of     83    79%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -330,7 +332,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 71    |
+Clk                                | BUFGP                  | 73    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -338,7 +340,7 @@ Asynchronous Control Signals Information:
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-Reset                              | IBUF                   | 71    |
+Reset                              | IBUF                   | 73    |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
@@ -357,7 +359,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
   Clock period: 3.851ns (frequency: 259.673MHz)
-  Total number of paths / destination ports: 90 / 71
+  Total number of paths / destination ports: 109 / 73
 -------------------------------------------------------------------------
 Delay:               3.851ns (Levels of Logic = 2)
   Source:            state_FSM_FFd1 (FF)
@@ -379,7 +381,7 @@ Delay:               3.851ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
-  Total number of paths / destination ports: 90 / 71
+  Total number of paths / destination ports: 92 / 73
 -------------------------------------------------------------------------
 Offset:              4.451ns (Levels of Logic = 3)
   Source:            Enter (PAD)
@@ -400,7 +402,7 @@ Offset:              4.451ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
-  Total number of paths / destination ports: 184 / 36
+  Total number of paths / destination ports: 203 / 36
 -------------------------------------------------------------------------
 Offset:              7.461ns (Levels of Logic = 3)
   Source:            state_FSM_FFd11 (FF)
@@ -423,11 +425,11 @@ Offset:              7.461ns (Levels of Logic = 3)
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.62 secs
+Total CPU time to Xst completion: 5.81 secs
  
 --> 
 
-Total memory usage is 4510756 kilobytes
+Total memory usage is 4510828 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
