@@ -12,14 +12,15 @@ entity Calc_Menu is
            Start : out  STD_LOGIC;
            Done : in  STD_LOGIC;
            OpCode : out  STD_LOGIC_VECTOR (2 downto 0);
-           In1 : out  STD_LOGIC_VECTOR (7 downto 0);
+           In1 : out  STD_LOGIC_VECTOR (7 downto 0); --skal ændres til 16bit?
            In2 : out  STD_LOGIC_VECTOR (7 downto 0);
            SW : in STD_LOGIC_VECTOR (7 downto 0));
 end Calc_Menu;
 
 architecture Behavioral of Calc_Menu is
 
-    type Statetype is (A,B,C,D,E,F,G,H,I,Val1,Op1,Val2,Op2,Val3);
+    type Statetype is (A,B,C,D,E,F,G,H,I,J,Val1,Val2,Val3,Op1,Op2);
+
 
     signal state, nextstate : Statetype;
 
@@ -136,31 +137,37 @@ begin
             when F =>
                 Start <= '1';
                 RegSel <= '0';
-                if done = '1' then
                     nextstate <= G;
-                else 
-                    nextstate <= F;
-                end if;
 
             when G =>
                 Start <= '0';
+					 if done = '1'
+					 then
                 nextstate <= H;
+					 else
+						nextstate <= G;
+						end if;
 
             when H =>
                 Start <= '1';
                 RegSel <= '1';
-                if done = '1' then
-                    nextstate <= I;
-                else
-                    nextstate <= H;
-                end if;
-
+					 nextstate <= I;
+					 
             when I =>
+                Start <= '0';
+					 if done = '1'
+					 then
+                nextstate <= J;
+					 else
+						nextstate <= I;
+						end if;
+						
+            when J =>
                 DispSel <= "00000110";  
                 if enter = '1' then
                     nextstate <= A;
                 else 
-                    nextstate <= I;
+                    nextstate <= J;
                 end if;
         end case;
     end process;
@@ -170,11 +177,11 @@ begin
         DispData <= 
             (others => '0')          when "00000000", 
             X"A0" & Val1S            when "00000001",
-            X"B0" & Val2S            when "00000010",
-            X"C0" & Val3S            when "00000011",
-            X"d0" & Op1S             when "00000100",
-            X"E0" & Op2S             when "00000110",
-            CalcVals                 when "00000101",
+            X"B0" & Op1s             when "00000010",
+            X"C0" & Val2S            when "00000011",
+            X"d0" & Op2S             when "00000100",
+            X"E0" & Val3s            when "00000101",
+            CalcVals                 when "00000110",
             (others => '0')          when others;
 
     with RegSel select

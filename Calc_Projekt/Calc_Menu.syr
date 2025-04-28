@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: Calc_Menu.prj
 
@@ -161,8 +161,8 @@ Synthesizing Unit <Calc_Menu>.
     Related source file is "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd".
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
-    | States             | 14                                             |
-    | Transitions        | 32                                             |
+    | States             | 15                                             |
+    | Transitions        | 33                                             |
     | Inputs             | 4                                              |
     | Outputs            | 14                                             |
     | Clock              | Clk                       (rising_edge)        |
@@ -198,25 +198,26 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <state/FSM> on signal <state[1:14]> with one-hot encoding.
--------------------------
+Optimizing FSM <state/FSM> on signal <state[1:15]> with one-hot encoding.
+--------------------------
  State | Encoding
--------------------------
- a     | 00000000000001
- b     | 00000000000010
- c     | 00000000010000
- d     | 00000001000000
- e     | 00000100000000
- f     | 00000000001000
- g     | 00100000000000
- h     | 01000000000000
- i     | 10000000000000
- val1  | 00000000000100
- op1   | 00000000100000
- val2  | 00000010000000
- op2   | 00001000000000
- val3  | 00010000000000
--------------------------
+--------------------------
+ a     | 000000000000001
+ b     | 000000000000010
+ c     | 000000000010000
+ d     | 000000001000000
+ e     | 000000100000000
+ f     | 000000000001000
+ g     | 000100000000000
+ h     | 001000000000000
+ i     | 010000000000000
+ j     | 100000000000000
+ val1  | 000000000000100
+ val2  | 000000010000000
+ val3  | 000010000000000
+ op1   | 000000000100000
+ op2   | 000001000000000
+--------------------------
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -241,7 +242,6 @@ Optimizing unit <std_16bit_reg> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block Calc_Menu, actual ratio is 5.
-FlipFlop state_FSM_FFd6 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -279,8 +279,8 @@ Design Statistics
 # IOs                              : 66
 
 Cell Usage :
-# BELS                             : 89
-#      LUT2                        : 8
+# BELS                             : 87
+#      LUT2                        : 6
 #      LUT3                        : 35
 #      LUT3_L                      : 6
 #      LUT4                        : 37
@@ -302,9 +302,9 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                       49  out of    960     5%  
+ Number of Slices:                       48  out of    960     5%  
  Number of Slice Flip Flops:             71  out of   1920     3%  
- Number of 4 input LUTs:                 86  out of   1920     4%  
+ Number of 4 input LUTs:                 84  out of   1920     4%  
  Number of IOs:                          66
  Number of bonded IOBs:                  66  out of     83    79%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -345,8 +345,8 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 3.940ns (Maximum Frequency: 253.807MHz)
-   Minimum input arrival time before clock: 4.547ns
+   Minimum period: 3.851ns (Maximum Frequency: 259.673MHz)
+   Minimum input arrival time before clock: 4.451ns
    Maximum output required time after clock: 7.461ns
    Maximum combinational path delay: No path found
 
@@ -356,62 +356,62 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 3.940ns (frequency: 253.807MHz)
-  Total number of paths / destination ports: 92 / 71
+  Clock period: 3.851ns (frequency: 259.673MHz)
+  Total number of paths / destination ports: 90 / 71
 -------------------------------------------------------------------------
-Delay:               3.940ns (Levels of Logic = 2)
-  Source:            state_FSM_FFd13 (FF)
-  Destination:       state_FSM_FFd11 (FF)
+Delay:               3.851ns (Levels of Logic = 2)
+  Source:            state_FSM_FFd1 (FF)
+  Destination:       state_FSM_FFd15 (FF)
   Source Clock:      Clk rising
   Destination Clock: Clk rising
 
-  Data Path: state_FSM_FFd13 to state_FSM_FFd11
+  Data Path: state_FSM_FFd1 to state_FSM_FFd15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             16   0.591   1.209  state_FSM_FFd13 (state_FSM_FFd13)
-     LUT2:I0->O            1   0.704   0.424  state_FSM_FFd11-In3 (state_FSM_FFd11-In3)
-     LUT4:I3->O            1   0.704   0.000  state_FSM_FFd11-In30 (state_FSM_FFd11-In)
-     FDC:D                     0.308          state_FSM_FFd11
+     FDC:C->Q             19   0.591   1.089  state_FSM_FFd1 (state_FSM_FFd1)
+     LUT4:I3->O            1   0.704   0.455  state_FSM_FFd15-In_SW0 (N16)
+     LUT4:I2->O            1   0.704   0.000  state_FSM_FFd15-In (state_FSM_FFd15-In)
+     FDP:D                     0.308          state_FSM_FFd15
     ----------------------------------------
-    Total                      3.940ns (2.307ns logic, 1.633ns route)
-                                       (58.6% logic, 41.4% route)
+    Total                      3.851ns (2.307ns logic, 1.544ns route)
+                                       (59.9% logic, 40.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
-  Total number of paths / destination ports: 93 / 71
+  Total number of paths / destination ports: 90 / 71
 -------------------------------------------------------------------------
-Offset:              4.547ns (Levels of Logic = 3)
+Offset:              4.451ns (Levels of Logic = 3)
   Source:            Enter (PAD)
-  Destination:       state_FSM_FFd11 (FF)
+  Destination:       state_FSM_FFd12 (FF)
   Destination Clock: Clk rising
 
-  Data Path: Enter to state_FSM_FFd11
+  Data Path: Enter to state_FSM_FFd12
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            13   1.218   1.018  Enter_IBUF (Enter_IBUF)
-     LUT3:I2->O            1   0.704   0.595  state_FSM_FFd11-In18 (state_FSM_FFd11-In18)
-     LUT4:I0->O            1   0.704   0.000  state_FSM_FFd11-In30 (state_FSM_FFd11-In)
-     FDC:D                     0.308          state_FSM_FFd11
+     IBUF:I->O            13   1.218   1.062  Enter_IBUF (Enter_IBUF)
+     LUT4:I1->O            1   0.704   0.455  state_FSM_FFd15-In_SW0 (N16)
+     LUT4:I2->O            1   0.704   0.000  state_FSM_FFd15-In (state_FSM_FFd15-In)
+     FDP:D                     0.308          state_FSM_FFd15
     ----------------------------------------
-    Total                      4.547ns (2.934ns logic, 1.613ns route)
-                                       (64.5% logic, 35.5% route)
+    Total                      4.451ns (2.934ns logic, 1.517ns route)
+                                       (65.9% logic, 34.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
-  Total number of paths / destination ports: 187 / 36
+  Total number of paths / destination ports: 184 / 36
 -------------------------------------------------------------------------
 Offset:              7.461ns (Levels of Logic = 3)
-  Source:            state_FSM_FFd10 (FF)
+  Source:            state_FSM_FFd11 (FF)
   Destination:       DispData<7> (PAD)
   Source Clock:      Clk rising
 
-  Data Path: state_FSM_FFd10 to DispData<7>
+  Data Path: state_FSM_FFd11 to DispData<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             14   0.591   1.175  state_FSM_FFd10 (state_FSM_FFd10)
+     FDC:C->Q             14   0.591   1.175  state_FSM_FFd11 (state_FSM_FFd11)
      LUT4:I0->O            1   0.704   0.595  DispData<7>4 (DispData<7>4)
      LUT3:I0->O            1   0.704   0.420  DispData<7>23 (DispData_7_OBUF)
      OBUF:I->O                 3.272          DispData_7_OBUF (DispData<7>)
@@ -423,11 +423,11 @@ Offset:              7.461ns (Levels of Logic = 3)
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.95 secs
+Total CPU time to Xst completion: 4.62 secs
  
 --> 
 
-Total memory usage is 4510836 kilobytes
+Total memory usage is 4510756 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

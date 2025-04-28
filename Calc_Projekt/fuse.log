@@ -1,16 +1,14 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu_tb_isim_beh.exe -prj /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu_tb_beh.prj work.Calc_Menu_tb 
-ISim P.20131013 (signature 0xfbc00daa)
-Number of CPUs detected in this system: 3
-Turning on mult-threading, number of parallel sub-compilation jobs: 6 
+Running: P:\Xilinx\14.1\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu_tb_isim_beh.exe -prj C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu_tb_beh.prj work.Calc_Menu_tb 
+ISim P.15xf (signature 0xc3576ebc)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Parsing VHDL file "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd" into library work
-Parsing VHDL file "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd" into library work
-Parsing VHDL file "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" into library work
-Parsing VHDL file "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_menu_TB.vhd" into library work
+Parsing VHDL file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd" into library work
+Parsing VHDL file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd" into library work
+Parsing VHDL file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" into library work
+Parsing VHDL file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_menu_TB.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 84588 KB
-Fuse CPU Usage: 1060 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
@@ -20,9 +18,8 @@ Compiling architecture behavioral of entity std_16bit_reg [std_16bit_reg_default
 Compiling architecture behavioral of entity Calc_Menu [calc_menu_default]
 Compiling architecture behavior of entity calc_menu_tb
 Time Resolution for simulation is 1ps.
-Waiting for 2 sub-compilation(s) to finish...
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 11 VHDL Units
-Built simulation executable /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu_tb_isim_beh.exe
-Fuse Memory Usage: 525840 KB
-Fuse CPU Usage: 1110 ms
-GCC CPU Usage: 1370 ms
+Built simulation executable C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu_tb_isim_beh.exe
+Fuse Memory Usage: 33888 KB
+Fuse CPU Usage: 468 ms

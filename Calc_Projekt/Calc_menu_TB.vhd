@@ -83,6 +83,7 @@ begin
         -- State A is active
         -- Step 1: Load Val1 value into the register
         SW <= "00000001";  -- Input value for Val1
+		  wait for 20 ns;
         Enter <= '1';      -- Simulate pressing Enter to load Val1
         wait for 20 ns;
         Enter <= '0';      -- Release Enter
@@ -98,49 +99,83 @@ begin
         -- State B is active
         -- Step 3: Load Op1 value (from SW input)
         SW <= "00000010";  -- Input value for Op1
+		  wait for 20 ns;
         Enter <= '1';      -- Simulate pressing Enter to load Op1
         wait for 20 ns;
         Enter <= '0';      -- Release Enter
         wait for 20 ns;
 
-        -- Step 4: Press Func to move to State C (set Op2)
+        -- Step 4: Press Func to move to State C (set val2)
         Func <= '1';       -- Press Func to go to next state (State C)
         wait for 20 ns;
         Func <= '0';       -- Release Func
         wait for 20 ns;
 
-        -- Test Case 3: State C (setting Op2)
+        -- Test Case 3: State C (val2)
         -- State C is active
         -- Step 5: Load Op2 value (from SW input)
-        SW <= "00000011";  -- Input value for Op2
-        Enter <= '1';      -- Simulate pressing Enter to load Op2
+        SW <= "00000011";  -- Input value for val2
+		  wait for 20 ns;
+        Enter <= '1';      -- Simulate pressing Enter to load val2
         wait for 20 ns;
         Enter <= '0';      -- Release Enter
         wait for 20 ns;
 
-        -- Step 6: Press Func to move to State D (set Val3)
+        -- Step 6: Press Func to move to State D (set op2)
         Func <= '1';       -- Press Func to go to next state (State D)
         wait for 20 ns;
         Func <= '0';       -- Release Func
         wait for 20 ns;
 
-        -- Test Case 4: State D (setting Val3)
+        -- Test Case 4: State D (setting op2)
         -- State D is active
         -- Step 7: Load Val3 value (from SW input)
         SW <= "00000100";  -- Input value for Val3
+		  wait for 20 ns;
         Enter <= '1';      -- Simulate pressing Enter to load Val3
         wait for 20 ns;
         Enter <= '0';      -- Release Enter
         wait for 20 ns;
 
-        -- Step 8: Press Func to complete the operation (or to check OpCode)
-        Func <= '1';       -- Press Func to go to the final state (operation done)
+        -- Step 8: Press fumc to go to state E (Setting Val3)
+        Func <= '1';       
         wait for 20 ns;
         Func <= '0';       -- Release Func
         wait for 20 ns;
 
-        -- End simulation
-        wait;
+		  SW <= "00000100";  -- Input value for Val3
+		  wait for 20 ns;
+        Enter <= '1';      -- Simulate pressing Enter to load Val3
+        wait for 20 ns;
+        Enter <= '0';      -- Release Enter
+        wait for 20 ns;
+      
+		
+		 -- step 9 Going to state F by pressing operation
+		 operation <= '1';
+		 wait for 20 ns;
+		 operation <='0';
+		 wait for 40 ns; --Wait for state change G to H (2clk)
+		
+		--stepsis 10
+		done <= '1';
+		wait for 20 ns;
+		done <= '0';
+		wait for 40 ns;
+		
+		--step 11 going from I to J when done is high
+		done <= '1';
+		wait for 20 ns;
+		done <='0';
+		wait for 20 ns;
+		
+		--step 12 going back to State A
+		enter <='1';
+		wait for 20 ns;
+		enter <='0';
+		wait for 20 ns;
+		
+		wait;
     end process;
 
 end behavior;
