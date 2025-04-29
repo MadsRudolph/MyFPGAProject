@@ -93,7 +93,7 @@ begin
 
             when C =>
                 DispSel <= "00000011";
-					 Tilstand <= "00000011";					 
+					 Tilstand <= "00000100";					 
                 if func = '1' then
                     nextstate <= D;
                 elsif enter = '1' then 
@@ -110,7 +110,7 @@ begin
 
             when D =>
                 DispSel <= "00000100";
-					 Tilstand <= "00000100";					 
+					 Tilstand <= "00001000";					 
                 if func = '1' then
                     nextstate <= E;
                 elsif enter = '1' then 
@@ -127,7 +127,7 @@ begin
 
             when E =>
                 DispSel <= "00000101";
-					 Tilstand <= "00000101";					 
+					 Tilstand <= "00010000";					 
                 if func = '1' then
                     nextstate <= A;
                 elsif enter = '1' then 
@@ -143,13 +143,12 @@ begin
                 nextstate <= E;
 
             when F =>
-					 Tilstand <= "00000110";
                 Start <= '1';
                 RegSel <= '0';
                     nextstate <= G;
 
             when G =>
-					 Tilstand <= "00000111";
+					 Tilstand <= "00100000";
                 Start <= '0';
 					 if done = '1'
 					 then
@@ -159,13 +158,12 @@ begin
 						end if;
 
             when H =>
-					 Tilstand <= "00001000";
                 Start <= '1';
                 RegSel <= '1';
 					 nextstate <= I;
 					 
             when I =>
-					 Tilstand <= "00001001";
+					 Tilstand <= "01000000";
 					 regsel <='1';
                 Start <= '0';
 					 if done = '1'
@@ -176,7 +174,7 @@ begin
 						end if;
 						
             when J =>
-					 Tilstand <= "00001010";
+					 Tilstand <= "10000000";
                 DispSel <= "00000110";  
                 if enter = '1' then
                     nextstate <= A;

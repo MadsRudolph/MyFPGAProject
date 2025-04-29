@@ -57,7 +57,7 @@ begin
         port map (
             Reset => BTN3,
             Clk   => MClk,
-				TimeP => 50e6,
+				TimeP => 50e3,
 				Clk1 => dispclk 
         );
 		  

@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.12 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: Calc_Top.prj
 
@@ -115,10 +115,10 @@ Architecture sevenseg_arch of Entity sevenseg4 is up to date.
 Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Debounce_corrected.vhd" in Library work.
 Architecture behavioral of Entity debounce is up to date.
 Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" in Library work.
-Architecture behavioral of Entity calc_menu is up to date.
+Entity <calc_menu> compiled.
+Entity <calc_menu> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd" in Library work.
-Entity <calc_top> compiled.
-Entity <calc_top> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity calc_top is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -233,7 +233,7 @@ Synthesizing Unit <Calc_Menu>.
     | States             | 15                                             |
     | Transitions        | 33                                             |
     | Inputs             | 4                                              |
-    | Outputs            | 22                                             |
+    | Outputs            | 16                                             |
     | Clock              | Clk                       (rising_edge)        |
     | Reset              | Reset                     (positive)           |
     | Reset type         | asynchronous                                   |
@@ -421,16 +421,16 @@ Design Statistics
 # IOs                              : 32
 
 Cell Usage :
-# BELS                             : 356
+# BELS                             : 353
 #      GND                         : 1
-#      INV                         : 6
-#      LUT1                        : 56
+#      INV                         : 5
+#      LUT1                        : 57
 #      LUT2                        : 31
 #      LUT2_D                      : 2
 #      LUT3                        : 12
 #      LUT3_D                      : 2
 #      LUT3_L                      : 4
-#      LUT4                        : 100
+#      LUT4                        : 97
 #      LUT4_D                      : 1
 #      MUXCY                       : 77
 #      MUXF5                       : 4
@@ -454,7 +454,7 @@ Selected Device : 3s100ecp132-4
 
  Number of Slices:                      121  out of    960    12%  
  Number of Slice Flip Flops:            122  out of   1920     6%  
- Number of 4 input LUTs:                214  out of   1920    11%  
+ Number of 4 input LUTs:                211  out of   1920    10%  
  Number of IOs:                          32
  Number of bonded IOBs:                  32  out of     83    38%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -582,7 +582,7 @@ Offset:              4.401ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            11   1.218   1.012  BTN0_IBUF (BTN0_IBUF)
-     LUT3:I1->O            1   0.704   0.455  U5/state_FSM_FFd9-In_SW0 (N14)
+     LUT3:I1->O            1   0.704   0.455  U5/state_FSM_FFd9-In_SW0 (N12)
      LUT4:I2->O            1   0.704   0.000  U5/state_FSM_FFd9-In (U5/state_FSM_FFd9-In)
      FDC:D                     0.308          U5/state_FSM_FFd9
     ----------------------------------------
@@ -603,17 +603,17 @@ Offset:              8.070ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q             14   0.591   1.175  U2/DispCount_0 (U2/DispCount_0)
-     LUT3:I0->O            1   0.704   0.000  U2/Mmux_DataN_41 (U2/Mmux_DataN_41)
-     MUXF5:I0->O           7   0.321   0.883  U2/Mmux_DataN_2_f5_0 (U2/DataN<1>)
-     LUT4:I0->O            1   0.704   0.420  U2/Mrom_cat21 (Cat_2_OBUF)
-     OBUF:I->O                 3.272          Cat_2_OBUF (Cat<2>)
+     LUT3:I0->O            1   0.704   0.000  U2/Mmux_DataN_4 (U2/Mmux_DataN_4)
+     MUXF5:I0->O           7   0.321   0.883  U2/Mmux_DataN_2_f5 (U2/DataN<0>)
+     LUT4:I0->O            1   0.704   0.420  U2/Mrom_cat111 (Cat_1_OBUF)
+     OBUF:I->O                 3.272          Cat_1_OBUF (Cat<1>)
     ----------------------------------------
     Total                      8.070ns (5.592ns logic, 2.478ns route)
                                        (69.3% logic, 30.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'MClk'
-  Total number of paths / destination ports: 663 / 10
+  Total number of paths / destination ports: 657 / 13
 -------------------------------------------------------------------------
 Offset:              10.572ns (Levels of Logic = 6)
   Source:            U5/state_FSM_FFd15 (FF)
@@ -629,8 +629,8 @@ Offset:              10.572ns (Levels of Logic = 6)
      LUT4:I0->O            1   0.704   0.499  U5/DispData<3>17 (DispData<3>)
      LUT3:I1->O            1   0.704   0.000  U2/Mmux_DataN_43 (U2/Mmux_DataN_43)
      MUXF5:I0->O           7   0.321   0.883  U2/Mmux_DataN_2_f5_2 (U2/DataN<3>)
-     LUT4:I0->O            1   0.704   0.420  U2/Mrom_cat41 (Cat_4_OBUF)
-     OBUF:I->O                 3.272          Cat_4_OBUF (Cat<4>)
+     LUT4:I0->O            1   0.704   0.420  U2/Mrom_cat21 (Cat_2_OBUF)
+     OBUF:I->O                 3.272          Cat_2_OBUF (Cat<2>)
     ----------------------------------------
     Total                     10.572ns (7.000ns logic, 3.572ns route)
                                        (66.2% logic, 33.8% route)
@@ -639,11 +639,11 @@ Offset:              10.572ns (Levels of Logic = 6)
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.14 secs
+Total CPU time to Xst completion: 5.00 secs
  
 --> 
 
-Total memory usage is 4510776 kilobytes
+Total memory usage is 4510832 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   30 (   0 filtered)
