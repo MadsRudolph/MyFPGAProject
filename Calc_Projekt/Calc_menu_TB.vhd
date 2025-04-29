@@ -155,15 +155,16 @@ begin
 		 operation <= '1';
 		 wait for 20 ns;
 		 operation <='0';
-		 wait for 40 ns; --Wait for state change G to H (2clk)
-		
+		 wait for 40 ns;
 		--stepsis 10
+		calcval <="0010010010010101";
 		done <= '1';
 		wait for 20 ns;
 		done <= '0';
-		wait for 40 ns;
+		wait for 20 ns;
 		
-		--step 11 going from I to J when done is high
+		calcval <="1111111111111111";
+		--step 11 going from j to k when done is high
 		done <= '1';
 		wait for 20 ns;
 		done <='0';
@@ -174,6 +175,11 @@ begin
 		wait for 20 ns;
 		enter <='0';
 		wait for 20 ns;
+		enter <='1';
+		wait for 20 ns;
+		enter <='0';
+		wait for 20 ns;
+	
 		
 		wait;
     end process;

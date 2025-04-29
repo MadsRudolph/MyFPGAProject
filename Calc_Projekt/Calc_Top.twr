@@ -45,17 +45,17 @@ Setup/Hold to clock MClk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-BTN0        |    4.087(R)|    0.695(R)|MClk_BUFGP        |   0.000|
-BTN1        |    0.698(R)|    0.620(R)|MClk_BUFGP        |   0.000|
-BTN2        |    1.042(R)|    0.347(R)|MClk_BUFGP        |   0.000|
-SW<0>       |    0.773(R)|    0.923(R)|MClk_BUFGP        |   0.000|
-SW<1>       |    1.180(R)|    0.501(R)|MClk_BUFGP        |   0.000|
-SW<2>       |    1.520(R)|    0.784(R)|MClk_BUFGP        |   0.000|
-SW<3>       |    2.231(R)|    0.885(R)|MClk_BUFGP        |   0.000|
-SW<4>       |    0.867(R)|    1.318(R)|MClk_BUFGP        |   0.000|
-SW<5>       |    1.121(R)|    1.002(R)|MClk_BUFGP        |   0.000|
-SW<6>       |    1.617(R)|    0.526(R)|MClk_BUFGP        |   0.000|
-SW<7>       |    1.147(R)|    0.859(R)|MClk_BUFGP        |   0.000|
+BTN0        |    2.902(R)|    0.387(R)|MClk_BUFGP        |   0.000|
+BTN1        |    0.425(R)|    0.839(R)|MClk_BUFGP        |   0.000|
+BTN2        |    0.738(R)|    0.591(R)|MClk_BUFGP        |   0.000|
+SW<0>       |    1.018(R)|    0.738(R)|MClk_BUFGP        |   0.000|
+SW<1>       |    2.172(R)|   -0.064(R)|MClk_BUFGP        |   0.000|
+SW<2>       |    1.391(R)|    0.562(R)|MClk_BUFGP        |   0.000|
+SW<3>       |    0.998(R)|    0.896(R)|MClk_BUFGP        |   0.000|
+SW<4>       |    0.637(R)|    1.280(R)|MClk_BUFGP        |   0.000|
+SW<5>       |    0.744(R)|    0.898(R)|MClk_BUFGP        |   0.000|
+SW<6>       |    0.849(R)|    0.730(R)|MClk_BUFGP        |   0.000|
+SW<7>       |    1.077(R)|    0.881(R)|MClk_BUFGP        |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock MClk to Pad
@@ -63,19 +63,19 @@ Clock MClk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-Cat<0>      |   15.928(R)|MClk_BUFGP        |   0.000|
-Cat<1>      |   15.960(R)|MClk_BUFGP        |   0.000|
-Cat<2>      |   16.171(R)|MClk_BUFGP        |   0.000|
-Cat<3>      |   15.779(R)|MClk_BUFGP        |   0.000|
-Cat<4>      |   16.580(R)|MClk_BUFGP        |   0.000|
-Cat<5>      |   16.344(R)|MClk_BUFGP        |   0.000|
-Cat<6>      |   15.951(R)|MClk_BUFGP        |   0.000|
-ld<0>       |    8.238(R)|MClk_BUFGP        |   0.000|
-ld<1>       |    8.910(R)|MClk_BUFGP        |   0.000|
-ld<2>       |    9.242(R)|MClk_BUFGP        |   0.000|
-ld<3>       |    8.413(R)|MClk_BUFGP        |   0.000|
-ld<4>       |    8.590(R)|MClk_BUFGP        |   0.000|
-ld<5>       |    7.694(R)|MClk_BUFGP        |   0.000|
+Cat<0>      |   16.762(R)|MClk_BUFGP        |   0.000|
+Cat<1>      |   17.103(R)|MClk_BUFGP        |   0.000|
+Cat<2>      |   17.224(R)|MClk_BUFGP        |   0.000|
+Cat<3>      |   17.135(R)|MClk_BUFGP        |   0.000|
+Cat<4>      |   17.212(R)|MClk_BUFGP        |   0.000|
+Cat<5>      |   17.063(R)|MClk_BUFGP        |   0.000|
+Cat<6>      |   17.190(R)|MClk_BUFGP        |   0.000|
+ld<0>       |    8.296(R)|MClk_BUFGP        |   0.000|
+ld<1>       |    8.822(R)|MClk_BUFGP        |   0.000|
+ld<2>       |    8.824(R)|MClk_BUFGP        |   0.000|
+ld<3>       |    9.458(R)|MClk_BUFGP        |   0.000|
+ld<4>       |    8.702(R)|MClk_BUFGP        |   0.000|
+ld<5>       |    7.929(R)|MClk_BUFGP        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock MClk
@@ -83,11 +83,11 @@ Clock to Setup on destination clock MClk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-MClk           |    7.136|         |         |         |
+MClk           |    7.139|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Apr 29 14:30:07 2025 
+Analysis completed Tue Apr 29 15:57:41 2025 
 --------------------------------------------------------------------------------
 
 Trace Settings:

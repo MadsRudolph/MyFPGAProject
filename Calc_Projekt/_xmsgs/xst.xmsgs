@@ -90,6 +90,9 @@
 It will be removed from the design.
 </msg>
 
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FFd4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">FSM</arg>&gt;.
+</msg>
+
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">state_FSM_FFd1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Calc_Menu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -99,8 +102,55 @@ It will be removed from the design.
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">state_FSM_FFd3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Calc_Menu</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1899" delta="old" >Due to constant pushing, all outputs of the instance &lt;<arg fmt="%s" index="1">CalcValReg</arg>&gt; of the block &lt;<arg fmt="%s" index="2">std_16bit_reg</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">Calc_Menu</arg>&gt;.
-This instance will be removed from the design along with all underlying logic
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/CalcValReg/data_out_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U5/state_FSM_FFd4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Calc_Top</arg>&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.

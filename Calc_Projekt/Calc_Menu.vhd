@@ -21,7 +21,7 @@ end Calc_Menu;
 
 architecture Behavioral of Calc_Menu is
 
-    type Statetype is (A,B,C,D,E,F,G,H,I,J,Val1,Val2,Val3,Op1,Op2);
+    type Statetype is (A,B,C,D,E,F,G,H,I,J, K, Val1,Val2,Val3,Op1,Op2);
 
 
     signal state, nextstate : Statetype;
@@ -150,36 +150,40 @@ begin
             when G =>
 					 Tilstand <= "00100000";
                 Start <= '0';
+						nextstate <= H;
+						
+            when H =>
+                RegSel <= '1';
 					 if done = '1'
 					 then
-                nextstate <= H;
+                nextstate <= I;
 					 else
-						nextstate <= G;
-						end if;
-
-            when H =>
+						nextstate <= H;
+						end if;					
+            
+				when I =>
+					 RegSel <= '1';
                 Start <= '1';
-                RegSel <= '1';
-					 nextstate <= I;
+					 nextstate <= J;
 					 
-            when I =>
+            when J =>
+					 RegSel <= '1';
 					 Tilstand <= "01000000";
-					 regsel <='1';
                 Start <= '0';
 					 if done = '1'
 					 then
-                nextstate <= J;
+                nextstate <= K;
 					 else
-						nextstate <= I;
+						nextstate <= J;
 						end if;
 						
-            when J =>
+            when K =>
 					 Tilstand <= "10000000";
                 DispSel <= "00000110";  
                 if enter = '1' then
                     nextstate <= A;
                 else 
-                    nextstate <= J;
+                    nextstate <= K;
                 end if;
         end case;
     end process;
