@@ -12,9 +12,11 @@ entity Calc_Menu is
            Start : out  STD_LOGIC;
            Done : in  STD_LOGIC;
            OpCode : out  STD_LOGIC_VECTOR (2 downto 0);
-           In1 : out  STD_LOGIC_VECTOR (15 downto 0); --skal ændres til 16bit?
+           In1 : out  STD_LOGIC_VECTOR (15 downto 0);
            In2 : out  STD_LOGIC_VECTOR (7 downto 0);
-           SW : in STD_LOGIC_VECTOR (7 downto 0));
+           SW : in STD_LOGIC_VECTOR (7 downto 0);
+			  Tilstand: out std_logic_vector (7 downto 0));
+			  
 end Calc_Menu;
 
 architecture Behavioral of Calc_Menu is
@@ -52,10 +54,12 @@ begin
         Start <= '0';
         RegSel <= '0';
         DispSel <= "00000000";
+		  Tilstand <= "00000000";
 
         case state is
             when A =>
-                DispSel <= "00000001";  
+                DispSel <= "00000001";
+					 Tilstand <= "00000001";
                 if func = '1' then
                     nextstate <= B;
                 elsif enter = '1' then 
@@ -71,7 +75,8 @@ begin
                 nextstate <= A;
 
             when B =>
-                DispSel <= "00000010";  
+                DispSel <= "00000010";
+					 Tilstand <= "00000010";					 
                 if func = '1' then
                     nextstate <= C;
                 elsif enter = '1' then 
@@ -87,7 +92,8 @@ begin
                 nextstate <= B;
 
             when C =>
-                DispSel <= "00000011";  
+                DispSel <= "00000011";
+					 Tilstand <= "00000011";					 
                 if func = '1' then
                     nextstate <= D;
                 elsif enter = '1' then 
@@ -103,7 +109,8 @@ begin
                 nextstate <= C;
 
             when D =>
-                DispSel <= "00000100";  
+                DispSel <= "00000100";
+					 Tilstand <= "00000100";					 
                 if func = '1' then
                     nextstate <= E;
                 elsif enter = '1' then 
@@ -119,7 +126,8 @@ begin
                 nextstate <= D;
 
             when E =>
-                DispSel <= "00000101";  
+                DispSel <= "00000101";
+					 Tilstand <= "00000101";					 
                 if func = '1' then
                     nextstate <= A;
                 elsif enter = '1' then 
@@ -135,11 +143,13 @@ begin
                 nextstate <= E;
 
             when F =>
+					 Tilstand <= "00000110";
                 Start <= '1';
                 RegSel <= '0';
                     nextstate <= G;
 
             when G =>
+					 Tilstand <= "00000111";
                 Start <= '0';
 					 if done = '1'
 					 then
@@ -149,11 +159,13 @@ begin
 						end if;
 
             when H =>
+					 Tilstand <= "00001000";
                 Start <= '1';
                 RegSel <= '1';
 					 nextstate <= I;
 					 
             when I =>
+					 Tilstand <= "00001001";
 					 regsel <='1';
                 Start <= '0';
 					 if done = '1'
@@ -164,6 +176,7 @@ begin
 						end if;
 						
             when J =>
+					 Tilstand <= "00001010";
                 DispSel <= "00000110";  
                 if enter = '1' then
                     nextstate <= A;

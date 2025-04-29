@@ -38,7 +38,7 @@ entity Calc_Top is
            SW : in  STD_LOGIC_VECTOR (7 downto 0);
            An : out  STD_LOGIC_VECTOR (3 downto 0);
            Cat : out  STD_LOGIC_VECTOR (6 downto 0);
-           LD : out  STD_LOGIC_VECTOR (7 downto 0));
+           ld : out  STD_LOGIC_VECTOR (7 downto 0));
 end Calc_Top;
 
 
@@ -98,7 +98,7 @@ begin
 				SW => SW,
 				CalcVal => CalcVal,
 				DispData => DispData,
-				-- Tilstand => LD,
+				Tilstand => ld,
 				Start => Start,
 				Done => Done,
 				OpCode => OpCode,
@@ -106,17 +106,17 @@ begin
 				In2 => In2
 	        );
 			  
-    U6: entity work.Calc_Data
-        port map (
-            Reset => BTN3,
-            Clk   => MClk,
-				CalcVal => CalcVal,
-				Start => Start,
-				Done => Done,
-				OpCode => OpCode,
-				In1 => In1,
-				In2 => In2
-	        );
+    --U6: entity work.Calc_Data
+        --port map (
+            --Reset => BTN3,
+            --Clk   => MClk,
+				--CalcVal => CalcVal,
+				--Start => Start,
+				--Done => Done,
+				--OpCode => OpCode,
+				--In1 => In1,
+				--In2 => In2
+	        --);
 			 
 end Behavioral;
 

@@ -1,57 +1,57 @@
 V3 31
-FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd 2025/04/28.17:37:39 P.15xf
-EN work/Calc_Menu 1745858267 \
+FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd 2025/04/29.13:20:31 P.15xf
+EN work/Calc_Menu 1745926243 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd \
       PB ieee/std_logic_1164 1335251622
-AR work/Calc_Menu/Behavioral 1745858268 \
+AR work/Calc_Menu/Behavioral 1745926244 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd \
-      EN work/Calc_Menu 1745858267 CP work/std_8bit_reg CP work/std_16bit_reg
-FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd 2025/04/28.18:34:50 P.15xf
-EN work/Calc_Top 1745858107 \
+      EN work/Calc_Menu 1745926243 CP work/std_8bit_reg CP work/std_16bit_reg
+FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd 2025/04/29.13:30:28 P.15xf
+EN work/Calc_Top 1745926245 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd \
       PB ieee/std_logic_1164 1335251622
-AR work/Calc_Top/Behavioral 1745858108 \
+AR work/Calc_Top/Behavioral 1745926246 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd \
-      EN work/Calc_Top 1745858107 CP work/DivClk CP work/SevenSeg4 CP work/Debounce \
-      CP work/Calc_Menu CP work/Calc_Data
+      EN work/Calc_Top 1745926245 CP work/DivClk CP work/SevenSeg4 CP work/Debounce \
+      CP work/Calc_Menu
 FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Debounce_corrected.vhd 2025/03/10.12:38:35 P.15xf
-EN work/Debounce 1745858265 \
+EN work/Debounce 1745926241 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Debounce_corrected.vhd \
       PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/Debounce/Behavioral 1745858266 \
+AR work/Debounce/Behavioral 1745926242 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Debounce_corrected.vhd \
-      EN work/Debounce 1745858265
+      EN work/Debounce 1745926241
 FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/DivClk.vhd 2025/03/10.12:38:37 P.15xf
-EN work/DivClk 1745858261 \
+EN work/DivClk 1745926237 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/DivClk.vhd \
       PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/DivClk/DivClk_arch 1745858262 \
+AR work/DivClk/DivClk_arch 1745926238 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/DivClk.vhd \
-      EN work/DivClk 1745858261
+      EN work/DivClk 1745926237
 FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/SevenSeg4.vhd 2025/04/28.18:31:00 P.15xf
-EN work/SevenSeg4 1745858263 \
+EN work/SevenSeg4 1745926239 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/SevenSeg4.vhd \
       PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/SevenSeg4/SevenSeg_arch 1745858264 \
+AR work/SevenSeg4/SevenSeg_arch 1745926240 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/SevenSeg4.vhd \
-      EN work/SevenSeg4 1745858263
+      EN work/SevenSeg4 1745926239
 FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd 2025/04/07.13:11:25 P.15xf
-EN work/std_16bit_reg 1745858259 \
+EN work/std_16bit_reg 1745926235 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd \
       PB ieee/std_logic_1164 1335251622
-AR work/std_16bit_reg/Behavioral 1745858260 \
+AR work/std_16bit_reg/Behavioral 1745926236 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd \
-      EN work/std_16bit_reg 1745858259
+      EN work/std_16bit_reg 1745926235
 FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd 2025/04/28.17:14:04 P.15xf
-EN work/std_8bit_reg 1745858257 \
+EN work/std_8bit_reg 1745926233 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd \
       PB ieee/std_logic_1164 1335251622
-AR work/std_8bit_reg/Behavioral 1745858258 \
+AR work/std_8bit_reg/Behavioral 1745926234 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd \
-      EN work/std_8bit_reg 1745858257
+      EN work/std_8bit_reg 1745926233
 FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/wird_8bit_reg.vhd 2025/04/28.17:34:52 P.15xf
 EN work/wird_8bit_reg 1745854511 \
       FL C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/wird_8bit_reg.vhd \
