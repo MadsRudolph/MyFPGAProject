@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Cald_data_TB_isim_beh.exe" -prj "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Cald_data_TB_beh.prj" "work.Cald_data_TB" 
+-intstyle "ise" -incremental -o "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_TB_isim_beh.exe" -prj "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_TB_beh.prj" "work.Calc_data_TB" 

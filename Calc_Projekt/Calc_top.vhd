@@ -108,7 +108,6 @@ begin
 			  
     U6: entity work.Calc_Data_topmudule
         port map (
-            Reset => BTN3,
             Clk   => MClk,
 				Calc_Val => CalcVal,
 				Start => Start,
