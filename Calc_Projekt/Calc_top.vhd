@@ -106,17 +106,17 @@ begin
 				In2 => In2
 	        );
 			  
-    --U6: entity work.Calc_Data
-        --port map (
-            --Reset => BTN3,
-            --Clk   => MClk,
-				--CalcVal => CalcVal,
-				--Start => Start,
-				--Done => Done,
-				--OpCode => OpCode,
-				--In1 => In1,
-				--In2 => In2
-	        --);
+    U6: entity work.Calc_Data_topmudule
+        port map (
+            Reset => BTN3,
+            Clk   => MClk,
+				Calc_Val => CalcVal,
+				Start => Start,
+				Done => Done,
+				OpCode => OpCode,
+				Inp1 => In1,
+				Inp2 => In2
+	        );
 			 
 end Behavioral;
 

@@ -1,4 +1,0 @@
-vhdl isim_temp "std_8bit_reg.vhd"
-vhdl isim_temp "std_16bit_reg.vhd"
-vhdl isim_temp "Calc_Menu.vhd"
-vhdl isim_temp "Calc_menu_TB.vhd"

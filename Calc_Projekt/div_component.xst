@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/xst"
+elaborate
+-ifn div_component.prj
+-ifmt mixed

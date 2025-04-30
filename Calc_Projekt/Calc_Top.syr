@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.85 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.85 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: Calc_Top.prj
 
@@ -104,6 +104,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
+Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/div_compoent.vhd" in Library work.
+Entity <div_component> compiled.
+Entity <div_component> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd" in Library work.
 Architecture behavioral of Entity std_8bit_reg is up to date.
 Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd" in Library work.
@@ -115,8 +118,9 @@ Architecture sevenseg_arch of Entity sevenseg4 is up to date.
 Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Debounce_corrected.vhd" in Library work.
 Architecture behavioral of Entity debounce is up to date.
 Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" in Library work.
-Entity <calc_menu> compiled.
-Entity <calc_menu> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity calc_menu is up to date.
+Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd" in Library work.
+Architecture behavioral of Entity calc_data_topmudule is up to date.
 Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd" in Library work.
 Architecture behavioral of Entity calc_top is up to date.
 
@@ -133,9 +137,13 @@ Analyzing hierarchy for entity <Debounce> in library <work> (architecture <Behav
 
 Analyzing hierarchy for entity <Calc_Menu> in library <work> (architecture <Behavioral>).
 
+Analyzing hierarchy for entity <Calc_data_topmudule> in library <work> (architecture <Behavioral>).
+
 Analyzing hierarchy for entity <std_8bit_reg> in library <work> (architecture <Behavioral>).
 
 Analyzing hierarchy for entity <std_16bit_reg> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <div_component> in library <work> (architecture <behavioral>).
 
 
 =========================================================================
@@ -161,6 +169,13 @@ Entity <std_8bit_reg> analyzed. Unit <std_8bit_reg> generated.
 
 Analyzing Entity <std_16bit_reg> in library <work> (Architecture <Behavioral>).
 Entity <std_16bit_reg> analyzed. Unit <std_16bit_reg> generated.
+
+Analyzing Entity <Calc_data_topmudule> in library <work> (Architecture <Behavioral>).
+Entity <Calc_data_topmudule> analyzed. Unit <Calc_data_topmudule> generated.
+
+Analyzing Entity <div_component> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <Div_reg> in unit <div_component> has a constant value of 000000000000000000000000 during circuit operation. The register is replaced by logic.
+Entity <div_component> analyzed. Unit <div_component> generated.
 
 
 =========================================================================
@@ -226,6 +241,30 @@ Synthesizing Unit <std_16bit_reg>.
 Unit <std_16bit_reg> synthesized.
 
 
+Synthesizing Unit <div_component>.
+    Related source file is "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/div_compoent.vhd".
+WARNING:Xst:647 - Input <Inp1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <resets> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <aktiv>.
+    Found 5-bit comparator less for signal <aktiv$cmp_lt0000> created at line 138.
+    Found 5-bit up counter for signal <counter>.
+    Found 5-bit comparator greatequal for signal <counter$cmp_ge0000> created at line 138.
+    Found 24-bit register for signal <Dividend>.
+    Found 24-bit subtractor for signal <Dividend$addsub0000> created at line 98.
+    Found 24-bit comparator less for signal <Dividend$cmp_lt0000> created at line 95.
+    Found 24-bit register for signal <Divisor>.
+    Found 24-bit register for signal <Dsor_reg>.
+    Found 1-bit register for signal <intdone>.
+    Found 1-bit register for signal <ResLSB>.
+    Found 16-bit register for signal <Resultat>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  91 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <div_component> synthesized.
+
+
 Synthesizing Unit <Calc_Menu>.
     Related source file is "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd".
     Found finite state machine <FSM_0> for signal <state>.
@@ -252,14 +291,27 @@ INFO:Xst:2117 - HDL ADVISOR - Mux Selector <DispSel> of Case statement line 0 wa
 Unit <Calc_Menu> synthesized.
 
 
+Synthesizing Unit <Calc_data_topmudule>.
+    Related source file is "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd".
+WARNING:Xst:643 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd" line 93: The result of a 16x16-bit multiplication is partially used. Only the 16 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 1-bit register for signal <done>.
+    Found 16-bit register for signal <Calc_val>.
+    Found 1-bit register for signal <done_next>.
+    Found 16-bit register for signal <ResGan>.
+    Found 16x16-bit multiplier for signal <ResGan$mult0001> created at line 93.
+    Found 16-bit register for signal <ResMin>.
+    Found 16-bit subtractor for signal <ResMin$sub0000> created at line 92.
+    Found 16-bit register for signal <ResPlu>.
+    Found 16-bit adder for signal <ResPlu$add0000> created at line 91.
+    Summary:
+	inferred  66 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+Unit <Calc_data_topmudule> synthesized.
+
+
 Synthesizing Unit <Calc_Top>.
     Related source file is "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd".
-WARNING:Xst:646 - Signal <start> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <calcval> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000.
-WARNING:Xst:646 - Signal <OPcode> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <In2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <In1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <Done> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 Unit <Calc_Top> synthesized.
 
 
@@ -269,18 +321,28 @@ HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  16x7-bit ROM                                          : 1
-# Adders/Subtractors                                   : 2
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
  17-bit adder                                          : 2
-# Counters                                             : 2
+ 24-bit subtractor                                     : 1
+# Counters                                             : 3
  2-bit up counter                                      : 1
  25-bit up counter                                     : 1
-# Registers                                            : 17
- 1-bit register                                        : 9
- 16-bit register                                       : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 30
+ 1-bit register                                        : 14
+ 16-bit register                                       : 6
  17-bit register                                       : 2
+ 24-bit register                                       : 3
  8-bit register                                        : 5
-# Comparators                                          : 2
+# Comparators                                          : 5
  17-bit comparator less                                : 2
+ 24-bit comparator less                                : 1
+ 5-bit comparator greatequal                           : 1
+ 5-bit comparator less                                 : 1
 # Multiplexers                                         : 1
  4-bit 4-to-1 multiplexer                              : 1
 # Decoders                                             : 1
@@ -316,28 +378,8 @@ Optimizing FSM <U5/state/FSM> on signal <state[1:16]> with one-hot encoding.
  op1   | 0000000000100000
  op2   | 0000001000000000
 ---------------------------
-WARNING:Xst:1293 - FF/Latch <FFd3> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <FFd2> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <FFd1> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_15> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_14> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_13> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_12> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_11> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_10> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_9> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_8> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_7> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_6> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_5> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_4> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_3> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_2> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_1> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <data_out_0> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1290 - Hierarchical block <CalcValReg> is unconnected in block <U5>.
-   It will be removed from the design.
-WARNING:Xst:2677 - Node <FFd4> of sequential type is unconnected in block <FSM>.
+INFO:Xst:2261 - The FF/Latch <Dsor_reg_0> in Unit <u1> is equivalent to the following 15 FFs/Latches, which will be removed : <Dsor_reg_1> <Dsor_reg_2> <Dsor_reg_3> <Dsor_reg_4> <Dsor_reg_5> <Dsor_reg_6> <Dsor_reg_7> <Dsor_reg_8> <Dsor_reg_9> <Dsor_reg_10> <Dsor_reg_11> <Dsor_reg_12> <Dsor_reg_13> <Dsor_reg_14> <Dsor_reg_15> 
+WARNING:Xst:1710 - FF/Latch <Dsor_reg_0> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -346,15 +388,24 @@ Macro Statistics
 # FSMs                                                 : 1
 # ROMs                                                 : 1
  16x7-bit ROM                                          : 1
-# Adders/Subtractors                                   : 2
+# Multipliers                                          : 1
+ 16x9-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
  17-bit adder                                          : 2
-# Counters                                             : 2
+ 24-bit subtractor                                     : 1
+# Counters                                             : 3
  2-bit up counter                                      : 1
  25-bit up counter                                     : 1
-# Registers                                            : 99
- Flip-Flops                                            : 99
-# Comparators                                          : 2
+ 5-bit up counter                                      : 1
+# Registers                                            : 256
+ Flip-Flops                                            : 256
+# Comparators                                          : 5
  17-bit comparator less                                : 2
+ 24-bit comparator less                                : 1
+ 5-bit comparator greatequal                           : 1
+ 5-bit comparator less                                 : 1
 # Multiplexers                                         : 1
  4-bit 4-to-1 multiplexer                              : 1
 # Decoders                                             : 1
@@ -367,9 +418,22 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <state_FSM_FFd1> has a constant value of 0 in block <Calc_Menu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_FSM_FFd2> has a constant value of 0 in block <Calc_Menu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <state_FSM_FFd3> has a constant value of 0 in block <Calc_Menu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Dsor_reg_0> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dsor_reg_1> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dsor_reg_2> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dsor_reg_3> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dsor_reg_4> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dsor_reg_5> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dsor_reg_6> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dsor_reg_7> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dsor_reg_8> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dsor_reg_9> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dsor_reg_10> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dsor_reg_11> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dsor_reg_12> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dsor_reg_13> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dsor_reg_14> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Dsor_reg_15> (without init value) has a constant value of 0 in block <div_component>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <Calc_Top> ...
 
@@ -379,28 +443,18 @@ Optimizing unit <std_8bit_reg> ...
 
 Optimizing unit <std_16bit_reg> ...
 
+Optimizing unit <div_component> ...
+
 Optimizing unit <Calc_Menu> ...
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_0> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_1> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_2> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_3> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_4> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_5> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_6> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_7> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_8> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_9> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_10> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_11> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_12> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_13> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_14> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/CalcValReg/data_out_15> of sequential type is unconnected in block <Calc_Top>.
-WARNING:Xst:2677 - Node <U5/state_FSM_FFd4> of sequential type is unconnected in block <Calc_Top>.
+
+Optimizing unit <Calc_data_topmudule> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Calc_Top, actual ratio is 12.
+Found area constraint ratio of 100 (+ 5) on block Calc_Top, actual ratio is 26.
+FlipFlop U5/state_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop U5/state_FSM_FFd3 has been replicated 1 time(s)
+FlipFlop U5/state_FSM_FFd4 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -408,8 +462,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 122
- Flip-Flops                                            : 122
+# Registers                                            : 291
+ Flip-Flops                                            : 291
 
 =========================================================================
 
@@ -438,30 +492,33 @@ Design Statistics
 # IOs                              : 32
 
 Cell Usage :
-# BELS                             : 353
+# BELS                             : 731
 #      GND                         : 1
-#      INV                         : 5
+#      INV                         : 6
 #      LUT1                        : 57
-#      LUT2                        : 31
+#      LUT2                        : 128
 #      LUT2_D                      : 2
-#      LUT3                        : 12
+#      LUT3                        : 53
 #      LUT3_D                      : 2
-#      LUT3_L                      : 4
-#      LUT4                        : 97
-#      LUT4_D                      : 1
-#      MUXCY                       : 77
-#      MUXF5                       : 4
+#      LUT4                        : 185
+#      MUXCY                       : 154
+#      MUXF5                       : 27
 #      VCC                         : 1
-#      XORCY                       : 59
-# FlipFlops/Latches                : 122
-#      FDC                         : 80
-#      FDCE                        : 41
+#      XORCY                       : 115
+# FlipFlops/Latches                : 291
+#      FDC                         : 112
+#      FDCE                        : 155
+#      FDE                         : 16
 #      FDP                         : 1
+#      FDRE                        : 6
+#      FDRSE                       : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 31
 #      IBUF                        : 12
 #      OBUF                        : 19
+# MULTs                            : 1
+#      MULT18X18SIO                : 1
 =========================================================================
 
 Device utilization summary:
@@ -469,11 +526,12 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                      121  out of    960    12%  
- Number of Slice Flip Flops:            122  out of   1920     6%  
- Number of 4 input LUTs:                211  out of   1920    10%  
+ Number of Slices:                      254  out of    960    26%  
+ Number of Slice Flip Flops:            291  out of   1920    15%  
+ Number of 4 input LUTs:                433  out of   1920    22%  
  Number of IOs:                          32
  Number of bonded IOBs:                  32  out of     83    38%  
+ Number of MULT18X18SIOs:                 1  out of      4    25%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -497,7 +555,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-MClk                               | BUFGP                  | 120   |
+MClk                               | BUFGP                  | 289   |
 U1/Clk1_D                          | NONE(U2/DispCount_0)   | 2     |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -507,16 +565,16 @@ Asynchronous Control Signals Information:
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-BTN3                               | IBUF                   | 122   |
+BTN3                               | IBUF                   | 268   |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 7.279ns (Maximum Frequency: 137.382MHz)
-   Minimum input arrival time before clock: 4.401ns
-   Maximum output required time after clock: 10.572ns
+   Minimum period: 10.067ns (Maximum Frequency: 99.332MHz)
+   Minimum input arrival time before clock: 5.019ns
+   Maximum output required time after clock: 10.616ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -525,43 +583,27 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'MClk'
-  Clock period: 7.279ns (frequency: 137.382MHz)
-  Total number of paths / destination ports: 1919 / 119
+  Clock period: 10.067ns (frequency: 99.332MHz)
+  Total number of paths / destination ports: 10409 / 414
 -------------------------------------------------------------------------
-Delay:               7.279ns (Levels of Logic = 19)
-  Source:            U4/Count_1 (FF)
-  Destination:       U4/Cout1 (FF)
+Delay:               10.067ns (Levels of Logic = 3)
+  Source:            U5/state_FSM_FFd3_1 (FF)
+  Destination:       U6/ResGan_15 (FF)
   Source Clock:      MClk rising
   Destination Clock: MClk rising
 
-  Data Path: U4/Count_1 to U4/Cout1
+  Data Path: U5/state_FSM_FFd3_1 to U6/ResGan_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              2   0.591   0.622  U4/Count_1 (U4/Count_1)
-     LUT1:I0->O            1   0.704   0.000  U4/Madd_Count_addsub0000_cy<1>_rt (U4/Madd_Count_addsub0000_cy<1>_rt)
-     MUXCY:S->O            1   0.464   0.000  U4/Madd_Count_addsub0000_cy<1> (U4/Madd_Count_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<2> (U4/Madd_Count_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<3> (U4/Madd_Count_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<4> (U4/Madd_Count_addsub0000_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<5> (U4/Madd_Count_addsub0000_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<6> (U4/Madd_Count_addsub0000_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<7> (U4/Madd_Count_addsub0000_cy<7>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<8> (U4/Madd_Count_addsub0000_cy<8>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<9> (U4/Madd_Count_addsub0000_cy<9>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<10> (U4/Madd_Count_addsub0000_cy<10>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<11> (U4/Madd_Count_addsub0000_cy<11>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<12> (U4/Madd_Count_addsub0000_cy<12>)
-     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<13> (U4/Madd_Count_addsub0000_cy<13>)
-     XORCY:CI->O           1   0.804   0.424  U4/Madd_Count_addsub0000_xor<14> (U4/Count_addsub0000<14>)
-     LUT4:I3->O            2   0.704   0.451  U4/Count_mux0000<14>1 (U4/Count_mux0000<14>)
-     LUT4:I3->O            1   0.704   0.000  U4/Mcompar_Cout1_cmp_lt0000_lut<5> (U4/Mcompar_Cout1_cmp_lt0000_lut<5>)
-     MUXCY:S->O            1   0.464   0.000  U4/Mcompar_Cout1_cmp_lt0000_cy<5> (U4/Mcompar_Cout1_cmp_lt0000_cy<5>)
-     MUXCY:CI->O           1   0.331   0.000  U4/Mcompar_Cout1_cmp_lt0000_cy<6> (U4/Mcompar_Cout1_cmp_lt0000_cy<6>)
-     FDC:D                     0.308          U4/Cout1
+     FDC:C->Q              2   0.591   0.622  U5/state_FSM_FFd3_1 (U5/state_FSM_FFd3_1)
+     LUT3:I0->O           32   0.704   1.297  U5/state_FSM_Out131_1 (U5/state_FSM_Out131)
+     LUT3:I2->O            4   0.704   0.587  U5/In2<7>1 (In2<7>)
+     MULT18X18SIO:B7->P15    1   4.834   0.420  U6/Mmult_ResGan_mult0001 (U6/ResGan_mult0001<15>)
+     FDCE:D                    0.308          U6/ResGan_15
     ----------------------------------------
-    Total                      7.279ns (5.782ns logic, 1.497ns route)
-                                       (79.4% logic, 20.6% route)
+    Total                     10.067ns (7.141ns logic, 2.926ns route)
+                                       (70.9% logic, 29.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'U1/Clk1_D'
@@ -587,24 +629,23 @@ Delay:               3.023ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'MClk'
-  Total number of paths / destination ports: 53 / 53
+  Total number of paths / destination ports: 77 / 77
 -------------------------------------------------------------------------
-Offset:              4.401ns (Levels of Logic = 3)
-  Source:            BTN0 (PAD)
-  Destination:       U5/state_FSM_FFd8 (FF)
+Offset:              5.019ns (Levels of Logic = 2)
+  Source:            BTN3 (PAD)
+  Destination:       U6/u1/intdone (FF)
   Destination Clock: MClk rising
 
-  Data Path: BTN0 to U5/state_FSM_FFd8
+  Data Path: BTN3 to U6/u1/intdone
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            11   1.218   1.012  BTN0_IBUF (BTN0_IBUF)
-     LUT3:I1->O            1   0.704   0.455  U5/state_FSM_FFd8-In_SW0 (N12)
-     LUT4:I2->O            1   0.704   0.000  U5/state_FSM_FFd8-In (U5/state_FSM_FFd8-In)
-     FDC:D                     0.308          U5/state_FSM_FFd8
+     IBUF:I->O           286   1.218   1.517  BTN3_IBUF (BTN3_IBUF)
+     LUT3:I0->O            6   0.704   0.669  U6/u1/counter_or00001 (U6/u1/counter_or0000)
+     FDRE:R                    0.911          U6/u1/intdone
     ----------------------------------------
-    Total                      4.401ns (2.934ns logic, 1.467ns route)
-                                       (66.7% logic, 33.3% route)
+    Total                      5.019ns (2.833ns logic, 2.186ns route)
+                                       (56.4% logic, 43.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'U1/Clk1_D'
@@ -630,39 +671,39 @@ Offset:              8.070ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'MClk'
-  Total number of paths / destination ports: 657 / 13
+  Total number of paths / destination ports: 883 / 15
 -------------------------------------------------------------------------
-Offset:              10.572ns (Levels of Logic = 6)
-  Source:            U5/state_FSM_FFd16 (FF)
+Offset:              10.616ns (Levels of Logic = 6)
+  Source:            U5/state_FSM_FFd15 (FF)
   Destination:       Cat<6> (PAD)
   Source Clock:      MClk rising
 
-  Data Path: U5/state_FSM_FFd16 to Cat<6>
+  Data Path: U5/state_FSM_FFd15 to Cat<6>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDP:C->Q             14   0.591   1.175  U5/state_FSM_FFd16 (U5/state_FSM_FFd16)
-     LUT4:I0->O            1   0.704   0.595  U5/DispData<3>15 (U5/DispData<3>15)
-     LUT4:I0->O            1   0.704   0.499  U5/DispData<3>17 (DispData<3>)
-     LUT3:I1->O            1   0.704   0.000  U2/Mmux_DataN_43 (U2/Mmux_DataN_43)
-     MUXF5:I0->O           7   0.321   0.883  U2/Mmux_DataN_2_f5_2 (U2/DataN<3>)
-     LUT4:I0->O            1   0.704   0.420  U2/Mrom_cat21 (Cat_2_OBUF)
-     OBUF:I->O                 3.272          Cat_2_OBUF (Cat<2>)
+     FDC:C->Q             15   0.591   1.192  U5/state_FSM_FFd15 (U5/state_FSM_FFd15)
+     LUT2:I0->O            2   0.704   0.622  U5/state_FSM_FFd13-In1 (U5/state_FSM_FFd13-In1)
+     LUT4:I0->O            1   0.704   0.499  U2/Mmux_DataN_31_SW0 (N95)
+     LUT4:I1->O            1   0.704   0.000  U2/Mmux_DataN_31 (U2/Mmux_DataN_31)
+     MUXF5:I1->O           7   0.321   0.883  U2/Mmux_DataN_2_f5_0 (U2/DataN<1>)
+     LUT4:I0->O            1   0.704   0.420  U2/Mrom_cat41 (Cat_4_OBUF)
+     OBUF:I->O                 3.272          Cat_4_OBUF (Cat<4>)
     ----------------------------------------
-    Total                     10.572ns (7.000ns logic, 3.572ns route)
-                                       (66.2% logic, 33.8% route)
+    Total                     10.616ns (7.000ns logic, 3.616ns route)
+                                       (65.9% logic, 34.1% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.18 secs
+Total CPU time to Xst completion: 6.66 secs
  
 --> 
 
-Total memory usage is 4510788 kilobytes
+Total memory usage is 4527000 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   47 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :   20 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 

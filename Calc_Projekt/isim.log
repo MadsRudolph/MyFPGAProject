@@ -1,5 +1,6 @@
 ISim log file
-Running: C:\Users\s246132\Xilinx_Projects\MyFPGAProject\Calc_Projekt\Calc_Menu_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu_tb_isim_beh.wdb 
+Running: C:\Users\s246132\Xilinx_Projects\MyFPGAProject\Calc_Projekt\Cald_data_TB_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Cald_data_TB_isim_beh.wdb 
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
 ISim P.15xf (signature 0xc3576ebc)
 ----------------------------------------------------------------------
 INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to '2100@xilinx.winbar.dtu.dk'.
@@ -18,13 +19,5 @@ Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# restart
-# run 1.00us
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# restart
-# run 1.00us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.

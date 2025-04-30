@@ -1,3 +1,2 @@
-work	"Calc_Menu.vhd"
-work	"std_16bit_reg.vhd"
-work	"std_8bit_reg.vhd"
+work	"Calc_data_topmudule.vhd"
+work	"div_compoent.vhd"
