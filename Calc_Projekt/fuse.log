@@ -1,22 +1,36 @@
-Running: P:\Xilinx\14.1\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_TB_isim_beh.exe -prj C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_TB_beh.prj work.Calc_data_TB 
+Running: P:\Xilinx\14.1\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top_without_Debounce_TB_isim_beh.exe -prj C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top_without_Debounce_TB_beh.prj work.Calc_top_without_Debounce_TB 
 ISim P.15xf (signature 0xc3576ebc)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd" into library work
+Parsing VHDL file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd" into library work
 Parsing VHDL file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/div_compoent.vhd" into library work
+Parsing VHDL file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/SevenSeg4.vhd" into library work
+Parsing VHDL file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/DivClk.vhd" into library work
+Parsing VHDL file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" into library work
 Parsing VHDL file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd" into library work
-Parsing VHDL file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_TB.vhd" into library work
+Parsing VHDL file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd" into library work
+Parsing VHDL file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top_without_Debounce_TB.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
 Compiling package numeric_std
+Compiling architecture divclk_arch of entity DivClk [divclk_default]
+Compiling architecture sevenseg_arch of entity SevenSeg4 [sevenseg4_default]
+Compiling architecture behavioral of entity std_8bit_reg [std_8bit_reg_default]
+Compiling architecture behavioral of entity std_16bit_reg [std_16bit_reg_default]
+Compiling architecture behavioral of entity Calc_Menu [calc_menu_default]
 Compiling architecture behavioral of entity div_component [div_component_default]
 Compiling architecture behavioral of entity Calc_data_topmudule [calc_data_topmudule_default]
-Compiling architecture behavior of entity calc_data_tb
+Compiling architecture behavioral of entity Calc_Top [calc_top_default]
+Compiling architecture behavior of entity calc_top_without_debounce_tb
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 8 VHDL Units
-Built simulation executable C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_TB_isim_beh.exe
-Fuse Memory Usage: 35852 KB
-Fuse CPU Usage: 531 ms
+Compiled 22 VHDL Units
+Built simulation executable C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top_without_Debounce_TB_isim_beh.exe
+Fuse Memory Usage: 37716 KB
+Fuse CPU Usage: 749 ms

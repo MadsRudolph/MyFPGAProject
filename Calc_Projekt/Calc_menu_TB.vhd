@@ -82,12 +82,13 @@ begin
         -- Test Case 1: State A (waiting for Val1 input)
         -- State A is active
         -- Step 1: Load Val1 value into the register
-        SW <= "00000001";  -- Input value for Val1
+        SW <= "00001000";  -- Input value for Val1
 		  wait for 20 ns;
         Enter <= '1';      -- Simulate pressing Enter to load Val1
         wait for 20 ns;
         Enter <= '0';      -- Release Enter
         wait for 20 ns;
+		  
 
         -- Step 2: Press Func to move to State B (set Op1)
         Func <= '1';       -- Press Func to go to next state (State B)
@@ -114,7 +115,7 @@ begin
         -- Test Case 3: State C (val2)
         -- State C is active
         -- Step 5: Load Op2 value (from SW input)
-        SW <= "00000011";  -- Input value for val2
+        SW <= "00000001";  -- Input value for val2
 		  wait for 20 ns;
         Enter <= '1';      -- Simulate pressing Enter to load val2
         wait for 20 ns;
@@ -143,7 +144,7 @@ begin
         Func <= '0';       -- Release Func
         wait for 20 ns;
 
-		  SW <= "00000100";  -- Input value for Val3
+		  SW <= "00000010";  -- Input value for Val3
 		  wait for 20 ns;
         Enter <= '1';      -- Simulate pressing Enter to load Val3
         wait for 20 ns;
@@ -161,7 +162,7 @@ begin
 		done <= '1';
 		wait for 20 ns;
 		done <= '0';
-		wait for 20 ns;
+		wait for 40 ns;
 		
 		calcval <="1111111111111111";
 		--step 11 going from j to k when done is high

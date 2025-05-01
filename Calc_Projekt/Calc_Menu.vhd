@@ -150,16 +150,17 @@ begin
             when G =>
 					 Tilstand <= "00100000";
                 Start <= '0';
+					 if done = '1' 
+					 then
 						nextstate <= H;
+					else nextstate <= G;
+						end if;
 						
             when H =>
                 RegSel <= '1';
-					 if done = '1'
-					 then
                 nextstate <= I;
-					 else
-						nextstate <= H;
-						end if;					
+						
+								
             
 				when I =>
 					 RegSel <= '1';
@@ -178,6 +179,7 @@ begin
 						end if;
 						
             when K =>
+					regsel <= '1';
 					 Tilstand <= "10000000";
                 DispSel <= "00000110";  
                 if enter = '1' then
