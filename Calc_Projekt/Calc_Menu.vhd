@@ -182,7 +182,7 @@ begin
 					regsel <= '1';
 					 Tilstand <= "10000000";
                 DispSel <= "00000110";  
-                if enter = '1' then
+                if func = '1' then
                     nextstate <= A;
                 else 
                     nextstate <= K;

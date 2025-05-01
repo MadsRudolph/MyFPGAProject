@@ -45,17 +45,17 @@ Setup/Hold to clock MClk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-BTN0        |    3.023(R)|   -0.090(R)|MClk_BUFGP        |   0.000|
-BTN1        |    0.319(R)|    0.925(R)|MClk_BUFGP        |   0.000|
-BTN2        |    0.961(R)|    0.411(R)|MClk_BUFGP        |   0.000|
-SW<0>       |    1.344(R)|    0.542(R)|MClk_BUFGP        |   0.000|
-SW<1>       |    2.785(R)|   -0.148(R)|MClk_BUFGP        |   0.000|
-SW<2>       |    1.882(R)|    0.469(R)|MClk_BUFGP        |   0.000|
-SW<3>       |    2.361(R)|    0.132(R)|MClk_BUFGP        |   0.000|
-SW<4>       |    0.608(R)|    1.122(R)|MClk_BUFGP        |   0.000|
-SW<5>       |    1.607(R)|    1.156(R)|MClk_BUFGP        |   0.000|
-SW<6>       |    1.716(R)|    0.477(R)|MClk_BUFGP        |   0.000|
-SW<7>       |    1.246(R)|    0.419(R)|MClk_BUFGP        |   0.000|
+BTN0        |    2.550(R)|    0.705(R)|MClk_BUFGP        |   0.000|
+BTN1        |    0.123(R)|    1.084(R)|MClk_BUFGP        |   0.000|
+BTN2        |    0.786(R)|    0.549(R)|MClk_BUFGP        |   0.000|
+SW<0>       |    1.276(R)|    0.625(R)|MClk_BUFGP        |   0.000|
+SW<1>       |    2.759(R)|    0.892(R)|MClk_BUFGP        |   0.000|
+SW<2>       |    1.862(R)|    0.721(R)|MClk_BUFGP        |   0.000|
+SW<3>       |    1.655(R)|    0.478(R)|MClk_BUFGP        |   0.000|
+SW<4>       |    2.141(R)|    0.320(R)|MClk_BUFGP        |   0.000|
+SW<5>       |    2.199(R)|    0.512(R)|MClk_BUFGP        |   0.000|
+SW<6>       |    2.470(R)|    0.498(R)|MClk_BUFGP        |   0.000|
+SW<7>       |    1.311(R)|    0.922(R)|MClk_BUFGP        |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock MClk to Pad
@@ -63,21 +63,21 @@ Clock MClk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-Cat<0>      |   16.713(R)|MClk_BUFGP        |   0.000|
-Cat<1>      |   16.612(R)|MClk_BUFGP        |   0.000|
-Cat<2>      |   16.816(R)|MClk_BUFGP        |   0.000|
-Cat<3>      |   17.011(R)|MClk_BUFGP        |   0.000|
-Cat<4>      |   16.887(R)|MClk_BUFGP        |   0.000|
-Cat<5>      |   16.577(R)|MClk_BUFGP        |   0.000|
-Cat<6>      |   16.578(R)|MClk_BUFGP        |   0.000|
-ld<0>       |    8.693(R)|MClk_BUFGP        |   0.000|
-ld<1>       |    8.480(R)|MClk_BUFGP        |   0.000|
-ld<2>       |    8.510(R)|MClk_BUFGP        |   0.000|
-ld<3>       |    8.126(R)|MClk_BUFGP        |   0.000|
-ld<4>       |    8.797(R)|MClk_BUFGP        |   0.000|
-ld<5>       |    8.013(R)|MClk_BUFGP        |   0.000|
-ld<6>       |    7.964(R)|MClk_BUFGP        |   0.000|
-ld<7>       |    8.280(R)|MClk_BUFGP        |   0.000|
+Cat<0>      |   17.719(R)|MClk_BUFGP        |   0.000|
+Cat<1>      |   17.453(R)|MClk_BUFGP        |   0.000|
+Cat<2>      |   17.411(R)|MClk_BUFGP        |   0.000|
+Cat<3>      |   17.555(R)|MClk_BUFGP        |   0.000|
+Cat<4>      |   16.474(R)|MClk_BUFGP        |   0.000|
+Cat<5>      |   16.995(R)|MClk_BUFGP        |   0.000|
+Cat<6>      |   17.385(R)|MClk_BUFGP        |   0.000|
+ld<0>       |    8.897(R)|MClk_BUFGP        |   0.000|
+ld<1>       |    8.618(R)|MClk_BUFGP        |   0.000|
+ld<2>       |    7.781(R)|MClk_BUFGP        |   0.000|
+ld<3>       |    8.373(R)|MClk_BUFGP        |   0.000|
+ld<4>       |    7.834(R)|MClk_BUFGP        |   0.000|
+ld<5>       |    8.006(R)|MClk_BUFGP        |   0.000|
+ld<6>       |    7.354(R)|MClk_BUFGP        |   0.000|
+ld<7>       |    8.862(R)|MClk_BUFGP        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock MClk
@@ -85,11 +85,11 @@ Clock to Setup on destination clock MClk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-MClk           |    8.513|         |         |         |
+MClk           |    8.520|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu May 01 14:03:33 2025 
+Analysis completed Thu May 01 15:41:46 2025 
 --------------------------------------------------------------------------------
 
 Trace Settings:

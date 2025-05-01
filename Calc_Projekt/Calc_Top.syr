@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: Calc_Top.prj
 
@@ -117,7 +117,8 @@ Architecture sevenseg_arch of Entity sevenseg4 is up to date.
 Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Debounce_corrected.vhd" in Library work.
 Architecture behavioral of Entity debounce is up to date.
 Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" in Library work.
-Architecture behavioral of Entity calc_menu is up to date.
+Entity <calc_menu> compiled.
+Entity <calc_menu> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd" in Library work.
 Architecture behavioral of Entity calc_data_topmudule is up to date.
 Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd" in Library work.
@@ -502,14 +503,14 @@ Cell Usage :
 #      LUT2                        : 139
 #      LUT2_D                      : 2
 #      LUT2_L                      : 1
-#      LUT3                        : 66
-#      LUT3_D                      : 3
+#      LUT3                        : 67
+#      LUT3_D                      : 2
 #      LUT3_L                      : 3
 #      LUT4                        : 163
 #      LUT4_D                      : 1
-#      LUT4_L                      : 2
+#      LUT4_L                      : 1
 #      MUXCY                       : 164
-#      MUXF5                       : 22
+#      MUXF5                       : 23
 #      VCC                         : 1
 #      XORCY                       : 123
 # FlipFlops/Latches                : 296
@@ -536,9 +537,9 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                      262  out of    960    27%  
+ Number of Slices:                      261  out of    960    27%  
  Number of Slice Flip Flops:            296  out of   1920    15%  
- Number of 4 input LUTs:                451  out of   1920    23%  
+ Number of 4 input LUTs:                450  out of   1920    23%  
  Number of IOs:                          32
  Number of bonded IOBs:                  32  out of     83    38%  
  Number of MULT18X18SIOs:                 1  out of      4    25%  
@@ -583,7 +584,7 @@ Timing Summary:
 Speed Grade: -4
 
    Minimum period: 8.547ns (Maximum Frequency: 116.999MHz)
-   Minimum input arrival time before clock: 4.429ns
+   Minimum input arrival time before clock: 4.401ns
    Maximum output required time after clock: 10.657ns
    Maximum combinational path delay: No path found
 
@@ -594,7 +595,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'MClk'
   Clock period: 8.547ns (frequency: 116.999MHz)
-  Total number of paths / destination ports: 11867 / 470
+  Total number of paths / destination ports: 11870 / 470
 -------------------------------------------------------------------------
 Delay:               8.547ns (Levels of Logic = 2)
   Source:            U5/state_FSM_FFd2 (FF)
@@ -638,24 +639,24 @@ Delay:               3.023ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'MClk'
-  Total number of paths / destination ports: 55 / 55
+  Total number of paths / destination ports: 53 / 53
 -------------------------------------------------------------------------
-Offset:              4.429ns (Levels of Logic = 3)
+Offset:              4.401ns (Levels of Logic = 3)
   Source:            BTN0 (PAD)
-  Destination:       U5/state_FSM_FFd15 (FF)
+  Destination:       U5/state_FSM_FFd8 (FF)
   Destination Clock: MClk rising
 
-  Data Path: BTN0 to U5/state_FSM_FFd15
+  Data Path: BTN0 to U5/state_FSM_FFd8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            12   1.218   1.040  BTN0_IBUF (BTN0_IBUF)
-     LUT3:I1->O            1   0.704   0.455  U5/state_FSM_FFd15-In_SW0 (N14)
-     LUT4:I2->O            1   0.704   0.000  U5/state_FSM_FFd15-In (U5/state_FSM_FFd15-In)
-     FDC:D                     0.308          U5/state_FSM_FFd15
+     IBUF:I->O            11   1.218   1.012  BTN0_IBUF (BTN0_IBUF)
+     LUT3:I1->O            1   0.704   0.455  U5/state_FSM_FFd8-In_SW0 (N12)
+     LUT4:I2->O            1   0.704   0.000  U5/state_FSM_FFd8-In (U5/state_FSM_FFd8-In)
+     FDC:D                     0.308          U5/state_FSM_FFd8
     ----------------------------------------
-    Total                      4.429ns (2.934ns logic, 1.495ns route)
-                                       (66.2% logic, 33.8% route)
+    Total                      4.401ns (2.934ns logic, 1.467ns route)
+                                       (66.7% logic, 33.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'U1/Clk1_D'
@@ -706,12 +707,12 @@ Offset:              10.657ns (Levels of Logic = 6)
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.58 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.03 secs
  
 --> 
 
-Total memory usage is 4526972 kilobytes
+Total memory usage is 4527020 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   20 (   0 filtered)

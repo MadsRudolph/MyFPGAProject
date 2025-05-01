@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top_without_Debounce_TB_isim_beh.exe" -prj "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top_without_Debounce_TB_beh.prj" "work.Calc_top_without_Debounce_TB" 
+-intstyle "ise" -incremental -o "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Top_Uden_Debounce_TB_isim_beh.exe" -prj "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Top_Uden_Debounce_TB_beh.prj" "work.Calc_Top_Uden_Debounce_TB" 
