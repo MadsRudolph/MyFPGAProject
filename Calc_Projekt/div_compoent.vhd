@@ -38,19 +38,18 @@ end div_component;
 architecture Behavioral of div_component is
 
 	signal ResLSB : std_logic;
-	signal counter : integer range 0 to 18;   -- Tæller for clock cycles sat til 16+1 så der er en clock til at loade værdierne  
+	signal counter : integer range 0 to 18;   -- Tller for clock cycles sat til 16+1 s der er en clock til at loade vrdierne  
 	signal Dividend :std_logic_vector(31 downto 0);
  	signal Divisor :std_logic_vector(23 downto 0);
  	signal Div_reg :std_logic_vector(31 downto 0);
  	signal Dsor_reg :std_logic_vector(23 downto 0);
  	signal Resultat : STD_LOGIC_VECTOR(15 downto 0);
- 	signal reset : std_logic;  -- reset signal
 	signal intdone : std_logic; -- intern done signal	 
- 	signal aktiv : std_logic; 	-- bruges til at holde divisionskomponenten aktiv indtil den har regnet færdig
+ 	signal aktiv : std_logic; 	-- bruges til at holde divisionskomponenten aktiv indtil den har regnet frdig
 begin
 
 
--- reset? (måske)
+-- reset? (mske)
  
 -- dividendregister
 process(clk)
@@ -85,7 +84,7 @@ begin
         	Divisor <= Dsor_reg;
     	 
     	elsif counter <= 18 then
-        	Divisor <= '0' & Divisor(23 downto 1); --højreskift
+        	Divisor <= '0' & Divisor(23 downto 1); --hjreskift
         	if unsigned(Dividend) < unsigned(Divisor) then
             	ResLSB <= '0';
                 	else
@@ -94,7 +93,7 @@ begin
                    	 
            	 
         	end if;
-        	else ResLSB <= '0';  -- fallback når counter > 16
+        	else ResLSB <= '0';  -- fallback nr counter > 16
         	end if;
         	end if;                	 
     	end process;
@@ -124,17 +123,17 @@ begin
     	intdone <= '0';
     	aktiv <= '1';
     	elsif aktiv = '1' then  
-        	if counter < 18 then -- sat til 18 så der er en buffer og der kan ske overflow og så der kan loades og sendes værdier
+        	if counter < 18 then -- sat til 18 s der er en buffer og der kan ske overflow og s der kan loades og sendes vrdier
         	counter <= counter + 1;
         	else
         	intdone <= '1'; --interne done signal sendes
-        	aktiv <= '0';  --færdig
+        	aktiv <= '0';  --frdig
     	end if;
     	end if;
     	end if;
 	end process;
 
-Resdiv <= Resultat; -- vi forbinder resultatet til Resdiv som føres videre i topmodulet
+Resdiv <= Resultat; -- vi forbinder resultatet til Resdiv som fres videre i topmodulet
 doneDiv <= intdone; -- det interne done forbindes til doneDiv som sendes videre i topmodulet
 
 

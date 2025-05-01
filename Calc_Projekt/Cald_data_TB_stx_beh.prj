@@ -1,3 +1,0 @@
-vhdl isim_temp "div_compoent.vhd"
-vhdl isim_temp "Calc_data_topmudule.vhd"
-vhdl isim_temp "Cald_data_TB.vhd"

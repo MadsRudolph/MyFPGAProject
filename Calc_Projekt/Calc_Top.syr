@@ -1,18 +1,21 @@
-Release 14.1 - xst P.15xf (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to xst/projnav.tmp
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.02 secs
  
---> Parameter xsthdpdir set to xst
+--> 
+Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.02 secs
  
---> Reading design: Calc_Top.prj
+--> 
+Reading design: Calc_Top.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -104,25 +107,25 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/div_compoent.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/div_compoent.vhd" in Library work.
 Architecture behavioral of Entity div_component is up to date.
-Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd" in Library work.
 Architecture behavioral of Entity std_8bit_reg is up to date.
-Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd" in Library work.
 Architecture behavioral of Entity std_16bit_reg is up to date.
-Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/DivClk.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/DivClk.vhd" in Library work.
 Architecture divclk_arch of Entity divclk is up to date.
-Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/SevenSeg4.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/SevenSeg4.vhd" in Library work.
 Architecture sevenseg_arch of Entity sevenseg4 is up to date.
-Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Debounce_corrected.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Debounce_corrected.vhd" in Library work.
 Architecture behavioral of Entity debounce is up to date.
-Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" in Library work.
-Entity <calc_menu> compiled.
-Entity <calc_menu> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd" in Library work.
+Architecture behavioral of Entity calc_menu is up to date.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd" in Library work.
 Architecture behavioral of Entity calc_data_topmudule is up to date.
-Compiling vhdl file "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd" in Library work.
-Architecture behavioral of Entity calc_top is up to date.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd" in Library work.
+Entity <calc_top> compiled.
+Entity <calc_top> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -184,7 +187,7 @@ Entity <div_component> analyzed. Unit <div_component> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <DivClk>.
-    Related source file is "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/DivClk.vhd".
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/DivClk.vhd".
     Found 1-bit register for signal <Clk1_D>.
     Found 25-bit up counter for signal <Cnt1>.
     Summary:
@@ -194,7 +197,7 @@ Unit <DivClk> synthesized.
 
 
 Synthesizing Unit <SevenSeg4>.
-    Related source file is "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/SevenSeg4.vhd".
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/SevenSeg4.vhd".
     Found 16x7-bit ROM for signal <cat>.
     Found 1-of-4 decoder for signal <an>.
     Found 4-bit 4-to-1 multiplexer for signal <DataN>.
@@ -208,7 +211,7 @@ Unit <SevenSeg4> synthesized.
 
 
 Synthesizing Unit <Debounce>.
-    Related source file is "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Debounce_corrected.vhd".
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Debounce_corrected.vhd".
     Found 1-bit register for signal <BTNa>.
     Found 1-bit register for signal <BTNb>.
     Found 1-bit xor2 for signal <BTNp>.
@@ -225,7 +228,7 @@ Unit <Debounce> synthesized.
 
 
 Synthesizing Unit <std_8bit_reg>.
-    Related source file is "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd".
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd".
     Found 8-bit register for signal <data_out>.
     Summary:
 	inferred   8 D-type flip-flop(s).
@@ -233,7 +236,7 @@ Unit <std_8bit_reg> synthesized.
 
 
 Synthesizing Unit <std_16bit_reg>.
-    Related source file is "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd".
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd".
     Found 16-bit register for signal <data_out>.
     Summary:
 	inferred  16 D-type flip-flop(s).
@@ -241,16 +244,15 @@ Unit <std_16bit_reg> synthesized.
 
 
 Synthesizing Unit <div_component>.
-    Related source file is "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/div_compoent.vhd".
-WARNING:Xst:1780 - Signal <reset> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/div_compoent.vhd".
     Found 1-bit register for signal <aktiv>.
-    Found 5-bit comparator less for signal <aktiv$cmp_lt0000> created at line 127.
+    Found 5-bit comparator less for signal <aktiv$cmp_lt0000> created at line 126.
     Found 5-bit up counter for signal <counter>.
-    Found 5-bit comparator greatequal for signal <counter$cmp_ge0000> created at line 127.
+    Found 5-bit comparator greatequal for signal <counter$cmp_ge0000> created at line 126.
     Found 32-bit register for signal <Div_reg>.
     Found 32-bit register for signal <Dividend>.
-    Found 32-bit subtractor for signal <Dividend$addsub0000> created at line 92.
-    Found 32-bit comparator less for signal <Dividend$cmp_lt0000> created at line 89.
+    Found 32-bit subtractor for signal <Dividend$addsub0000> created at line 91.
+    Found 32-bit comparator less for signal <Dividend$cmp_lt0000> created at line 88.
     Found 24-bit register for signal <Divisor>.
     Found 24-bit register for signal <Dsor_reg>.
     Found 1-bit register for signal <intdone>.
@@ -265,7 +267,7 @@ Unit <div_component> synthesized.
 
 
 Synthesizing Unit <Calc_Menu>.
-    Related source file is "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd".
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd".
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 16                                             |
@@ -291,8 +293,8 @@ Unit <Calc_Menu> synthesized.
 
 
 Synthesizing Unit <Calc_data_topmudule>.
-    Related source file is "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd".
-WARNING:Xst:643 - "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd" line 83: The result of a 16x16-bit multiplication is partially used. Only the 16 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd".
+WARNING:Xst:643 - "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd" line 83: The result of a 16x16-bit multiplication is partially used. Only the 16 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
     Found 1-bit register for signal <done>.
     Found 16-bit register for signal <Calc_val>.
     Found 16-bit register for signal <ResGan>.
@@ -309,7 +311,7 @@ Unit <Calc_data_topmudule> synthesized.
 
 
 Synthesizing Unit <Calc_Top>.
-    Related source file is "C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd".
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd".
 Unit <Calc_Top> synthesized.
 
 
@@ -707,14 +709,15 @@ Offset:              10.657ns (Levels of Logic = 6)
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.03 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 2.26 secs
  
 --> 
 
-Total memory usage is 4527020 kilobytes
+
+Total memory usage is 521240 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   20 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

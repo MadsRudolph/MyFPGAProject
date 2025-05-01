@@ -1,14 +1,14 @@
 --------------------------------------------------------------------------------
-Release 14.1 Trace  (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-P:\Xilinx\14.1\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
--n 3 -fastpaths -xml Calc_Top.twx Calc_Top.ncd -o Calc_Top.twr Calc_Top.pcf
--ucf Map.ucf
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml Calc_Top.twx Calc_Top.ncd -o Calc_Top.twr Calc_Top.pcf -ucf
+Map.ucf
 
 Design file:              Calc_Top.ncd
 Physical constraint file: Calc_Top.pcf
-Device,package,speed:     xc3s100e,cp132,-4 (PRODUCTION 1.27 2012-04-23)
+Device,package,speed:     xc3s100e,cp132,-4 (PRODUCTION 1.27 2013-10-13)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -89,14 +89,14 @@ MClk           |    8.520|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu May 01 15:41:46 2025 
+Analysis completed Thu May  1 18:31:41 2025 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4503 MB
+Peak Memory Usage: 327 MB
 
 
 

@@ -46,7 +46,7 @@ architecture Behavioral of Calc_Top is
 
 --signal skammekrog (ved TB skal fjernes fra Signal)(BTN2d,BTN1d,)
 
-signal DispClk,start, Done: STD_LOGIC;
+signal DispClk,BTN2d,BTN1d,start, Done: STD_LOGIC;
 signal DispData,In1, calcval: STD_LOGIC_VECTOR (15 downto 0);
 signal In2: STD_LOGIC_VECTOR (7 downto 0);
 signal OPcode: STD_LOGIC_VECTOR (2 downto 0);
@@ -70,50 +70,33 @@ begin
 				Cat => Cat,
 				An => An
         );
-		  
-	--udkommenter debounce for at TB	  
---    U3: entity work.Debounce
---        port map (
---            Reset => BTN3,
---            Clk   => MClk,
---				BTN => BTN2,
---				BTNd => BTN2d
---	        );
-	
---    U4: entity work.Debounce
---        port map (
---            Reset => BTN3,
---            Clk   => MClk,
---				BTN => BTN1,
---				BTNd => BTN1d
---	        );
-	--Portmap uden Debounce skal udkommenteres ved TB		  
-    U5: entity work.Calc_Menu
-      port map (
+---------------------------------------------		  
+	--kommenter debounce for TB	  
+    U3: entity work.Debounce
+        port map (
             Reset => BTN3,
             Clk   => MClk,
-				Enter => BTN0,
-				Operation => BTN2,
-				Func => BTN1,
-				SW => SW,
-				CalcVal => CalcVal,
-				DispData => DispData,
-				Tilstand => ld,
-				Start => Start,
-				Done => Done,
-				OpCode => OpCode,
-				In1 => In1,
-				In2 => In2
+				BTN => BTN2,
+				BTNd => BTN2d
 	        );
+	
+    U4: entity work.Debounce
+        port map (
+            Reset => BTN3,
+            Clk   => MClk,
+				BTN => BTN1,
+				BTNd => BTN1d
+	        );
+----------------------------------------------			  
 			  
-		
---			  U5: entity work.Calc_Menu
---        port map (
+	--Portmap uden Debounce skal udkommenteres ved TB		  
+--    U5: entity work.Calc_Menu
+--      port map (
 --            Reset => BTN3,
 --            Clk   => MClk,
 --				Enter => BTN0,
---				Operation => BTN2d,
---				Func => BTN1d,
+--				Operation => BTN2,
+--				Func => BTN1,
 --				SW => SW,
 --				CalcVal => CalcVal,
 --				DispData => DispData,
@@ -124,6 +107,25 @@ begin
 --				In1 => In1,
 --				In2 => In2
 --	        );
+			  
+		
+			  U5: entity work.Calc_Menu
+        port map (
+            Reset => BTN3,
+            Clk   => MClk,
+				Enter => BTN0,
+				Operation => BTN2d,
+				Func => BTN1d,
+				SW => SW,
+				CalcVal => CalcVal,
+				DispData => DispData,
+				Tilstand => ld,
+				Start => Start,
+				Done => Done,
+				OpCode => OpCode,
+				In1 => In1,
+				In2 => In2
+	        );
 			  
     U6: entity work.Calc_Data_topmudule
         port map (
