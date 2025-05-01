@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2025-05-01T18:23:28</DateModified>
+  <DateModified>2025-05-02T00:12:31</DateModified>
   <ModuleName>Calc_Top</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2025-05-02T00:10:41</SummaryTimeStamp>
   <SavedFilePath>/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/iseconfig/Calc_Top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/</ImplementationReportsDirectory>
   <DateInitialized>2025-04-30T21:00:33</DateInitialized>

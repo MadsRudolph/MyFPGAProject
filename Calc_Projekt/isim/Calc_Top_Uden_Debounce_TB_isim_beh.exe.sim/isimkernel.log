@@ -1,0 +1,10 @@
+Command line:
+   Calc_Top_Uden_Debounce_TB_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  46057
+
+Thu May  1 21:46:00 2025
+
+
+ Elaboration Time: 0.01 sec

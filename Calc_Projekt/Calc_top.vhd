@@ -71,7 +71,7 @@ begin
 				An => An
         );
 ---------------------------------------------		  
-	--kommenter debounce for TB	  
+--	--kommenter debounce for TB	  
     U3: entity work.Debounce
         port map (
             Reset => BTN3,

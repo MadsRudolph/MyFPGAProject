@@ -1,68 +1,68 @@
 V3 35
-FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd 2025/05/01.16:04:39 P.20131013
-EN work/Calc_data_topmudule 1746116999 \
+FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd 2025/05/01.23:58:59 P.20131013
+EN work/Calc_data_topmudule 1746137427 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/Calc_data_topmudule/Behavioral 1746117000 \
+AR work/Calc_data_topmudule/Behavioral 1746137428 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd \
-      EN work/Calc_data_topmudule 1746116999 CP div_component
+      EN work/Calc_data_topmudule 1746137427 CP div_component
 FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd 2025/05/01.16:04:39 P.20131013
-EN work/Calc_Menu 1746116997 \
+EN work/Calc_Menu 1746137425 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Calc_Menu/Behavioral 1746116998 \
+AR work/Calc_Menu/Behavioral 1746137426 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd \
-      EN work/Calc_Menu 1746116997 CP work/std_8bit_reg CP work/std_16bit_reg
-FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd 2025/05/01.18:29:41 P.20131013
-EN work/Calc_Top 1746117001 \
+      EN work/Calc_Menu 1746137425 CP work/std_8bit_reg CP work/std_16bit_reg
+FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd 2025/05/02.00:10:07 P.20131013
+EN work/Calc_Top 1746137429 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Calc_Top/Behavioral 1746117002 \
+AR work/Calc_Top/Behavioral 1746137430 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd \
-      EN work/Calc_Top 1746117001 CP work/DivClk CP work/SevenSeg4 CP work/Debounce \
+      EN work/Calc_Top 1746137429 CP work/DivClk CP work/SevenSeg4 CP work/Debounce \
       CP work/Calc_Menu CP work/Calc_Data_topmudule
 FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Debounce_corrected.vhd 2025/03/10.15:47:12 P.20131013
-EN work/Debounce 1746116995 \
+EN work/Debounce 1746137423 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Debounce_corrected.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/Debounce/Behavioral 1746116996 \
+AR work/Debounce/Behavioral 1746137424 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Debounce_corrected.vhd \
-      EN work/Debounce 1746116995
+      EN work/Debounce 1746137423
 FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/DivClk.vhd 2025/03/10.15:47:12 P.20131013
-EN work/DivClk 1746116991 \
+EN work/DivClk 1746137419 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/DivClk.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/DivClk/DivClk_arch 1746116992 \
+AR work/DivClk/DivClk_arch 1746137420 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/DivClk.vhd \
-      EN work/DivClk 1746116991
-FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/div_compoent.vhd 2025/05/01.18:28:52 P.20131013
-EN work/div_component 1746116985 \
+      EN work/DivClk 1746137419
+FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/div_compoent.vhd 2025/05/02.00:08:51 P.20131013
+EN work/div_component 1746137413 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/div_compoent.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/div_component/Behavioral 1746116986 \
+AR work/div_component/Behavioral 1746137414 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/div_compoent.vhd \
-      EN work/div_component 1746116985
+      EN work/div_component 1746137413
 FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/SevenSeg4.vhd 2025/04/29.18:32:20 P.20131013
-EN work/SevenSeg4 1746116993 \
+EN work/SevenSeg4 1746137421 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/SevenSeg4.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/SevenSeg4/SevenSeg_arch 1746116994 \
+AR work/SevenSeg4/SevenSeg_arch 1746137422 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/SevenSeg4.vhd \
-      EN work/SevenSeg4 1746116993
+      EN work/SevenSeg4 1746137421
 FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd 2025/04/07.22:09:13 P.20131013
-EN work/std_16bit_reg 1746116989 \
+EN work/std_16bit_reg 1746137417 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/std_16bit_reg/Behavioral 1746116990 \
+AR work/std_16bit_reg/Behavioral 1746137418 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_16bit_reg.vhd \
-      EN work/std_16bit_reg 1746116989
+      EN work/std_16bit_reg 1746137417
 FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd 2025/04/06.23:05:35 P.20131013
-EN work/std_8bit_reg 1746116987 \
+EN work/std_8bit_reg 1746137415 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/std_8bit_reg/Behavioral 1746116988 \
+AR work/std_8bit_reg/Behavioral 1746137416 \
       FL /home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/std_8bit_reg.vhd \
-      EN work/std_8bit_reg 1746116987
+      EN work/std_8bit_reg 1746137415

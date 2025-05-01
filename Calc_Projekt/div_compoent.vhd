@@ -49,7 +49,6 @@ architecture Behavioral of div_component is
 begin
 
 
--- reset? (mske)
  
 -- dividendregister
 process(clk)
@@ -68,32 +67,33 @@ process(clk)
 	begin
     	if rising_edge(clk) then
     	if start = '1' then
-    	Dsor_reg <= Inp2 & (15 downto 0 => '0');
+    	Dsor_reg <= Inp2 & (15 downto 0 => '0');--smelter 16 lave bits på højre side af input 2 (divisoren )
         	elsif start = '0' then
-        	Dsor_reg <= Dsor_reg;
+        	Dsor_reg <= Dsor_reg;-- hvis start er lav skal registeret bare forblive det samme, kan evt sættes til 0 (reset)
     	end if;
     	end if;
 end process;
- 
+
+--Divisionsblok 
 process(clk)
 begin
 	if rising_edge(clk) then
     
     	if counter = 0 then
-        	Dividend <= Div_reg;
-        	Divisor <= Dsor_reg;
+        	Dividend <= Div_reg;-- Div registerets værdi loades ind i dividenden
+        	Divisor <= Dsor_reg;-- Dsor registerets værdi loades ind i divisoren
     	 
-    	elsif counter <= 18 then
-        	Divisor <= '0' & Divisor(23 downto 1); --hjreskift
+    	elsif counter <= 18 then-- indtil counteren når 18 skal nedenfor køre 
+        	Divisor <= '0' & Divisor(23 downto 1); --højreskift
         	if unsigned(Dividend) < unsigned(Divisor) then
-            	ResLSB <= '0';
+            	ResLSB <= '0';-- hvis dividenden er mindre end divisor bliver ResLSB lav og dette bit shiftes venstre ind i resultatet
                 	else
-                    	Dividend <= std_logic_vector(unsigned(Dividend) - unsigned(Divisor));
-                    	ResLSB <= '1';
+                    	Dividend <= std_logic_vector(unsigned(Dividend) - unsigned(Divisor));-- hvis dividend >= divisor trækkes divisor fra dividend
+                    	ResLSB <= '1';-- resLSB sættes højt og det er klar til at blive shiftet ind i resultatet 
                    	 
            	 
         	end if;
-        	else ResLSB <= '0';  -- fallback nr counter > 16
+        	else ResLSB <= '0'; -- fallback når counter > 18 er et else til 'elsif counter <= 18 then' (ren sikkerhed)
         	end if;
         	end if;                	 
     	end process;
@@ -102,11 +102,11 @@ begin
 process(clk)
 begin
     	if rising_edge(clk) then
-        	if aktiv = '1' then
+        	if aktiv = '1' then-- hvis aktiv er høj køres denne process
         	if ResLSB = '1' then
-        	Resultat <= Resultat(14 downto 0) & '1';
+        	Resultat <= Resultat(14 downto 0) & '1';-- hvis resLSB er høj smeltes et '1' tal på resultatet til højre
         	elsif ResLSB = '0' then -- hvis ResLSB = 0
-        	Resultat <= Resultat(14 downto 0) & '0';
+        	Resultat <= Resultat(14 downto 0) & '0';-- hvis resLSB er lav smeltes et 0 tal på resultatet til højre 
             	else
             	Resultat <= (15 downto 0 => '0');
         	end if;
@@ -119,15 +119,15 @@ process(clk)
 begin
 	if rising_edge(clk) then
 	if start = '1' then
-    	counter <= 0;
-    	intdone <= '0';
-    	aktiv <= '1';
-    	elsif aktiv = '1' then  
+    	counter <= 0;-- tæller initializeres til 0
+    	intdone <= '0';-- intdone initializeres til 0
+    	aktiv <= '1';-- aktiv signalet sættes når start går høj og herefter bruges denne til at holde count i tælling
+    	elsif aktiv = '1' then -- der tælles hvis aktiv er høj. 
         	if counter < 18 then -- sat til 18 s der er en buffer og der kan ske overflow og s der kan loades og sendes vrdier
         	counter <= counter + 1;
         	else
         	intdone <= '1'; --interne done signal sendes
-        	aktiv <= '0';  --frdig
+        	aktiv <= '0';  --færdig
     	end if;
     	end if;
     	end if;

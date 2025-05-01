@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-mads-VirtualBox::  Thu May 01 18:31:34 2025
+mads-VirtualBox::  Fri May 02 00:10:30 2025
 
 par -w -intstyle ise -ol high -t 1 Calc_Top_map.ncd Calc_Top.ncd Calc_Top.pcf 
 
@@ -125,19 +125,19 @@ Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 4
 
 Updating file: Calc_Top.ncd with current fully routed design.
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
-Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
-Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 WARNING:Route:455 - CLK Net:U1/Clk1_D may have excessive skew because 
       1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 4 secs 
+Total REAL time to Router completion: 5 secs 
 Total CPU time to Router completion: 4 secs 
 
 Partition Implementation Status
@@ -199,9 +199,9 @@ Generating Pad Report.
 All signals are completely routed.
 
 Total REAL time to PAR completion: 5 secs 
-Total CPU time to PAR completion: 4 secs 
+Total CPU time to PAR completion: 5 secs 
 
-Peak Memory Usage:  547 MB
+Peak Memory Usage:  548 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
