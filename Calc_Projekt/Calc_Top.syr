@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Reading design: Calc_Top.prj
@@ -126,8 +126,7 @@ Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_
 Entity <calc_data_topmudule> compiled.
 Entity <calc_data_topmudule> (Architecture <behavioral>) compiled.
 Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_top.vhd" in Library work.
-Entity <calc_top> compiled.
-Entity <calc_top> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity calc_top is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -253,8 +252,8 @@ Synthesizing Unit <div_component>.
     Found 5-bit comparator greatequal for signal <counter$cmp_ge0000> created at line 126.
     Found 32-bit register for signal <Div_reg>.
     Found 32-bit register for signal <Dividend>.
-    Found 32-bit subtractor for signal <Dividend$addsub0000> created at line 91.
-    Found 32-bit comparator less for signal <Dividend$cmp_lt0000> created at line 88.
+    Found 32-bit subtractor for signal <Dividend$addsub0000> created at line 92.
+    Found 32-bit comparator less for signal <Dividend$cmp_lt0000> created at line 89.
     Found 24-bit register for signal <Divisor>.
     Found 24-bit register for signal <Dsor_reg>.
     Found 1-bit register for signal <intdone>.
@@ -270,6 +269,9 @@ Unit <div_component> synthesized.
 
 Synthesizing Unit <Calc_Menu>.
     Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Menu.vhd".
+WARNING:Xst:1305 - Output <In1> is never assigned. Tied to value 0000000000000000.
+WARNING:Xst:1305 - Output <In2> is never assigned. Tied to value 00000000.
+WARNING:Xst:1305 - Output <OpCode> is never assigned. Tied to value 000.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 16                                             |
@@ -296,15 +298,15 @@ Unit <Calc_Menu> synthesized.
 
 Synthesizing Unit <Calc_data_topmudule>.
     Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd".
-WARNING:Xst:643 - "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd" line 83: The result of a 16x16-bit multiplication is partially used. Only the 16 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_data_topmudule.vhd" line 85: The result of a 16x16-bit multiplication is partially used. Only the 16 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
     Found 1-bit register for signal <done>.
     Found 16-bit register for signal <Calc_val>.
     Found 16-bit register for signal <ResGan>.
-    Found 16x16-bit multiplier for signal <ResGan$mult0001> created at line 83.
+    Found 16x16-bit multiplier for signal <ResGan$mult0001> created at line 85.
     Found 16-bit register for signal <ResMin>.
-    Found 16-bit subtractor for signal <ResMin$sub0000> created at line 82.
+    Found 16-bit subtractor for signal <ResMin$sub0000> created at line 84.
     Found 16-bit register for signal <ResPlu>.
-    Found 16-bit adder for signal <ResPlu$add0000> created at line 81.
+    Found 16-bit adder for signal <ResPlu$add0000> created at line 83.
     Summary:
 	inferred  65 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
@@ -381,8 +383,28 @@ Optimizing FSM <U5/state/FSM> on signal <state[1:16]> with one-hot encoding.
  op1   | 0000000000100000
  op2   | 0000001000000000
 ---------------------------
-INFO:Xst:2261 - The FF/Latch <Dsor_reg_0> in Unit <u1> is equivalent to the following 31 FFs/Latches, which will be removed : <Dsor_reg_1> <Dsor_reg_2> <Dsor_reg_3> <Dsor_reg_4> <Dsor_reg_5> <Dsor_reg_6> <Dsor_reg_7> <Dsor_reg_8> <Dsor_reg_9> <Dsor_reg_10> <Dsor_reg_11> <Dsor_reg_12> <Dsor_reg_13> <Dsor_reg_14> <Dsor_reg_15> <Div_reg_16> <Div_reg_17> <Div_reg_18> <Div_reg_19> <Div_reg_20> <Div_reg_21> <Div_reg_22> <Div_reg_23> <Div_reg_24> <Div_reg_25> <Div_reg_26> <Div_reg_27> <Div_reg_28> <Div_reg_29> <Div_reg_30> <Div_reg_31> 
-WARNING:Xst:1710 - FF/Latch <Dsor_reg_0> (without init value) has a constant value of 0 in block <u1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1290 - Hierarchical block <u1> is unconnected in block <U6>.
+   It will be removed from the design.
+INFO:Xst:2261 - The FF/Latch <Calc_val_0> in Unit <U6> is equivalent to the following 15 FFs/Latches, which will be removed : <Calc_val_1> <Calc_val_2> <Calc_val_3> <Calc_val_4> <Calc_val_5> <Calc_val_6> <Calc_val_7> <Calc_val_8> <Calc_val_9> <Calc_val_10> <Calc_val_11> <Calc_val_12> <Calc_val_13> <Calc_val_14> <Calc_val_15> 
+WARNING:Xst:1710 - FF/Latch <Calc_val_0> (without init value) has a constant value of 0 in block <U6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_15> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_14> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_13> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_12> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_11> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_10> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_9> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_8> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_7> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_6> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_5> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_4> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_3> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_2> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_1> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_out_0> (without init value) has a constant value of 0 in block <CalcValReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1290 - Hierarchical block <CalcValReg> is unconnected in block <U5>.
+   It will be removed from the design.
 WARNING:Xst:2404 -  FFs/Latches <Div_reg<31:16>> (without init value) have a constant value of 0 in block <div_component>.
 
 Synthesizing (advanced) Unit <Calc_data_topmudule>.
@@ -458,11 +480,179 @@ Optimizing unit <div_component> ...
 Optimizing unit <Calc_Menu> ...
 
 Optimizing unit <Calc_data_topmudule> ...
+WARNING:Xst:1710 - FF/Latch <U6/ResPlu_12> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResPlu_13> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResPlu_14> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResPlu_15> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_0> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_1> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_2> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_3> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_4> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_5> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_6> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_7> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_8> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_9> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_10> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_11> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_12> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_13> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_14> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResMin_15> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_15> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_14> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_13> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_12> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_11> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_10> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_9> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_8> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_0> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_1> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_2> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_3> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_4> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_5> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_6> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_7> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_8> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_9> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_10> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_11> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_12> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_13> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_14> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/Calc_val_15> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResPlu_0> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResPlu_1> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResPlu_2> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResPlu_3> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResPlu_4> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResPlu_5> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResPlu_6> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResPlu_7> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResPlu_8> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResPlu_9> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResPlu_10> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/ResPlu_11> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_11> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_10> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_9> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_8> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_7> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_6> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_5> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_4> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_3> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_2> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_1> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_0> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Dsor_reg_23> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Dsor_reg_22> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Dsor_reg_21> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Dsor_reg_20> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Dsor_reg_19> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Dsor_reg_18> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Dsor_reg_17> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Dsor_reg_16> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_7> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_6> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_5> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_4> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_3> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_2> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_1> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Div_reg_0> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_23> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_22> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_12> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_13> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_14> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_15> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_16> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_17> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_18> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_19> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_20> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U6/u1/Divisor_21> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_0> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_1> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_2> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_3> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_4> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_5> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_6> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_7> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_8> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_9> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_10> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_11> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_12> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_13> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_14> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U5/CalcValReg/data_out_15> (without init value) has a constant value of 0 in block <Calc_Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/intdone> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/Mmult_ResGan_mult0001> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/ResLSB> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_0> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_1> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_2> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_3> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_4> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_5> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_6> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_7> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_8> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_9> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_10> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_11> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_12> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_13> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_14> is unconnected in block <Calc_Top>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <U6/u1/Resultat_15> is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_0> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_1> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_2> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_3> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_4> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_5> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_6> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_7> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_8> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_9> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_10> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_11> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_12> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_13> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_14> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_15> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_16> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_17> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_18> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_19> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_20> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_21> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_22> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_23> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_24> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_25> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_26> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_27> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_28> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_29> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_30> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/Dividend_31> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/aktiv> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/counter_0> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/counter_1> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/counter_2> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/counter_3> of sequential type is unconnected in block <Calc_Top>.
+WARNING:Xst:2677 - Node <U6/u1/counter_4> of sequential type is unconnected in block <Calc_Top>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Calc_Top, actual ratio is 27.
-FlipFlop U5/state_FSM_FFd1 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 5) on block Calc_Top, actual ratio is 13.
 
 Final Macro Processing ...
 
@@ -470,8 +660,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 296
- Flip-Flops                                            : 296
+# Registers                                            : 127
+ Flip-Flops                                            : 127
 
 =========================================================================
 
@@ -500,40 +690,31 @@ Design Statistics
 # IOs                              : 32
 
 Cell Usage :
-# BELS                             : 762
+# BELS                             : 359
 #      GND                         : 1
-#      INV                         : 14
+#      INV                         : 5
 #      LUT1                        : 57
-#      LUT2                        : 139
+#      LUT2                        : 32
 #      LUT2_D                      : 2
 #      LUT2_L                      : 1
-#      LUT3                        : 67
-#      LUT3_D                      : 2
+#      LUT3                        : 16
+#      LUT3_D                      : 1
 #      LUT3_L                      : 3
-#      LUT4                        : 163
-#      LUT4_D                      : 1
-#      LUT4_L                      : 1
-#      MUXCY                       : 164
-#      MUXF5                       : 23
+#      LUT4                        : 99
+#      MUXCY                       : 77
+#      MUXF5                       : 5
 #      VCC                         : 1
-#      XORCY                       : 123
-# FlipFlops/Latches                : 296
-#      FD                          : 23
-#      FDC                         : 85
-#      FDCE                        : 57
-#      FDE                         : 121
+#      XORCY                       : 59
+# FlipFlops/Latches                : 127
+#      FDC                         : 84
+#      FDCE                        : 41
 #      FDP                         : 1
-#      FDR                         : 1
-#      FDRE                        : 6
 #      FDS                         : 1
-#      FDSE                        : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 31
 #      IBUF                        : 12
 #      OBUF                        : 19
-# MULTs                            : 1
-#      MULT18X18SIO                : 1
 =========================================================================
 
 Device utilization summary:
@@ -541,12 +722,11 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                      261  out of    960    27%  
- Number of Slice Flip Flops:            296  out of   1920    15%  
- Number of 4 input LUTs:                450  out of   1920    23%  
+ Number of Slices:                      125  out of    960    13%  
+ Number of Slice Flip Flops:            127  out of   1920     6%  
+ Number of 4 input LUTs:                216  out of   1920    11%  
  Number of IOs:                          32
  Number of bonded IOBs:                  32  out of     83    38%  
- Number of MULT18X18SIOs:                 1  out of      4    25%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -570,7 +750,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-MClk                               | BUFGP                  | 295   |
+MClk                               | BUFGP                  | 125   |
 U1/Clk1_D                          | NONE(U2/DispCount_0)   | 2     |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -580,16 +760,16 @@ Asynchronous Control Signals Information:
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-BTN3                               | IBUF                   | 143   |
+BTN3                               | IBUF                   | 126   |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 8.547ns (Maximum Frequency: 116.999MHz)
+   Minimum period: 7.279ns (Maximum Frequency: 137.382MHz)
    Minimum input arrival time before clock: 4.401ns
-   Maximum output required time after clock: 10.657ns
+   Maximum output required time after clock: 10.572ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -598,26 +778,43 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'MClk'
-  Clock period: 8.547ns (frequency: 116.999MHz)
-  Total number of paths / destination ports: 11870 / 470
+  Clock period: 7.279ns (frequency: 137.382MHz)
+  Total number of paths / destination ports: 1937 / 124
 -------------------------------------------------------------------------
-Delay:               8.547ns (Levels of Logic = 2)
-  Source:            U5/state_FSM_FFd2 (FF)
-  Destination:       U6/Mmult_ResGan_mult0001 (MULT)
+Delay:               7.279ns (Levels of Logic = 19)
+  Source:            U4/Count_1 (FF)
+  Destination:       U4/Cout1 (FF)
   Source Clock:      MClk rising
   Destination Clock: MClk rising
 
-  Data Path: U5/state_FSM_FFd2 to U6/Mmult_ResGan_mult0001
+  Data Path: U4/Count_1 to U4/Cout1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              5   0.591   0.637  U5/state_FSM_FFd2 (U5/state_FSM_FFd2)
-     LUT4:I3->O           41   0.704   1.344  U5/state_FSM_Out131_1 (U5/state_FSM_Out131)
-     LUT2:I1->O            4   0.704   0.587  U5/In1<15>1 (In1<15>)
-     MULT18X18SIO:A15          3.980          U6/Mmult_ResGan_mult0001
+     FDC:C->Q              2   0.591   0.622  U4/Count_1 (U4/Count_1)
+     LUT1:I0->O            1   0.704   0.000  U4/Madd_Count_addsub0000_cy<1>_rt (U4/Madd_Count_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  U4/Madd_Count_addsub0000_cy<1> (U4/Madd_Count_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<2> (U4/Madd_Count_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<3> (U4/Madd_Count_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<4> (U4/Madd_Count_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<5> (U4/Madd_Count_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<6> (U4/Madd_Count_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<7> (U4/Madd_Count_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<8> (U4/Madd_Count_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<9> (U4/Madd_Count_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<10> (U4/Madd_Count_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<11> (U4/Madd_Count_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<12> (U4/Madd_Count_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  U4/Madd_Count_addsub0000_cy<13> (U4/Madd_Count_addsub0000_cy<13>)
+     XORCY:CI->O           1   0.804   0.424  U4/Madd_Count_addsub0000_xor<14> (U4/Count_addsub0000<14>)
+     LUT4:I3->O            2   0.704   0.451  U4/Count_mux0000<14>1 (U4/Count_mux0000<14>)
+     LUT4:I3->O            1   0.704   0.000  U4/Mcompar_Cout1_cmp_lt0000_lut<5> (U4/Mcompar_Cout1_cmp_lt0000_lut<5>)
+     MUXCY:S->O            1   0.464   0.000  U4/Mcompar_Cout1_cmp_lt0000_cy<5> (U4/Mcompar_Cout1_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.331   0.000  U4/Mcompar_Cout1_cmp_lt0000_cy<6> (U4/Mcompar_Cout1_cmp_lt0000_cy<6>)
+     FDC:D                     0.308          U4/Cout1
     ----------------------------------------
-    Total                      8.547ns (5.979ns logic, 2.568ns route)
-                                       (70.0% logic, 30.0% route)
+    Total                      7.279ns (5.782ns logic, 1.497ns route)
+                                       (79.4% logic, 20.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'U1/Clk1_D'
@@ -686,40 +883,40 @@ Offset:              8.070ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'MClk'
-  Total number of paths / destination ports: 883 / 15
+  Total number of paths / destination ports: 659 / 15
 -------------------------------------------------------------------------
-Offset:              10.657ns (Levels of Logic = 6)
-  Source:            U5/state_FSM_FFd1 (FF)
+Offset:              10.572ns (Levels of Logic = 6)
+  Source:            U5/state_FSM_FFd16 (FF)
   Destination:       Cat<6> (PAD)
   Source Clock:      MClk rising
 
-  Data Path: U5/state_FSM_FFd1 to Cat<6>
+  Data Path: U5/state_FSM_FFd16 to Cat<6>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             19   0.591   1.260  U5/state_FSM_FFd1 (U5/state_FSM_FFd1)
-     LUT4:I0->O            1   0.704   0.595  U5/DispData<3>4 (U5/DispData<3>4)
-     LUT3:I0->O            1   0.704   0.499  U5/DispData<3>23 (DispData<3>)
+     FDP:C->Q             14   0.591   1.175  U5/state_FSM_FFd16 (U5/state_FSM_FFd16)
+     LUT4:I0->O            1   0.704   0.595  U5/DispData<3>15 (U5/DispData<3>15)
+     LUT4:I0->O            1   0.704   0.499  U5/DispData<3>17 (DispData<3>)
      LUT3:I1->O            1   0.704   0.000  U2/Mmux_DataN_43 (U2/Mmux_DataN_43)
      MUXF5:I0->O           7   0.321   0.883  U2/Mmux_DataN_2_f5_2 (U2/DataN<3>)
      LUT4:I0->O            1   0.704   0.420  U2/Mrom_cat21 (Cat_2_OBUF)
      OBUF:I->O                 3.272          Cat_2_OBUF (Cat<2>)
     ----------------------------------------
-    Total                     10.657ns (7.000ns logic, 3.657ns route)
-                                       (65.7% logic, 34.3% route)
+    Total                     10.572ns (7.000ns logic, 3.572ns route)
+                                       (66.2% logic, 33.8% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 2.91 secs
+Total CPU time to Xst completion: 2.52 secs
  
 --> 
 
 
-Total memory usage is 521212 kilobytes
+Total memory usage is 519360 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   19 (   0 filtered)
+Number of warnings :  209 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

@@ -1,196 +1,166 @@
 --------------------------------------------------------------------------------
 -- Company: 
--- Engineer:
+-- Engineer: 
 --
--- Create Date:   15:48:19 05/01/2025
--- Design Name:   
--- Module Name:   C:/Users/s246132/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Top_Uden_Debounce_TB.vhd
--- Project Name:  Calc_Projekt
+-- Create Date: 15:48:19 05/01/2025
+-- Design Name: 
+-- Module Name: Calc_Top_Uden_Debounce_TB - Testbench
+-- Project Name: Calc_Projekt
 -- Target Device:  
--- Tool versions:  
--- Description:   
--- 
--- VHDL Test Bench Created by ISE for module: Calc_Top
--- 
--- Dependencies:
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
--- Notes: 
--- This testbench has been automatically generated using types std_logic and
--- std_logic_vector for the ports of the unit under test.  Xilinx recommends
--- that these types always be used for the top-level I/O of a design in order
--- to guarantee that the testbench will bind correctly to the post-implementation 
--- simulation model.
+-- Description: Full simulation of FSM through all states.
 --------------------------------------------------------------------------------
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
- 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
- 
-ENTITY Calc_Top_Uden_Debounce_TB IS
-END Calc_Top_Uden_Debounce_TB;
- 
-ARCHITECTURE behavior OF Calc_Top_Uden_Debounce_TB IS 
- 
-    -- Component Declaration for the Unit Under Test (UUT)
- 
-    COMPONENT Calc_Top
-    PORT(
-         BTN3 : IN  std_logic;
-         MClk : IN  std_logic;
-         BTN0 : IN  std_logic;
-         BTN1 : IN  std_logic;
-         BTN2 : IN  std_logic;
-         SW : IN  std_logic_vector(7 downto 0);
-         An : OUT  std_logic_vector(3 downto 0);
-         Cat : OUT  std_logic_vector(6 downto 0);
-         ld : OUT  std_logic_vector(7 downto 0)
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Calc_Top_Uden_Debounce_TB is
+end Calc_Top_Uden_Debounce_TB;
+
+architecture behavior of Calc_Top_Uden_Debounce_TB is
+
+    -- Component declaration
+    component Calc_Top
+        Port(
+            BTN3 : IN  std_logic;
+            MClk : IN  std_logic;
+            BTN0 : IN  std_logic;
+            BTN1 : IN  std_logic;
+            BTN2 : IN  std_logic;
+            SW   : IN  std_logic_vector(7 downto 0);
+            An   : OUT std_logic_vector(3 downto 0);
+            Cat  : OUT std_logic_vector(6 downto 0);
+            ld   : OUT std_logic_vector(7 downto 0)
         );
-    END COMPONENT;
-    
+    end component;
 
-   --Inputs
-   signal BTN3 : std_logic := '0';
-   signal MClk : std_logic := '0';
-   signal BTN0 : std_logic := '0';
-   signal BTN1 : std_logic := '0';
-   signal BTN2 : std_logic := '0';
-   signal SW : std_logic_vector(7 downto 0) := (others => '0');
+    -- Input signals
+    signal BTN3 : std_logic := '0';
+    signal MClk : std_logic := '0';
+    signal BTN0 : std_logic := '0';
+    signal BTN1 : std_logic := '0';
+    signal BTN2 : std_logic := '0';
+    signal SW   : std_logic_vector(7 downto 0) := (others => '0');
 
- 	--Outputs
-   signal An : std_logic_vector(3 downto 0);
-   signal Cat : std_logic_vector(6 downto 0);
-   signal ld : std_logic_vector(7 downto 0);
+    -- Output signals
+    signal An  : std_logic_vector(3 downto 0);
+    signal Cat : std_logic_vector(6 downto 0);
+    signal ld  : std_logic_vector(7 downto 0);
 
-   -- Clock period definitions
-   constant MClk_period : time := 10 ns;
- 
-BEGIN
- 
-	-- Instantiate the Unit Under Test (UUT)
-   uut: Calc_Top PORT MAP (
-          BTN3 => BTN3,
-          MClk => MClk,
-          BTN0 => BTN0,
-          BTN1 => BTN1,
-          BTN2 => BTN2,
-          SW => SW,
-          An => An,
-          Cat => Cat,
-          ld => ld
+    -- Clock period definition
+    constant MClk_period : time := 10 ns;
+
+begin
+
+    -- Instantiate the Unit Under Test (UUT)
+    uut: Calc_Top
+        port map (
+            BTN3 => BTN3,
+            MClk => MClk,
+            BTN0 => BTN0,
+            BTN1 => BTN1,
+            BTN2 => BTN2,
+            SW   => SW,
+            An   => An,
+            Cat  => Cat,
+            ld   => ld
         );
 
-   -- Clock process definitions
-   MClk_process :process
-   begin
-		MClk <= '0';
-		wait for MClk_period/2;
-		MClk <= '1';
-		wait for MClk_period/2;
-   end process;
- 
-
-   -- Stimulus process
-  stim_proc: process
+    -- Clock generation process
+    MClk_process : process
     begin
-        -- Initialize inputs
-        BTN3 <= '1'; -- Start with a reset
-        wait for MClk_period;
-        BTN3 <= '0'; -- De-assert reset
+        MClk <= '0';
+        wait for MClk_period/2;
+        MClk <= '1';
+        wait for MClk_period/2;
+    end process;
 
-        -- Test Case 1: State A (waiting for Val1 input)
-        -- State A is active
-        -- Step 1: Load Val1 value into the register
-        SW <= "00001000";  -- Input value for Val1
+    -- Stimulus process: run through all FSM states, doing the calculation of ((8*2)/4)
+    stim_proc: process
+    begin
+        -- Reset
+        BTN3 <= '1';
         wait for MClk_period;
-        BTN0 <= '1';      -- Simulate pressing Enter to load Val1
-        wait for MClk_period;
-        BTN0 <= '0';      -- Release Enter
-        wait for MClk_period;
+        BTN3 <= '0';
 
-        -- Step 2: Press Func to move to State B (set Op1)
-        BTN1 <= '1';       -- Press Func to go to next state (State B)
+        -- State A - Load Val1
+        SW <= "00001000";--8
         wait for MClk_period;
-        BTN1 <= '0';       -- Release Func
+        BTN0 <= '1';
         wait for MClk_period;
-
-        -- Test Case 2: State B (setting Op1)
-        -- State B is active
-        -- Step 3: Load Op1 value (from SW input)
-        SW <= "00000011";  -- Input value for Op1
-        wait for MClk_period;
-        BTN0 <= '1';      -- Simulate pressing Enter to load Op1
-        wait for MClk_period;
-        BTN0 <= '0';      -- Release Enter
+        BTN0 <= '0';
         wait for MClk_period;
 
-        -- Step 4: Press Func to move to State C (set val2)
-        BTN1 <= '1';       -- Press Func to go to next state (State C)
+        -- Move to State B
+        BTN1 <= '1';
         wait for MClk_period;
-        BTN1 <= '0';       -- Release Func
+        BTN1 <= '0';
+        wait for MClk_period;
+
+        -- State B - Load Op1
+        SW <= "00000011";--*
+        wait for MClk_period;
+        BTN0 <= '1';
+        wait for MClk_period;
+        BTN0 <= '0';
+        wait for MClk_period;
+
+        -- Move to State C
+        BTN1 <= '1';
+        wait for MClk_period;
+        BTN1 <= '0';
         wait for 20 ns;
 
-        -- Test Case 3: State C (val2)
-        -- State C is active
-        -- Step 5: Load Op2 value (from SW input)
-        SW <= "00000010";  -- Input value for val2
+        -- State C - Load Val2
+        SW <= "00000010";--2
         wait for MClk_period;
-        BTN0 <= '1';      -- Simulate pressing Enter to load val2
+        BTN0 <= '1';
         wait for MClk_period;
-        BTN0 <= '0';      -- Release Enter
+        BTN0 <= '0';
         wait for MClk_period;
 
-        -- Step 6: Press Func to move to State D (set op2)
-        BTN1 <= '1';       -- Press Func to go to next state (State D)
+        -- Move to State D
+        BTN1 <= '1';
         wait for MClk_period;
-        BTN1 <= '0';       -- Release Func
-        wait for MClk_period;
-
-        -- Test Case 4: State D (setting op2)
-        -- State D is active
-        -- Step 7: Load Val3 value (from SW input)
-        SW <= "00000100";  -- Input value for op2
-        wait for MClk_period;
-        BTN0 <= '1';      -- Simulate pressing Enter to load op2
-        wait for MClk_period;
-        BTN0 <= '0';      -- Release Enter
+        BTN1 <= '0';
         wait for MClk_period;
 
-        -- Step 8: Press fumc to go to state E (Setting Val3)
-        BTN1 <= '1';       
+        -- State D - Load Op2
+        SW <= "00000100";--/
         wait for MClk_period;
-        BTN1 <= '0';       -- Release Func
+        BTN0 <= '1';
+        wait for MClk_period;
+        BTN0 <= '0';
         wait for MClk_period;
 
-		  SW <= "00000100";  -- Input value for Val3
+        -- Move to State E - Load Val3
+        BTN1 <= '1';
         wait for MClk_period;
-        BTN0 <= '1';      -- Simulate pressing Enter to load Val3
+        BTN1 <= '0';
         wait for MClk_period;
-        BTN0 <= '0';      -- Release Enter
+
+        SW <= "00000100";--4
         wait for MClk_period;
-      
-		
-		 -- step 9 Going to state F by pressing operation
-		 BTN2 <= '1';
+        BTN0 <= '1';
         wait for MClk_period;
-		 BTN2 <='0';
-			wait for MClk_period;
-			
-			wait for 40*MClk_period;
-			--going to state A by pressing FUNC
-			BTN1 <= '1';
-         wait for MClk_period;
-		   BTN1 <='0';
-			wait for MClk_period;
-			
-			
-		 
-		wait;
+        BTN0 <= '0';
+        wait for MClk_period;
+
+        -- Move to State F - Execute
+        BTN2 <= '1';
+        wait for MClk_period;
+        BTN2 <= '0';
+        wait for MClk_period;
+
+        -- Wait for operation to complete
+        wait for 40 * MClk_period;
+
+        -- Return to State A
+        BTN1 <= '1';
+        wait for MClk_period;
+        BTN1 <= '0';
+        wait for MClk_period;
+
+        wait;
     end process;
 
 end behavior;

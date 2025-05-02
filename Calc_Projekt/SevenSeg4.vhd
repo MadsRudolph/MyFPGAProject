@@ -47,6 +47,7 @@ begin
      end case;
     end process DispCountDec;
 
+
    with DataN SELect      --  Activate segments acc. to Data
      cat <= "0000001" when "0000",   --0
             "1001111" when "0001",   --1
