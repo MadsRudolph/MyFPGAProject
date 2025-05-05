@@ -1,0 +1,5 @@
+vhdl work "../../../Downloads/DivClk.vhd"
+vhdl work "PWMmodule.vhd"
+vhdl work "Sawtooth.vhd"
+vhdl work "LYSregul.vhd"
+vhdl work "TopLys.vhd"

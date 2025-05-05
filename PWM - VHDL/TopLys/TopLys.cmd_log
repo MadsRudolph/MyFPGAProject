@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.xst" -ofn "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.syr" 
