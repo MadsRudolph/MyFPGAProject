@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2025-05-05T15:29:41</DateModified>
+  <DateModified>2025-05-08T20:10:24</DateModified>
   <ModuleName>TopLys</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2025-05-08T20:09:59</SummaryTimeStamp>
   <SavedFilePath>/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/iseconfig/TopLys.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/</ImplementationReportsDirectory>
   <DateInitialized>2025-05-05T15:29:41</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

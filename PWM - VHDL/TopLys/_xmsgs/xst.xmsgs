@@ -5,16 +5,16 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.vhd</arg>&quot; Line <arg fmt="%d" index="2">46</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">LD</arg>&apos;.
+<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd</arg>&quot; Line <arg fmt="%d" index="2">46</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">LD</arg>&apos;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.vhd</arg>&quot; Line <arg fmt="%d" index="2">46</arg>. <arg fmt="%s" index="3">LD</arg>: Undefined symbol (last report in this block)
+<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd</arg>&quot; Line <arg fmt="%d" index="2">46</arg>. <arg fmt="%s" index="3">LD</arg>: Undefined symbol (last report in this block)
 </msg>
 
-<msg type="error" file="HDLParsers" num="3324" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.vhd</arg>&quot; Line <arg fmt="%d" index="2">42</arg>. IN mode Formal <arg fmt="%s" index="3">SW</arg> of <arg fmt="%s" index="4">entity</arg> with no default value must be associated with an actual value.
+<msg type="error" file="HDLParsers" num="3324" delta="new" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd</arg>&quot; Line <arg fmt="%d" index="2">42</arg>. IN mode Formal <arg fmt="%s" index="3">SW</arg> of <arg fmt="%s" index="4">entity</arg> with no default value must be associated with an actual value.
 </msg>
 
-<msg type="error" file="HDLParsers" num="820" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.vhd</arg>&quot; Line <arg fmt="%d" index="2">48</arg>. Type of actual ports is not compatible with type of ports of <arg fmt="%s" index="3">entity</arg>.
+<msg type="error" file="HDLParsers" num="820" delta="new" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd</arg>&quot; Line <arg fmt="%d" index="2">48</arg>. Type of actual ports is not compatible with type of ports of <arg fmt="%s" index="3">entity</arg>.
 </msg>
 
 </messages>

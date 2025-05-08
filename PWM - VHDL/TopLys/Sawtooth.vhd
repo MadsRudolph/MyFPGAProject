@@ -19,7 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEE.STD_LOGIC_unsigned.ALL;
+use IEEE.STD_LOGIC_unsigned.ALL;
 
 entity Sawtooth is
     Port ( Reset : in  STD_LOGIC;

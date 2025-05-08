@@ -1,0 +1,5 @@
+set -tmpdir "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/xst/projnav.tmp"
+set -xsthdpdir "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/xst"
+elaborate
+-ifn DivClk.prj
+-ifmt mixed

@@ -1,18 +1,21 @@
-Release 14.1 - xst P.15xf (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to xst/projnav.tmp
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.88 secs
+Total CPU time to Xst completion: 0.00 secs
  
---> Parameter xsthdpdir set to xst
+--> 
+Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.89 secs
+Total CPU time to Xst completion: 0.00 secs
  
---> Reading design: TopLys.prj
+--> 
+Reading design: TopLys.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -68,7 +71,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -104,25 +107,21 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/s240324/Downloads/DivClk.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/DivClk.vhd" in Library work.
 Architecture divclk_arch of Entity divclk is up to date.
-Compiling vhdl file "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/PWMmodule.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/PWMmodule.vhd" in Library work.
 Architecture behavioral of Entity pwmmodule is up to date.
-Compiling vhdl file "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/LYSregul.vhd" in Library work.
-Entity <lysregul> compiled.
-Entity <lysregul> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/Sawtooth.vhd" in Library work.
-Entity <Sawtooth> compiled.
-Entity <Sawtooth> (Architecture <Behavioral>) compiled.
-Compiling vhdl file "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.vhd" in Library work.
-Entity <TopLys> compiled.
-ERROR:HDLParsers:3312 - "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.vhd" Line 46. Undefined symbol 'LD'.
-ERROR:HDLParsers:1209 - "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.vhd" Line 46. LD: Undefined symbol (last report in this block)
-ERROR:HDLParsers:3324 - "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.vhd" Line 42. IN mode Formal SW of entity with no default value must be associated with an actual value.
-ERROR:HDLParsers:820 - "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.vhd" Line 48. Type of actual ports is not compatible with type of ports of entity.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/LYSregul.vhd" in Library work.
+Architecture behavioral of Entity lysregul is up to date.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd" in Library work.
+ERROR:HDLParsers:3312 - "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd" Line 46. Undefined symbol 'LD'.
+ERROR:HDLParsers:1209 - "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd" Line 46. LD: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3324 - "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd" Line 42. IN mode Formal SW of entity with no default value must be associated with an actual value.
+ERROR:HDLParsers:820 - "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd" Line 48. Type of actual ports is not compatible with type of ports of entity.
 --> 
 
-Total memory usage is 4492792 kilobytes
+
+Total memory usage is 480800 kilobytes
 
 Number of errors   :    4 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

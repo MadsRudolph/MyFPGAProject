@@ -1,33 +1,41 @@
-V3 19
-FL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/LYSregul.vhd" 2025/05/05.14:38:30 P.15xf
-EN work/LYSregul 1746448717 \
-      FL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/LYSregul.vhd" \
-      PB ieee/std_logic_1164 1335251622 PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/LYSregul/Behavioral 1746448718 \
-      FL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/LYSregul.vhd" \
-      EN work/LYSregul 1746448717 CP work/DivClk CP work/PWMmodule
-FL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/PWMmodule.vhd" 2025/05/05.14:01:06 P.15xf
-EN work/PWMmodule 1746448715 \
-      FL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/PWMmodule.vhd" \
-      PB ieee/std_logic_1164 1335251622 PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/PWMmodule/Behavioral 1746448716 \
-      FL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/PWMmodule.vhd" \
-      EN work/PWMmodule 1746448715
-FL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/Sawtooth.vhd" 2025/05/05.14:32:05 P.15xf
-EN work/Sawtooth 1746448719 \
-      FL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/Sawtooth.vhd" \
-      PB ieee/std_logic_1164 1335251622
-AR work/Sawtooth/Behavioral 1746448720 \
-      FL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/Sawtooth.vhd" \
-      EN work/Sawtooth 1746448719
-EN work/TopLys 0 FL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.vhd" \
-      PB ieee/std_logic_1164 1335251622
-AR work/TopLys/Behavioral 0 \
-      FL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.vhd" EN work/TopLys 0 \
-      CP work/LYSregul CP work/Sawtooth
-FL C:/Users/s240324/Downloads/DivClk.vhd 2025/05/05.12:32:51 P.15xf
-EN work/DivClk 1746448713 FL C:/Users/s240324/Downloads/DivClk.vhd \
+V3 23
+FL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/DivClk.vhd" 2025/03/10.15:47:12 P.20131013
+EN work/DivClk 1746727798 \
+      FL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/DivClk.vhd" \
       PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
       PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/DivClk/DivClk_arch 1746448714 \
-      FL C:/Users/s240324/Downloads/DivClk.vhd EN work/DivClk 1746448713
+AR work/DivClk/DivClk_arch 1746727799 \
+      FL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/DivClk.vhd" \
+      EN work/DivClk 1746727798
+FL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/LYSregul.vhd" 2025/05/05.14:38:32 P.20131013
+EN work/LYSregul 1746727802 \
+      FL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/LYSregul.vhd" \
+      PB ieee/std_logic_1164 1335251622 PB ieee/STD_LOGIC_UNSIGNED 1335251625
+AR work/LYSregul/Behavioral 1746727803 \
+      FL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/LYSregul.vhd" \
+      EN work/LYSregul 1746727802 CP work/DivClk CP work/PWMmodule
+FL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/PWMmodule.vhd" 2025/05/05.15:12:38 P.20131013
+EN work/PWMmodule 1746727800 \
+      FL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/PWMmodule.vhd" \
+      PB ieee/std_logic_1164 1335251622 PB ieee/STD_LOGIC_UNSIGNED 1335251625
+AR work/PWMmodule/Behavioral 1746727801 \
+      FL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/PWMmodule.vhd" \
+      EN work/PWMmodule 1746727800
+FL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/Sawtooth.vhd" 2025/05/08.20:09:11 P.20131013
+EN work/Sawtooth 1746448719 \
+      FL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/Sawtooth.vhd" \
+      PB ieee/std_logic_1164 1335251622 PB ieee/STD_LOGIC_UNSIGNED 1335251625
+AR work/Sawtooth/Behavioral 1746448720 \
+      FL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/Sawtooth.vhd" \
+      EN work/Sawtooth 1746448719
+FL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd" 2025/05/05.14:36:22 P.20131013
+EN work/TopLys 0 \
+      FL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd" \
+      PB ieee/std_logic_1164 1335251622
+AR work/TopLys/Behavioral 0 \
+      FL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd" \
+      EN work/TopLys 0 CP work/LYSregul CP work/Sawtooth
+FL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/LYSregul.vhd" 2025/05/05.14:38:30 P.20131013
+FL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/PWMmodule.vhd" 2025/05/05.14:01:06 P.20131013
+FL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/Sawtooth.vhd" 2025/05/05.14:32:05 P.20131013
+FL C:/Users/s240324/Downloads/DivClk.vhd 2025/05/05.12:32:51 P.20131013

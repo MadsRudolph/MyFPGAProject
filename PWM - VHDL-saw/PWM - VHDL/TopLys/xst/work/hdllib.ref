@@ -1,0 +1,10 @@
+EN lysregul NULL "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/LYSregul.vhd" sub00/vhpl02 1746726750
+AR pwmmodule behavioral "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/PWMmodule.vhd" sub00/vhpl01 1746726749
+AR sawtooth behavioral "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/Sawtooth.vhd" sub00/vhpl07 1746726753
+EN pwmmodule NULL "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/PWMmodule.vhd" sub00/vhpl00 1746726748
+AR toplys behavioral "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/TopLys.vhd" sub00/vhpl09 1746726755
+EN sawtooth NULL "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/Sawtooth.vhd" sub00/vhpl06 1746726752
+AR lysregul behavioral "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/LYSregul.vhd" sub00/vhpl05 1746726751
+EN divclk NULL "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/DivCLK.vhd" sub00/vhpl03 1746726746
+EN toplys NULL "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/TopLys.vhd" sub00/vhpl08 1746726754
+AR divclk divclk_arch "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/DivCLK.vhd" sub00/vhpl04 1746726747

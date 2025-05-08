@@ -1,9 +1,9 @@
-EN lysregul NULL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/LYSregul.vhd" sub00/vhpl02 1746448717
-AR pwmmodule behavioral "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/PWMmodule.vhd" sub00/vhpl01 1746448716
+EN lysregul NULL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/LYSregul.vhd" sub00/vhpl02 1746727802
+AR pwmmodule behavioral "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/PWMmodule.vhd" sub00/vhpl01 1746727801
 AR sawtooth behavioral "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/Sawtooth.vhd" sub00/vhpl07 1746448720
-EN pwmmodule NULL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/PWMmodule.vhd" sub00/vhpl00 1746448715
-EN sawtooth NULL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/Sawtooth.vhd" sub00/vhpl06 1746448719
-AR lysregul behavioral "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/LYSregul.vhd" sub00/vhpl05 1746448718
-EN divclk NULL C:/Users/s240324/Downloads/DivClk.vhd sub00/vhpl03 1746448713
-EN toplys NULL "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.vhd" sub00/vhpl08 1746448721
-AR divclk divclk_arch C:/Users/s240324/Downloads/DivClk.vhd sub00/vhpl04 1746448714
+EN pwmmodule NULL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/PWMmodule.vhd" sub00/vhpl00 1746727800
+EN sawtooth NULL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/Sawtooth.vhd" sub00/vhpl06 1746727772
+AR lysregul behavioral "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/LYSregul.vhd" sub00/vhpl05 1746727803
+EN divclk NULL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/DivClk.vhd" sub00/vhpl03 1746727798
+EN toplys NULL "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd" sub00/vhpl08 1746727804
+AR divclk divclk_arch "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/DivClk.vhd" sub00/vhpl04 1746727799

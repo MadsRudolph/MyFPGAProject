@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/LYSregul.xst" -ofn "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/LYSregul.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCFmap.ucf -p xc3s100e-cp132-4 "LYSregul.ngc" LYSregul.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCFmap.ucf -p xc3s100e-cp132-4 "LYSregul.ngc" LYSregul.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o LYSregul_map.ncd LYSregul.ngd LYSregul.pcf 
+par -w -intstyle ise -ol high -t 1 LYSregul_map.ncd LYSregul.ncd LYSregul.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LYSregul.twx LYSregul.ncd -o LYSregul.twr LYSregul.pcf -ucf UCFmap.ucf 
+bitgen -intstyle ise -f LYSregul.ut LYSregul.ncd 
