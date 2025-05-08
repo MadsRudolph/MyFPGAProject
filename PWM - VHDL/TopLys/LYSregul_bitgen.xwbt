@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\s240324\Desktop\PWM - VHDL\TopLys\LYSregul.ncd
-OUTFILE=C:\Users\s240324\Desktop\PWM - VHDL\TopLys\LYSregul.bit
+INFILE=/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/LYSregul.ncd
+OUTFILE=/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/LYSregul.bit
 FAMILY=Spartan3E
 PART=xc3s100e-4cp132
-WORKINGDIR=C:\Users\s240324\Desktop\PWM - VHDL\TopLys
-LICENSE=ISE
-USER_INFO=176339219_1777488102_210785245_522
+WORKINGDIR=/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys
+LICENSE=WebPack
+USER_INFO=213343244_0_0_270

@@ -2,3 +2,7 @@ xst -intstyle ise -ifn "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.xst" -
 xst -intstyle ise -ifn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.xst" -ofn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.syr" 
 xst -intstyle ise -ifn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.xst" -ofn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.syr" 
 xst -intstyle ise -ifn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.xst" -ofn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.syr" 
+xst -intstyle ise -ifn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.xst" -ofn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.syr" 
+xst -intstyle ise -ifn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.xst" -ofn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.syr" 
+xst -intstyle ise -ifn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.xst" -ofn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.syr" 
+xst -intstyle ise -ifn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.xst" -ofn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.syr" 

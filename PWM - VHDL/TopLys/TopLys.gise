@@ -26,8 +26,11 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="DivClk.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="DivClk.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="DivClk.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="LYSregul.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="LYSregul.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="LYSregul.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="LYSregul.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="LYSregul.drc" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="LYSregul.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="LYSregul.ncd" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="LYSregul.ngc"/>
@@ -46,6 +49,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="LYSregul.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="LYSregul.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="LYSregul.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="LYSregul_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="LYSregul_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="LYSregul_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="LYSregul_map.mrp" xil_pn:subbranch="Map"/>
@@ -92,6 +96,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="lysregul.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="lysregul.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="lysregul.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
@@ -103,11 +108,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1746448710" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-2256129984157977648" xil_pn:start_ts="1746448710">
+    <transform xil_pn:end_ts="1746731930" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-4923654163455722756" xil_pn:start_ts="1746731930">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1746448710" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-6618428132211396391" xil_pn:start_ts="1746448710">
+    <transform xil_pn:end_ts="1746731930" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-7846807786183367163" xil_pn:start_ts="1746731930">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -115,7 +120,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1746448710" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-2601435115362702962" xil_pn:start_ts="1746448710">
+    <transform xil_pn:end_ts="1746731930" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="6420683502498994234" xil_pn:start_ts="1746731930">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -123,57 +128,47 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1746448710" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-7864123658537374493" xil_pn:start_ts="1746448710">
+    <transform xil_pn:end_ts="1746731930" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="649825499333299343" xil_pn:start_ts="1746731930">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1746727799" xil_pn:in_ck="-1001008126487939655" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-2989763168584919818" xil_pn:start_ts="1746727796">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1746731935" xil_pn:in_ck="-2653272801800510722" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="7918845128627330850" xil_pn:start_ts="1746731930">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
+      <outfile xil_pn:name="LYSregul.lso"/>
+      <outfile xil_pn:name="LYSregul.ngc"/>
       <outfile xil_pn:name="LYSregul.ngr"/>
+      <outfile xil_pn:name="LYSregul.prj"/>
+      <outfile xil_pn:name="LYSregul.stx"/>
+      <outfile xil_pn:name="LYSregul.syr"/>
+      <outfile xil_pn:name="LYSregul.xst"/>
+      <outfile xil_pn:name="LYSregul_xst.xrpt"/>
       <outfile xil_pn:name="PWMmodule.ngr"/>
-      <outfile xil_pn:name="TopLys.lso"/>
-      <outfile xil_pn:name="TopLys.prj"/>
-      <outfile xil_pn:name="TopLys.syr"/>
-      <outfile xil_pn:name="TopLys.xst"/>
-      <outfile xil_pn:name="TopLys_vhdl.prj"/>
-      <outfile xil_pn:name="TopLys_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1746447624" xil_pn:in_ck="4042333543345320" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-2478641627882005713" xil_pn:start_ts="1746447624">
+    <transform xil_pn:end_ts="1746732083" xil_pn:in_ck="4042333543345320" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-2478641627882005713" xil_pn:start_ts="1746732083">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1746447629" xil_pn:in_ck="-3710954940499165371" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="940167986745919698" xil_pn:start_ts="1746447624">
+    <transform xil_pn:end_ts="1746732087" xil_pn:in_ck="-3710954940499165371" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="940167986745919698" xil_pn:start_ts="1746732083">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="LYSregul.bld"/>
       <outfile xil_pn:name="LYSregul.ngd"/>
       <outfile xil_pn:name="LYSregul_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1746447635" xil_pn:in_ck="4698529116014301222" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1303429204059397298" xil_pn:start_ts="1746447629">
+    <transform xil_pn:end_ts="1746732092" xil_pn:in_ck="4698529116014301222" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1303429204059397298" xil_pn:start_ts="1746732087">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="LYSregul.pcf"/>
       <outfile xil_pn:name="LYSregul_map.map"/>
@@ -185,13 +180,10 @@
       <outfile xil_pn:name="LYSregul_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1746447646" xil_pn:in_ck="-7969645855947906689" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1746447635">
+    <transform xil_pn:end_ts="1746732099" xil_pn:in_ck="-7969645855947906689" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1746732092">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="LYSregul.ncd"/>
       <outfile xil_pn:name="LYSregul.pad"/>
       <outfile xil_pn:name="LYSregul.par"/>
@@ -203,27 +195,21 @@
       <outfile xil_pn:name="LYSregul_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1746447649" xil_pn:in_ck="3981527550712253818" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="287829442711806529" xil_pn:start_ts="1746447646">
+    <transform xil_pn:end_ts="1746733889" xil_pn:in_ck="3981527550712253818" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="2969983391363831627" xil_pn:start_ts="1746733885">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="LYSregul.bgn"/>
+      <outfile xil_pn:name="LYSregul.bit"/>
+      <outfile xil_pn:name="LYSregul.drc"/>
       <outfile xil_pn:name="LYSregul.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
-      <outfile xil_pn:name="lysregul.bgn"/>
-      <outfile xil_pn:name="lysregul.bit"/>
-      <outfile xil_pn:name="lysregul.drc"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1746447646" xil_pn:in_ck="4496360689959393954" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1746447643">
+    <transform xil_pn:end_ts="1746732099" xil_pn:in_ck="4496360689959393954" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1746732097">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="LYSregul.twr"/>
       <outfile xil_pn:name="LYSregul.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

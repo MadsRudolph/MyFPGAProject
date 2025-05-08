@@ -13,4 +13,3 @@ NET"SW[0]" LOC = P11;
 NET "BTN3" LOC = A7;
 #Assignment of CLK
 NET "mclk" LOC = B8;
- 

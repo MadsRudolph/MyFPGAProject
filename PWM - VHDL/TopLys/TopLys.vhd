@@ -36,7 +36,7 @@ entity TopLys is
 end TopLys;
 
 architecture Behavioral of TopLys is
-signal SigAmpl: STD_LOGIC_VECTOR(7 downto 0);
+signal LD, SigAmpl: STD_LOGIC_VECTOR(7 downto 0);
 begin
 
 LYSregul: entity work.LYSregul
@@ -44,12 +44,6 @@ port map (
 Reset <= Reset,
 Clk <= Clk,
 LD <= VPWM);
-
-Sawtooth: entity work.Sawtooth
-port map (
-Reset <= Reset,
-Clk <= Clk,
-SigAmpl <=SigAmpl);
 
 end Behavioral;
 

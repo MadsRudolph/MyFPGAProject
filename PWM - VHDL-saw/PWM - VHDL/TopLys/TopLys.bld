@@ -5,7 +5,7 @@ Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
 ise -dd _ngo -nt timestamp -uc UCFmap.ucf -p xc3s100e-cp132-4 TopLys.ngc
 TopLys.ngd
 
-Reading NGO file "/home/mads/Downloads/PWM - VHDL-saw/PWM -
+Reading NGO file "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM -
 VHDL/TopLys/TopLys.ngc" ...
 Gathering constraint information from source properties...
 Done.

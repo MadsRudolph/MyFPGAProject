@@ -9,7 +9,7 @@ Target Device  : xc3s100e
 Target Package : cp132
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Fri May  2 00:10:26 2025
+Mapped Date    : Thu May  8 21:36:17 2025
 
 Mapping design into LUTs...
 Running directed packing...
@@ -24,15 +24,15 @@ Design Summary:
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:           296 out of   1,920   15%
-  Number of 4 input LUTs:               391 out of   1,920   20%
+  Number of Slice Flip Flops:           127 out of   1,920    6%
+  Number of 4 input LUTs:               157 out of   1,920    8%
 Logic Distribution:
-  Number of occupied Slices:            278 out of     960   28%
-    Number of Slices containing only related logic:     278 out of     278 100%
-    Number of Slices containing unrelated logic:          0 out of     278   0%
+  Number of occupied Slices:            139 out of     960   14%
+    Number of Slices containing only related logic:     139 out of     139 100%
+    Number of Slices containing unrelated logic:          0 out of     139   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         448 out of   1,920   23%
-    Number used as logic:               391
+  Total Number of 4 input LUTs:         214 out of   1,920   11%
+    Number used as logic:               157
     Number used as a route-thru:         57
 
   The Slice Logic Distribution report is not meaningful if the design is
@@ -40,11 +40,10 @@ Logic Distribution:
 
   Number of bonded IOBs:                 32 out of      83   38%
   Number of BUFGMUXs:                     1 out of      24    4%
-  Number of MULT18X18SIOs:                1 out of       4   25%
 
-Average Fanout of Non-Clock Nets:                2.95
+Average Fanout of Non-Clock Nets:                2.85
 
-Peak Memory Usage:  563 MB
+Peak Memory Usage:  560 MB
 Total REAL time to MAP completion:  1 secs 
 Total CPU time to MAP completion:   1 secs 
 

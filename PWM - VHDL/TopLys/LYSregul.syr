@@ -1,18 +1,21 @@
-Release 14.1 - xst P.15xf (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to xst/projnav.tmp
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.03 secs
  
---> Parameter xsthdpdir set to xst
+--> 
+Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.03 secs
  
---> Reading design: LYSregul.prj
+--> 
+Reading design: LYSregul.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -68,7 +71,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -104,11 +107,11 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/s240324/Downloads/DivClk.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/DivClk.vhd" in Library work.
 Architecture divclk_arch of Entity divclk is up to date.
-Compiling vhdl file "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/PWMmodule.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/PWMmodule.vhd" in Library work.
 Architecture behavioral of Entity pwmmodule is up to date.
-Compiling vhdl file "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/LYSregul.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/LYSregul.vhd" in Library work.
 Architecture behavioral of Entity lysregul is up to date.
 
 =========================================================================
@@ -131,7 +134,7 @@ Analyzing Entity <DivClk> in library <work> (Architecture <DivClk_arch>).
 Entity <DivClk> analyzed. Unit <DivClk> generated.
 
 Analyzing Entity <PWMmodule> in library <work> (Architecture <Behavioral>).
-WARNING:Xst:819 - "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/PWMmodule.vhd" line 40: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/PWMmodule.vhd" line 41: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <PWMcnt>, <SigAmpl>
 Entity <PWMmodule> analyzed. Unit <PWMmodule> generated.
 
@@ -143,7 +146,7 @@ Entity <PWMmodule> analyzed. Unit <PWMmodule> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <DivClk>.
-    Related source file is "C:/Users/s240324/Downloads/DivClk.vhd".
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/DivClk.vhd".
     Found 1-bit register for signal <Clk1_D>.
     Found 25-bit up counter for signal <Cnt1>.
     Summary:
@@ -153,9 +156,9 @@ Unit <DivClk> synthesized.
 
 
 Synthesizing Unit <PWMmodule>.
-    Related source file is "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/PWMmodule.vhd".
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/PWMmodule.vhd".
     Found 8-bit up counter for signal <PWMcnt>.
-    Found 8-bit comparator lessequal for signal <PWMout$cmp_le0000> created at line 42.
+    Found 8-bit comparator lessequal for signal <PWMout$cmp_le0000> created at line 43.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 Comparator(s).
@@ -163,7 +166,7 @@ Unit <PWMmodule> synthesized.
 
 
 Synthesizing Unit <LYSregul>.
-    Related source file is "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/LYSregul.vhd".
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/LYSregul.vhd".
 Unit <LYSregul> synthesized.
 
 
@@ -458,12 +461,13 @@ Delay:               7.486ns (Levels of Logic = 11)
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.67 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.20 secs
  
 --> 
 
-Total memory usage is 4510808 kilobytes
+
+Total memory usage is 503444 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

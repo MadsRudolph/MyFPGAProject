@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-mads-VirtualBox::  Thu May 08 19:52:42 2025
+mads-VirtualBox::  Thu May 08 22:01:44 2025
 
 par -w -intstyle ise -ol high -t 1 TopLys_map.ncd TopLys.ncd TopLys.pcf 
 
@@ -123,22 +123,22 @@ Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 2
 
 Updating file: TopLys.ncd with current fully routed design.
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
-Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
+Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
-Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
+Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 WARNING:Route:455 - CLK Net:LYSregul/U1/Clk1_D may have excessive skew because 
       4 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 WARNING:Route:455 - CLK Net:Sawtooth/SigCnt/Clk1_D may have excessive skew because 
       4 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 2 secs 
-Total CPU time to Router completion: 2 secs 
+Total REAL time to Router completion: 3 secs 
+Total CPU time to Router completion: 3 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -205,7 +205,7 @@ Generating Pad Report.
 All signals are completely routed.
 
 Total REAL time to PAR completion: 3 secs 
-Total CPU time to PAR completion: 2 secs 
+Total CPU time to PAR completion: 3 secs 
 
 Peak Memory Usage:  542 MB
 

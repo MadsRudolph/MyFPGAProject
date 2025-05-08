@@ -5,16 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLParsers" num="3312" delta="new" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd</arg>&quot; Line <arg fmt="%d" index="2">46</arg>. Undefined symbol &apos;<arg fmt="%s" index="3">LD</arg>&apos;.
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/PWMmodule.vhd</arg>&quot; line <arg fmt="%d" index="2">41</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;PWMcnt&gt;, &lt;SigAmpl&gt;</arg>
 </msg>
 
-<msg type="error" file="HDLParsers" num="1209" delta="new" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd</arg>&quot; Line <arg fmt="%d" index="2">46</arg>. <arg fmt="%s" index="3">LD</arg>: Undefined symbol (last report in this block)
-</msg>
-
-<msg type="error" file="HDLParsers" num="3324" delta="new" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd</arg>&quot; Line <arg fmt="%d" index="2">42</arg>. IN mode Formal <arg fmt="%s" index="3">SW</arg> of <arg fmt="%s" index="4">entity</arg> with no default value must be associated with an actual value.
-</msg>
-
-<msg type="error" file="HDLParsers" num="820" delta="new" >&quot;<arg fmt="%s" index="1">/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/TopLys.vhd</arg>&quot; Line <arg fmt="%d" index="2">48</arg>. Type of actual ports is not compatible with type of ports of <arg fmt="%s" index="3">entity</arg>.
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

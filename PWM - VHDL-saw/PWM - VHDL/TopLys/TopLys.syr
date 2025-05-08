@@ -4,14 +4,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.00 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.00 secs
  
 --> 
@@ -107,26 +107,15 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/TopLys is now defined in a different file.  It was defined in "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.vhd", and is now defined in "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/TopLys.vhd".
-WARNING:HDLParsers:3607 - Unit work/TopLys/Behavioral is now defined in a different file.  It was defined in "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/TopLys.vhd", and is now defined in "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/TopLys.vhd".
-WARNING:HDLParsers:3607 - Unit work/LYSregul is now defined in a different file.  It was defined in "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/LYSregul.vhd", and is now defined in "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/LYSregul.vhd".
-WARNING:HDLParsers:3607 - Unit work/LYSregul/Behavioral is now defined in a different file.  It was defined in "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/LYSregul.vhd", and is now defined in "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/LYSregul.vhd".
-WARNING:HDLParsers:3607 - Unit work/Sawtooth is now defined in a different file.  It was defined in "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/Sawtooth.vhd", and is now defined in "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/Sawtooth.vhd".
-WARNING:HDLParsers:3607 - Unit work/Sawtooth/Behavioral is now defined in a different file.  It was defined in "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/Sawtooth.vhd", and is now defined in "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/Sawtooth.vhd".
-WARNING:HDLParsers:3607 - Unit work/DivClk is now defined in a different file.  It was defined in "C:/Users/s240324/Downloads/DivClk.vhd", and is now defined in "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/DivCLK.vhd".
-WARNING:HDLParsers:3607 - Unit work/DivClk/DivClk_arch is now defined in a different file.  It was defined in "C:/Users/s240324/Downloads/DivClk.vhd", and is now defined in "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/DivCLK.vhd".
-WARNING:HDLParsers:3607 - Unit work/PWMmodule is now defined in a different file.  It was defined in "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/PWMmodule.vhd", and is now defined in "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/PWMmodule.vhd".
-WARNING:HDLParsers:3607 - Unit work/PWMmodule/Behavioral is now defined in a different file.  It was defined in "C:/Users/s240324/Desktop/PWM - VHDL/TopLys/PWMmodule.vhd", and is now defined in "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/PWMmodule.vhd".
-Compiling vhdl file "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/DivCLK.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/DivCLK.vhd" in Library work.
 Architecture divclk_arch of Entity divclk is up to date.
-Compiling vhdl file "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/PWMmodule.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/PWMmodule.vhd" in Library work.
 Architecture behavioral of Entity pwmmodule is up to date.
-Compiling vhdl file "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/LYSregul.vhd" in Library work.
-Entity <lysregul> compiled.
-Entity <lysregul> (Architecture <behavioral>) compiled.
-Compiling vhdl file "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/Sawtooth.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/LYSregul.vhd" in Library work.
+Architecture behavioral of Entity lysregul is up to date.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/Sawtooth.vhd" in Library work.
 Architecture behavioral of Entity sawtooth is up to date.
-Compiling vhdl file "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/TopLys.vhd" in Library work.
+Compiling vhdl file "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/TopLys.vhd" in Library work.
 Architecture behavioral of Entity toplys is up to date.
 
 =========================================================================
@@ -159,7 +148,7 @@ Analyzing Entity <PWMmodule> in library <work> (Architecture <Behavioral>).
 Entity <PWMmodule> analyzed. Unit <PWMmodule> generated.
 
 Analyzing Entity <Sawtooth> in library <work> (Architecture <Behavioral>).
-WARNING:Xst:819 - "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/Sawtooth.vhd" line 43: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/Sawtooth.vhd" line 43: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <Reset>
 Entity <Sawtooth> analyzed. Unit <Sawtooth> generated.
 
@@ -171,7 +160,7 @@ Entity <Sawtooth> analyzed. Unit <Sawtooth> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <DivClk>.
-    Related source file is "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/DivCLK.vhd".
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/DivCLK.vhd".
     Found 32-bit adder for signal <$add0000>.
     Found 32-bit comparator equal for signal <Clear1$cmp_eq0000> created at line 36.
     Found 1-bit register for signal <Clk1_D>.
@@ -186,7 +175,7 @@ Unit <DivClk> synthesized.
 
 
 Synthesizing Unit <PWMmodule>.
-    Related source file is "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/PWMmodule.vhd".
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/PWMmodule.vhd".
     Found 8-bit up counter for signal <PWMcnt>.
     Found 8-bit comparator less for signal <PWMout$cmp_lt0000> created at line 46.
     Summary:
@@ -196,12 +185,12 @@ Unit <PWMmodule> synthesized.
 
 
 Synthesizing Unit <LYSregul>.
-    Related source file is "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/LYSregul.vhd".
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/LYSregul.vhd".
 Unit <LYSregul> synthesized.
 
 
 Synthesizing Unit <Sawtooth>.
-    Related source file is "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/Sawtooth.vhd".
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/Sawtooth.vhd".
     Found 8-bit up counter for signal <SigS>.
     Summary:
 	inferred   1 Counter(s).
@@ -209,7 +198,7 @@ Unit <Sawtooth> synthesized.
 
 
 Synthesizing Unit <TopLys>.
-    Related source file is "/home/mads/Downloads/PWM - VHDL-saw/PWM - VHDL/TopLys/TopLys.vhd".
+    Related source file is "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/TopLys.vhd".
 WARNING:Xst:1780 - Signal <PWMcnt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 Unit <TopLys> synthesized.
 
@@ -554,14 +543,14 @@ Offset:              7.914ns (Levels of Logic = 11)
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 2.01 secs
+Total CPU time to Xst completion: 1.59 secs
  
 --> 
 
 
-Total memory usage is 505684 kilobytes
+Total memory usage is 505596 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   12 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 
