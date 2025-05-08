@@ -136,7 +136,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="LYSregul.lso"/>
@@ -159,6 +161,7 @@
     <transform xil_pn:end_ts="1746732087" xil_pn:in_ck="-3710954940499165371" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="940167986745919698" xil_pn:start_ts="1746732083">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="LYSregul.bld"/>
       <outfile xil_pn:name="LYSregul.ngd"/>
       <outfile xil_pn:name="LYSregul_ngdbuild.xrpt"/>
@@ -168,6 +171,7 @@
     <transform xil_pn:end_ts="1746732092" xil_pn:in_ck="4698529116014301222" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1303429204059397298" xil_pn:start_ts="1746732087">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="LYSregul.pcf"/>
@@ -184,6 +188,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="LYSregul.ncd"/>
       <outfile xil_pn:name="LYSregul.pad"/>
       <outfile xil_pn:name="LYSregul.par"/>
@@ -198,6 +203,7 @@
     <transform xil_pn:end_ts="1746733889" xil_pn:in_ck="3981527550712253818" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="2969983391363831627" xil_pn:start_ts="1746733885">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="LYSregul.bgn"/>
       <outfile xil_pn:name="LYSregul.bit"/>
       <outfile xil_pn:name="LYSregul.drc"/>
@@ -210,6 +216,7 @@
     <transform xil_pn:end_ts="1746732099" xil_pn:in_ck="4496360689959393954" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1746732097">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="LYSregul.twr"/>
       <outfile xil_pn:name="LYSregul.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

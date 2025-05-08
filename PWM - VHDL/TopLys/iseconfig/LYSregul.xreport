@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2025-05-08T21:34:56</DateModified>
+  <DateModified>2025-05-08T22:09:08</DateModified>
   <ModuleName>LYSregul</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/iseconfig/LYSregul.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL/TopLys/</ImplementationReportsDirectory>
   <DateInitialized>2025-05-08T21:34:56</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

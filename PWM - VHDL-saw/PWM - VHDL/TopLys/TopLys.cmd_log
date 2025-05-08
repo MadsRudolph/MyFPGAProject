@@ -58,3 +58,4 @@ map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o TopLys_
 par -w -intstyle ise -ol high -t 1 TopLys_map.ncd TopLys.ncd TopLys.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TopLys.twx TopLys.ncd -o TopLys.twr TopLys.pcf -ucf UCFmap.ucf 
 bitgen -intstyle ise -f TopLys.ut TopLys.ncd 
+xst -intstyle ise -ifn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/TopLys.xst" -ofn "/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/TopLys.syr" 

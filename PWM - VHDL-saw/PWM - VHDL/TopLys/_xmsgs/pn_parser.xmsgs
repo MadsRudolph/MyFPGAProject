@@ -8,18 +8,6 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/DivCLK.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/LYSregul.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/PWMmodule.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/Sawtooth.vhd&quot; into library work</arg>
-</msg>
-
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/mads/Xilinx_Projects/MyFPGAProject/PWM - VHDL-saw/PWM - VHDL/TopLys/TopLys.vhd&quot; into library work</arg>
 </msg>
 

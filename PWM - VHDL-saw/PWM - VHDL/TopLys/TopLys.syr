@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Reading design: TopLys.prj
@@ -543,7 +543,7 @@ Offset:              7.914ns (Levels of Logic = 11)
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 1.59 secs
+Total CPU time to Xst completion: 1.93 secs
  
 --> 
 
