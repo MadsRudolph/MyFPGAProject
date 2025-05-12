@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Top.ncd
-OUTFILE=/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt/Calc_Top.bit
-FAMILY=Spartan3E
-PART=xc3s100e-4cp132
-WORKINGDIR=/home/mads/Xilinx_Projects/MyFPGAProject/Calc_Projekt
-LICENSE=WebPack
-USER_INFO=213343244_0_0_270
