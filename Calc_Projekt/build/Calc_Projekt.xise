@@ -15,64 +15,64 @@
   <version xil_pn:ise_version="14.7" xil_pn:schema_version="2"/>
 
   <files>
-    <file xil_pn:name="Calc_top.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../src/modules/Calc_top.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="9"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="9"/>
     </file>
-    <file xil_pn:name="Calc_Menu.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../src/modules/Calc_Menu.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="7"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="7"/>
-    </file>
-    <file xil_pn:name="Debounce_corrected.vhd" xil_pn:type="FILE_VHDL">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="6"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="6"/>
-    </file>
-    <file xil_pn:name="DivClk.vhd" xil_pn:type="FILE_VHDL">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="5"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="5"/>
     </file>
-    <file xil_pn:name="SevenSeg4.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../src/components/Debounce_corrected.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="6"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="8"/>
+    </file>
+    <file xil_pn:name="../src/components/DivClk.vhd" xil_pn:type="FILE_VHDL">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="5"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="7"/>
+    </file>
+    <file xil_pn:name="../src/modules/SevenSeg4.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="4"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="4"/>
     </file>
-    <file xil_pn:name="std_8bit_reg.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../src/modules/std_8bit_reg.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="1"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
     </file>
-    <file xil_pn:name="std_16bit_reg.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../src/modules/std_16bit_reg.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="2"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
     </file>
-    <file xil_pn:name="Calc_menu_TB.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../src/testbenches/Calc_menu_TB.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="23"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="23"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="23"/>
     </file>
-    <file xil_pn:name="Map.ucf" xil_pn:type="FILE_UCF">
+    <file xil_pn:name="../constraints/Map.ucf" xil_pn:type="FILE_UCF">
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
-    <file xil_pn:name="Calc_data_topmudule.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../src/modules/Calc_data_topmudule.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="8"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="8"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="6"/>
     </file>
-    <file xil_pn:name="div_compoent.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../src/components/div_compoent.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="3"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="3"/>
     </file>
-    <file xil_pn:name="THETEST.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../src/testbenches/THETEST.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="35"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="35"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="35"/>
     </file>
-    <file xil_pn:name="Calc_data_TB.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../src/testbenches/Calc_data_TB.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="85"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="85"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="85"/>
     </file>
-    <file xil_pn:name="Calc_Top_Uden_Debounce_TB.vhd" xil_pn:type="FILE_VHDL">
+    <file xil_pn:name="../src/testbenches/Calc_Top_Uden_Debounce_TB.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="10"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="97"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="97"/>
@@ -184,7 +184,7 @@
     <property xil_pn:name="Ignore User Timing Constraints Map" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Ignore User Timing Constraints Par" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Implementation Top" xil_pn:value="Architecture|Calc_Top|Behavioral" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Implementation Top File" xil_pn:value="Calc_top.vhd" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Implementation Top File" xil_pn:value="../src/modules/Calc_top.vhd" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/Calc_Top" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Include 'uselib Directive in Verilog File" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Include SIMPRIM Models in Verilog File" xil_pn:value="false" xil_pn:valueState="default"/>
