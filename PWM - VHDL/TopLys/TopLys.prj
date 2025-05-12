@@ -1,4 +1,0 @@
-vhdl work "PWMmodule.vhd"
-vhdl work "DivClk.vhd"
-vhdl work "LYSregul.vhd"
-vhdl work "TopLys.vhd"
