@@ -1,0 +1,34 @@
+# Backup & temp files
+*.log
+*.tmp
+*.bak
+*~
+
+# Xilinx build junk (but NOT project files like .xise!)
+*.ngc
+*.ngd
+*.ncd
+*.bgn
+*.drc
+*.bit
+*.pad
+*.par
+*.twx
+*.twr
+*.xrpt
+*.xwbt
+*.html
+*.xml
+*.cmd_log
+*.ut
+*.map
+*.mrp
+*.summary
+*.xmsgs
+*.ref
+*.lst
+
+# Ignore generated folders
+/_ngo/
+/xst/
+/iseconfig/
