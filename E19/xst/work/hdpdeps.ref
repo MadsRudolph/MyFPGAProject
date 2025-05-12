@@ -1,0 +1,16 @@
+V3 9
+FL C:/Users/s240324/MyFPGAProject/E19/ENT1.vhd 2025/05/12.13:46:28 P.15xf
+EN work/ENT1 1747051081 FL C:/Users/s240324/MyFPGAProject/E19/ENT1.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/ENT1/Behavioral 1747051082 \
+      FL C:/Users/s240324/MyFPGAProject/E19/ENT1.vhd EN work/ENT1 1747051081
+FL C:/Users/s240324/MyFPGAProject/E19/ENT2.vhd 2025/05/12.14:01:36 P.15xf
+EN work/ENT2 1747051300 FL C:/Users/s240324/MyFPGAProject/E19/ENT2.vhd \
+      PB ieee/std_logic_1164 1335251622 PB ieee/STD_LOGIC_UNSIGNED 1335251625
+AR work/ENT2/Behavioral 1747051301 \
+      FL C:/Users/s240324/MyFPGAProject/E19/ENT2.vhd EN work/ENT2 1747051300
+FL C:/Users/s240324/MyFPGAProject/E19/ENT3.vhd 2025/05/12.14:47:53 P.15xf
+EN work/ENT3 1747054076 FL C:/Users/s240324/MyFPGAProject/E19/ENT3.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/ENT3/Behavioral 1747054077 \
+      FL C:/Users/s240324/MyFPGAProject/E19/ENT3.vhd EN work/ENT3 1747054076
