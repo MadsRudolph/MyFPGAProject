@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/Mads/MyFPGAProject/Mock_Exam_TEMPLATE/project_files/FSM_TB_isim_beh.exe" -prj "/home/Mads/MyFPGAProject/Mock_Exam_TEMPLATE/project_files/FSM_TB_beh.prj" "work.FSM_TB" 

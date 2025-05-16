@@ -14,15 +14,18 @@ architecture Behavioral of ENT3 is
     type StateType is (S0, S1, S2, S3, S4);
     signal State, NextState : StateType;
 begin
+
+    -- State register
     process(Reset, Clk)
     begin
-        if Reset = '1' then
+        if Reset = '1' then --Asynkron reset
             State <= S0;
         elsif rising_edge(Clk) then
             State <= NextState;
         end if;
     end process;
 
+    -- Output and next-state logic
     process(State, X)
     begin
         Z <= "00";
@@ -30,35 +33,37 @@ begin
 
         case State is
             when S0 =>
+                Z <= "11";
                 if X(1) = '1' then
-                    Z(0) <= '1';
                     NextState <= S1;
                 end if;
+
             when S1 =>
-                if X(1) = '0' then
-                    NextState <= S2;
-                end if;
+                Z(0) <= '1';
+                if X = "10" then
+						NextState <= S3;
+						elsif X(1) = '0' then
+						NextState <= S2;
+						end if;
+
+
             when S2 =>
                 Z(1) <= '1';
-                if X = "10" then
-                    NextState <= S3;
-                elsif X = "11" then
-                    NextState <= S1;
-                end if;
-            when S3 =>
-                Z(0) <= '1';
                 if X(0) = '1' then
-                    NextState <= S4;
-                else
-                    NextState <= S0;
-                end if;
-            when S4 =>
-                if X(0) = '0' then
-                    Z(1) <= '1';
-                    NextState <= S1;
-                else
                     NextState <= S3;
+                elsif X(0) = '0' then
+                    NextState <= S1;
+                end if;
+
+            when S3 =>
+                Z <= "11";
+                NextState <= S4;
+
+            when S4 =>
+                if X = "00" then
+                    NextState <= S1;
                 end if;
         end case;
     end process;
+
 end Behavioral;
