@@ -1,8 +1,0 @@
-work	"Calc_Menu.vhd"
-work	"Calc_data_topmudule.vhd"
-work	"Calc_top.vhd"
-work	"DivClk.vhd"
-work	"SevenSeg4.vhd"
-work	"div_compoent.vhd"
-work	"std_16bit_reg.vhd"
-work	"std_8bit_reg.vhd"
