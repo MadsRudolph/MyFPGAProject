@@ -107,8 +107,8 @@ This project was developed by:
 ---
 
 ## 📖 Documentation
-- [Final Report (PDF)](./docs/Report.pdf) – Detailed explanation of modules, FSM, and datapath  
-- [Project Assignment (PDF)](./docs/Assignment.pdf) – Original project description  
+- [Final Report (PDF)](./Calc_Projekt/docs/Lommeregner Rapport Gruppe 4.pdf) – Detailed explanation of modules, FSM, and datapath  
+- [Project Assignment (PDF)](./Calc_Projekt/Docs/VHDL Projekt (Lommeregner).pdf) – Original project description  
 
 ---
 
