@@ -1,3 +1,8 @@
+![VHDL](https://img.shields.io/badge/VHDL-Programming-blueviolet?style=flat-square&logo=vhdl)  
+![FPGA](https://img.shields.io/badge/FPGA-Digilent%20Basys%202-brightgreen?style=flat-square&logo=xilinx)  
+![DTU Project](https://img.shields.io/badge/DTU-Engineering-red?style=flat-square&logo=apachespark)  
+![Status](https://img.shields.io/badge/Status-Completed-success?style=flat-square)
+
 # FPGA Calculator – VHDL Project
 
 This project was developed as the final assignment for the **Digital Engineering 30081** course at **DTU**.  
